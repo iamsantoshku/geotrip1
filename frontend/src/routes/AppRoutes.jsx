@@ -1,0 +1,83 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from '../pages/Home'
+import Login from '../pages/Login'
+// import Header from '../component/Header';
+import Profile from '../pages/Profile';
+import MyBookingsDashboard from '../component/userprofile/MyBookingsDashboard';
+import Hotel from '../pages/Hotel';
+import Hoteldetails from '../pages/Hoteldetails';
+import Flight from '../pages/Flight';
+import FlightSearch from '../component/flight/flightserch';
+import Flighthome from '../pages/Flighthome';
+import Stayhome from '../pages/Stayhome';
+import Hotelhome from '../pages/Hotelhome';
+import Adminhome from '../admin/components/Adminhome';
+import Dashboard from '../admin/components/Dashboard';
+import AddAirline from '../admin/AddAirline';
+import AddFlight from '../admin/AddFlight';
+import HotelAdd from '../admin/HotelAdd';
+import Car from '../pages/Car';
+import AddCar from '../admin/AddCar';
+import Carlisting from '../pages/Carlisting';
+import AddRoom from '../admin/AddRoom';
+import RoomDetails from '../component/room/RoomDetails';
+import Roomdetails from '../pages/Roomdetails';
+import Roombook from '../component/room/Roombook';
+import Bookingform from '../component/room/Bookingform';
+import Bookingform3 from '../component/room/Bookingform3';
+
+
+const ProtectedRoute = ({ element: Element, ...rest }) => {
+  const isAdmin = localStorage.getItem("isAdmin") === "true";
+  return isAdmin ? <Element {...rest} /> : <Navigate to="/" replace />;
+};
+const AppRoutes = () => {
+  return (
+    <div>
+      
+       <Routes>
+       <Route path='/' element={<Home/>}></Route>
+       {/* <Route path='/login' element={<Login/>}></Route> */}
+       <Route path='user-profile' element={<Profile/>}></Route>
+       <Route path='my-booking' element={<MyBookingsDashboard/>}></Route>
+       <Route path='hotel-list-01' element={<Hotel/>}></Route>
+       <Route path='hotel-details' element={<Hoteldetails/>}></Route>
+       <Route path='flight-list-01' element={<Flight/>}></Route>
+       <Route path='flight-home' element={<Flighthome/>}></Route>
+       <Route path='home-stay' element = {<Stayhome/>}></Route>
+       <Route path='home-hotel' element = {<Hotelhome/>}></Route>
+       <Route path='home-car' element = {<Car/>}></Route>
+       <Route path='car-list' element = {<Carlisting/>}></Route>
+       {/* <Route path='room-details' element = {<RoomDetails/>}></Route> */}
+       {/* <Route path="/room-details/:hotelId" element={<RoomDetails />} /> */}
+       <Route path="/room-details/:hotelId" element={<Roomdetails />} />
+
+       {/* <Route path="/roomdetails/:hotelId" element={<RoomDetails />} /> */}
+       <Route path="/roombook" element={<Roombook />} />
+       <Route path='bookingpage-02.html' element={<Bookingform/>}></Route>
+       <Route path='bookingpage-03.html' element = {<Bookingform3/>}></Route>
+
+
+       {/* admin  */}
+
+       <Route
+          path="/admin-panel"
+          element={<ProtectedRoute element={Adminhome} />}
+        >
+           <Route path="dashboard" element={<Dashboard />} />
+          {/* <Route path="mysite" element={<HomepageCards />} /> */}
+          <Route path="add-airline" element={<AddAirline />} />
+          <Route path="add-flight" element={<AddFlight />} />  
+          <Route path="add-hotel" element={<HotelAdd/>} />
+          <Route path="add-car" element={<AddCar/>} />
+          <Route path="add-room" element={<AddRoom/>} />
+
+          </Route>
+       </Routes>
+      
+    </div>
+  )
+}
+
+export default AppRoutes
