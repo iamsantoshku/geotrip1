@@ -376,13 +376,13 @@ const Header = () => {
 
 <a className="nav-brand static-show" href="/">
               {isScrolled && isHomePage ? (
-                <img src="src/assets/img/logo-light.png" className="logo" alt="Scrolled Logo" />
+                <img src="/assets/img/logo-light.png" className="logo" alt="Scrolled Logo" />
               ) : (
-                <img src="src/assets/img/logo.png" className="logo" alt="Default Logo" />
+                <img src="/assets/img/logo.png" className="logo" alt="Default Logo" />
               )}
             </a>
             <a className="nav-brand mob-show" href="/">
-              <img src="src/assets/img/logo.png" className="logo" alt="Logo" />
+              <img src="/assets/img/logo.png" className="logo" alt="Logo" />
             </a>
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
@@ -400,7 +400,7 @@ const Header = () => {
                     e.preventDefault();
                     setShowCountryModal(true);
                   }} className="nav-link" data-bs-toggle="modal" data-bs-target="#countryModal">
-                    <img src="src/assets/img/flag/flag.png" className="img-fluid" width="17" alt="Country" />
+                    <img src="/assets/img/flag/flag.png" className="img-fluid" width="17" alt="Country" />
                   </a>
                 </li>
                 <li>
@@ -661,7 +661,7 @@ const Header = () => {
                   }}
                 >
                   <img
-                    src="src/assets/img/flag/flag.png"
+                    src="/assets/img/flag/flag.png"
                     className="img-fluid"
                     width="17"
                     alt="Country"

@@ -1389,7 +1389,6 @@ const BookTicketBox = ({
   return (
     <div
       
-
       className="image-cover hero-header bg-white"
          style={{
            backgroundImage: "url(src/assets/img/banner-7.jpg)",
@@ -1486,7 +1485,6 @@ const BookTicketBox = ({
               </div>
             </div>
           )}
-
           {/* Search Button */}
           <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 -mb-7">
             <div className="form-group mb-0">
