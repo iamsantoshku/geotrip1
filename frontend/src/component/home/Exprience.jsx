@@ -11,7 +11,7 @@ const Exprience = () => {
             <div className="col-xl-5 col-lg-5 col-md-6">
               <div className="position-relative">
                 <img
-                  src="src/assets/img/img-2.png"
+                  src="/assets/img/img-2.png"
                   className="img-fluid rounded-3 position-relative z-1"
                   alt="Experience"
                 />
@@ -32,21 +32,21 @@ const Exprience = () => {
                         <li className="avatar avatar-md">
                           <img
                             className="avatar-img circle"
-                            src="src/assets/img/team-2.jpg"
+                            src="/assets/img/team-2.jpg"
                             alt="avatar"
                           />
                         </li>
                         <li className="avatar avatar-md">
                           <img
                             className="avatar-img circle"
-                            src="src/assets/img/team-3.jpg"
+                            src="/assets/img/team-3.jpg"
                             alt="avatar"
                           />
                         </li>
                         <li className="avatar avatar-md">
                           <img
                             className="avatar-img circle"
-                            src="src/assets/img/team-4.jpg"
+                            src="/assets/img/team-4.jpg"
                             alt="avatar"
                           />
                         </li>

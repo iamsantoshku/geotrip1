@@ -16,7 +16,7 @@ const Googleios = () => {
                       <div className="appLink-captions">
                         <div className="d-flex align-items-center">
                           <div>
-                            <img src="src/assets/img/app-link.png" className="img-fluid" width="65" alt="App Icon" />
+                            <img src="/assets/img/app-link.png" className="img-fluid" width="65" alt="App Icon" />
                           </div>
                           <div className="ps-3">
                             <h2 className="fw-bold fs-2 mb-1">Download App Now!</h2>

@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="footer-widget">
                   <div className="d-flex align-items-start flex-column mb-3">
                     <div className="d-inline-block">
-                      <img src="src/assets/img/logo-light.png" className="img-fluid" width="160" alt="Footer Logo" />
+                      <img src="/assets/img/logo-light.png" className="img-fluid" width="160" alt="Footer Logo" />
                     </div>
                   </div>
                   <div className="footer-add pe-xl-3">
@@ -80,7 +80,7 @@ const Footer = () => {
                 <div className="footer-widget">
                   <h4 className="widget-title">Payment Methods</h4>
                   <div className="pmt-wrap">
-                    <img src="src/assets/img/payment.png" className="img-fluid" alt="Payment Methods" />
+                    <img src="/assets/img/payment.png" className="img-fluid" alt="Payment Methods" />
                   </div>
                   <div className="our-prtwrap mt-4">
                     <div className="prtn-title">
@@ -88,13 +88,13 @@ const Footer = () => {
                     </div>
                     <div className="prtn-thumbs d-flex align-items-center justify-content-start">
                       <div className="pmt-wrap pe-4">
-                        <img src="src/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" />
+                        <img src="/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" />
                       </div>
                       <div className="pmt-wrap pe-4">
-                        <img src="src/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" />
+                        <img src="/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" />
                       </div>
                       <div className="pmt-wrap pe-4">
-                        <img src="src/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" />
+                        <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" />
                       </div>
                     </div>
                   </div>

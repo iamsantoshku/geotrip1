@@ -5,7 +5,7 @@ const VideoHelp = () => {
     <div>
       <section
         className="bg-cover"
-        style={{ background: "url(src/assets/img/bg-3.jpg) no-repeat", backgroundSize: "cover" }}
+        style={{ background: "url(/assets/img/bg-3.jpg) no-repeat", backgroundSize: "cover" }}
         data-overlay="5"
       >
         <div className="ht-150"></div>

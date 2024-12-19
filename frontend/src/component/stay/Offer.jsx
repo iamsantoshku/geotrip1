@@ -3,19 +3,19 @@ import React from 'react';
 const offers = [
   {
     title: "30% Off On Summer Vacation",
-    imageUrl: "src/assets/img/city/ct-3.png",
+    imageUrl: "/assets/img/city/ct-3.png",
     validUntil: "31 March 2023",
     link: "flight-search.html"
   },
   {
     title: "20% Off On Domestic Holiday",
-    imageUrl: "src/assets/img/city/ct-3.png",
+    imageUrl: "/assets/img/city/ct-3.png",
     validUntil: "31 July 2023",
     link: "flight-search.html"
   },
   {
     title: "40% Off On Winter Vacation",
-    imageUrl: "src/assets/img/city/ct-3.png",
+    imageUrl: "/assets/img/city/ct-3.png",
     validUntil: "31 July 2023",
     link: "flight-search.html"
   }

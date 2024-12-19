@@ -15,7 +15,7 @@ const Roomdet2 = () => {
                 <div className="roomavls-groups">
                   <div className="roomavls-thumb mb-2">
                     <img
-                      src="src/assets/img/hotel/hotel-10.jpg"
+                      src="/assets/img/hotel/hotel-10.jpg"
                       className="img-fluid rounded-2"
                       alt="Superior Double Room"
                     />

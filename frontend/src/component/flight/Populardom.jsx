@@ -7,7 +7,7 @@ import React from 'react';
 const Populardom = () => {
   const routes = [
     {
-      imgSrc: "src/assets/img/destination/tr-1.jpg",
+      imgSrc: "/assets/img/destination/tr-1.jpg",
       from: "New York",
       to: "Los Angeles",
       type: "Round-trip",
@@ -15,7 +15,7 @@ const Populardom = () => {
       price: "US$492",
     },
     {
-      imgSrc: "src/assets/img/destination/tr-2.jpg",
+      imgSrc: "/assets/img/destination/tr-2.jpg",
       from: "New York",
       to: "Los Angeles",
       type: "Round-trip",
@@ -23,7 +23,7 @@ const Populardom = () => {
       price: "US$492",
     },
     {
-      imgSrc: "src/assets/img/destination/tr-3.jpg",
+      imgSrc: "/assets/img/destination/tr-3.jpg",
       from: "New York",
       to: "Los Angeles",
       type: "Round-trip",
@@ -31,7 +31,7 @@ const Populardom = () => {
       price: "US$492",
     },
     {
-      imgSrc: "src/assets/img/destination/tr-6.jpg",
+      imgSrc: "/assets/img/destination/tr-6.jpg",
       from: "New York",
       to: "Los Angeles",
       type: "Round-trip",

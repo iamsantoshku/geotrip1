@@ -1391,7 +1391,7 @@ const BookTicketBox = ({
       
       className="image-cover hero-header bg-white"
          style={{
-           backgroundImage: "url(src/assets/img/banner-7.jpg)",
+           backgroundImage: "url(/assets/img/banner-7.jpg)",
            backgroundRepeat: "no-repeat",
         }} 
     >

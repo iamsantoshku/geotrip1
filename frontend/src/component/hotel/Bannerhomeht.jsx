@@ -58,7 +58,7 @@ const Bannerhomeht = () => {
     <div>
       <div
         className="image-cover hero-header bg-white"
-        style={{ background: "url(src/assets/img/banner-5.jpg) no-repeat" }}
+        style={{ background: "url(/assets/img/banner-5.jpg) no-repeat" }}
         data-overlay="5"
       >
         <div className="container">

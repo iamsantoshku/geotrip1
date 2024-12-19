@@ -68,6 +68,13 @@
 //             ))}
 //           </div>
 
+
+
+
+
+
+
+
 //           {/* Explore More Button */}
 //           <div className="row align-items-center justify-content-center">
 //             <div className="col-xl-12 col-lg-12 col-md-12">
@@ -123,14 +130,14 @@ const AttractionCard = ({ imageSrc, cityName, thingsToDo }) => {
 
 const Popularat = () => {
   const attractions = [
-    { imageSrc: 'src/assets/img/attr/attr-7.jpg', cityName: 'Kansas City', thingsToDo: 260 },
-    { imageSrc: 'src/assets/img/attr/attr-5.jpg', cityName: 'Los Angeles', thingsToDo: 240 },
-    { imageSrc: 'src/assets/img/attr/attr-6.jpg', cityName: 'San Antonio', thingsToDo: 312 },
-    { imageSrc: 'src/assets/img/attr/attr-8.jpg', cityName: 'San Francisco', thingsToDo: 220 },
-    { imageSrc: 'src/assets/img/attr/attr-9.jpg', cityName: 'Nashville', thingsToDo: 180 },
-    { imageSrc: 'src/assets/img/attr/attr-10.jpg', cityName: 'Philadelphia', thingsToDo: 612 },
-    { imageSrc: 'src/assets/img/tours/tour-11.jpg', cityName: 'San Jose', thingsToDo: 145 },
-    { imageSrc: 'src/assets/img/tours/tour-10.jpg', cityName: 'San Diego', thingsToDo: 310 },
+    { imageSrc: '/assets/img/attr/attr-7.jpg', cityName: 'Kansas City', thingsToDo: 260 },
+    { imageSrc: '/assets/img/attr/attr-5.jpg', cityName: 'Los Angeles', thingsToDo: 240 },
+    { imageSrc: '/assets/img/attr/attr-6.jpg', cityName: 'San Antonio', thingsToDo: 312 },
+    { imageSrc: '/assets/img/attr/attr-8.jpg', cityName: 'San Francisco', thingsToDo: 220 },
+    { imageSrc: '/assets/img/attr/attr-9.jpg', cityName: 'Nashville', thingsToDo: 180 },
+    { imageSrc: '/assets/img/attr/attr-10.jpg', cityName: 'Philadelphia', thingsToDo: 612 },
+    { imageSrc: '/assets/img/tours/tour-11.jpg', cityName: 'San Jose', thingsToDo: 145 },
+    { imageSrc: '/assets/img/tours/tour-10.jpg', cityName: 'San Diego', thingsToDo: 310 },
   ];
 
   return (

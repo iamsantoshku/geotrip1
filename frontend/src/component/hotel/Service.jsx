@@ -60,28 +60,28 @@
 // 												<ul class="row align-items-center g-3 p-0 mb-0">
 // 													<li class="col-xl-3 col-lg-3 col-md-6 col-6">
 // 														<div class="d-flex flex-column align-items-center rounded border br-dashed p-2">
-// 															<div class="room-alsyruk mb-2"><img src="src/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
+// 															<div class="room-alsyruk mb-2"><img src="/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
 // 																	alt=""></div>
 // 															<div class="tedfr-caps text-center "><span class="text-muted-2">Meeting Room</span></div>
 // 														</div>
 // 													</li>
 // 													<li class="col-xl-3 col-lg-3 col-md-6 col-6">
 // 														<div class="d-flex flex-column align-items-center rounded border br-dashed p-2">
-// 															<div class="room-alsyruk mb-2"><img src="src/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
+// 															<div class="room-alsyruk mb-2"><img src="/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
 // 																	alt=""></div>
 // 															<div class="tedfr-caps text-center "><span class="text-muted-2">Restaurant</span></div>
 // 														</div>
 // 													</li>
 // 													<li class="col-xl-3 col-lg-3 col-md-6 col-6">
 // 														<div class="d-flex flex-column align-items-center rounded border br-dashed p-2">
-// 															<div class="room-alsyruk mb-2"><img src="src/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
+// 															<div class="room-alsyruk mb-2"><img src="/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
 // 																	alt=""></div>
 // 															<div class="tedfr-caps text-center "><span class="text-muted-2">Playground</span></div>
 // 														</div>
 // 													</li>
 // 													<li class="col-xl-3 col-lg-3 col-md-6 col-6">
 // 														<div class="d-flex flex-column align-items-center rounded border br-dashed p-2">
-// 															<div class="room-alsyruk mb-2"><img src="src/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
+// 															<div class="room-alsyruk mb-2"><img src="/assets/img/hotel/hotel-5.jpg" class="img-fluid rounded"
 // 																	alt=""></div>
 // 															<div class="tedfr-caps text-center "><span class="text-muted-2">Night Bars</span></div>
 // 														</div>
@@ -170,7 +170,7 @@ const Service = () => {
                       <li className="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div className="d-flex flex-column align-items-center rounded border br-dashed p-2">
                           <div className="room-alsyruk mb-2">
-                            <img src="src/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
+                            <img src="/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
                           </div>
                           <div className="tedfr-caps text-center">
                             <span className="text-muted-2">Meeting Room</span>
@@ -180,7 +180,7 @@ const Service = () => {
                       <li className="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div className="d-flex flex-column align-items-center rounded border br-dashed p-2">
                           <div className="room-alsyruk mb-2">
-                            <img src="src/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
+                            <img src="/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
                           </div>
                           <div className="tedfr-caps text-center">
                             <span className="text-muted-2">Restaurant</span>
@@ -190,7 +190,7 @@ const Service = () => {
                       <li className="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div className="d-flex flex-column align-items-center rounded border br-dashed p-2">
                           <div className="room-alsyruk mb-2">
-                            <img src="src/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
+                            <img src="/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
                           </div>
                           <div className="tedfr-caps text-center">
                             <span className="text-muted-2">Playground</span>
@@ -200,7 +200,7 @@ const Service = () => {
                       <li className="col-xl-3 col-lg-3 col-md-6 col-6">
                         <div className="d-flex flex-column align-items-center rounded border br-dashed p-2">
                           <div className="room-alsyruk mb-2">
-                            <img src="src/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
+                            <img src="/assets/img/hotel/hotel-5.jpg" className="img-fluid rounded" alt="" />
                           </div>
                           <div className="tedfr-caps text-center">
                             <span className="text-muted-2">Night Bars</span>

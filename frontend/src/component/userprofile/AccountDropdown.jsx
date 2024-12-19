@@ -19,7 +19,7 @@
 //         aria-haspopup="true"
 //         aria-expanded={showDropdown}
 //       >
-//         <img src="src/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
+//         <img src="/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
 //       </button>
 
 //       {/* Dropdown Menu */}
@@ -123,7 +123,7 @@
 //         aria-haspopup="true"
 //         aria-expanded={showDropdown}
 //       >
-//         <img src="src/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
+//         <img src="/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
 //       </button>
 
 //       {/* Dropdown Menu */}
@@ -225,7 +225,7 @@ const AccountDropdown = () => {
         aria-haspopup="true"
         aria-expanded={showDropdown}
       >
-        <img src="src/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
+        <img src="/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
       </button>
 
       {/* Dropdown Menu */}

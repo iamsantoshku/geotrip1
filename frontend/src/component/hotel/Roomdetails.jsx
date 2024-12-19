@@ -64,17 +64,17 @@ const Roomdetails = () => {
                 <div className="galleryGrid typeGrid_3 mt-2">
                   {['hotel-1', 'hotel-2', 'hotel-3', 'hotel-4', 'hotel-5', 'hotel-6', 'hotel-7'].map((image, index) => (
                     <div className="galleryGrid__item" key={index}>
-                      <a href={`src/assets/img/hotel/${image}.jpg`} data-lightbox="roadtrip">
-                        <img src={`src/assets/img/hotel/${image}.jpg`} alt="image" className="rounded-2 img-fluid" />
+                      <a href={`/assets/img/hotel/${image}.jpg`} data-lightbox="roadtrip">
+                        <img src={`/assets/img/hotel/${image}.jpg`} alt="image" className="rounded-2 img-fluid" />
                       </a>
                     </div>
                   ))}
                   <div className="galleryGrid__item position-relative">
-                    <a href="src/assets/img/hotel/hotel-7.jpg" data-lightbox="roadtrip">
-                      <img src="src/assets/img/hotel/hotel-7.jpg" alt="image" className="rounded-2 img-fluid" />
+                    <a href="/assets/img/hotel/hotel-7.jpg" data-lightbox="roadtrip">
+                      <img src="/assets/img/hotel/hotel-7.jpg" alt="image" className="rounded-2 img-fluid" />
                     </a>
                     <div className="position-absolute end-0 bottom-0 mb-3 me-3">
-                      <a href="src/assets/img/hotel/hotel-7.jpg" data-lightbox="roadtrip" className="btn btn-md btn-whites fw-medium text-dark">
+                      <a href="/assets/img/hotel/hotel-7.jpg" data-lightbox="roadtrip" className="btn btn-md btn-whites fw-medium text-dark">
                         <i className="fa-solid fa-caret-right me-1"></i>16 More Photos
                       </a>
                     </div>

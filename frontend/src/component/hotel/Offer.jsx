@@ -5,7 +5,7 @@ const Offer = () => {
     {
       bgColor: 'bg-light-success',
       textColor: 'text-success',
-      imgSrc: 'src/assets/img/flt-3.png',
+      imgSrc: '/assets/img/flt-3.png',
       discount: '$899 off',
       description: 'On Domestic Flights',
       code: 'LOG125F',
@@ -15,7 +15,7 @@ const Offer = () => {
     {
       bgColor: 'bg-light-purple',
       textColor: 'text-purple',
-      imgSrc: 'src/assets/img/goibibo.png',
+      imgSrc: '/assets/img/goibibo.png',
       discount: '$899 off',
       description: 'On Domestic Flights',
       code: 'INT285',
@@ -25,7 +25,7 @@ const Offer = () => {
     {
       bgColor: 'bg-light-danger',
       textColor: 'text-danger',
-      imgSrc: 'src/assets/img/flt-2.png',
+      imgSrc: '/assets/img/flt-2.png',
       discount: '$899 off',
       description: 'On Domestic Flights',
       code: 'LOG125F',
@@ -35,7 +35,7 @@ const Offer = () => {
     {
       bgColor: 'bg-light-warning',
       textColor: 'text-warning',
-      imgSrc: 'src/assets/img/flt-1.png',
+      imgSrc: '/assets/img/flt-1.png',
       discount: '$899 off',
       description: 'On Domestic Flights',
       code: 'LOG125F',

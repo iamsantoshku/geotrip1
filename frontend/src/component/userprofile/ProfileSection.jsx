@@ -99,7 +99,7 @@ const ProfileSection = () => {
                                     <div className="crd-thumbimg text-center">
                                         <div className="p-2 d-flex align-items-center justify-content-center brd">
                                             <img
-                                                src="src/assets/img/team-1.jpg"
+                                                src="/assets/img/team-1.jpg"
                                                 className="img-fluid circle"
                                                 width="120"
                                                 alt=""

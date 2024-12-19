@@ -3,21 +3,21 @@ import { Modal } from 'react-bootstrap';
 
 const Country = ({ show, onClose }) => {
   const suggestedCountries = [
-    { name: 'United States', currency: 'United States Dollar', flag: '/src/assets/img/flag/united-states.png' },
-    { name: 'United Kingdom', currency: 'Pound Sterling', flag: '/src/assets/img/flag/united-kingdom.png' },
-    { name: 'India', currency: 'Indian Rupees', flag: '/src/assets/img/flag/flag.png' },
-    { name: 'Belgium', currency: 'Euro', flag: '/src/assets/img/flag/belgium.png' },
-    { name: 'Brazil', currency: 'Australian Dollar', flag: '/src/assets/img/flag/brazil.png' },
-    { name: 'China', currency: 'Thai Baht', flag: '/src/assets/img/flag/china.png' },
+    { name: 'United States', currency: 'United States Dollar', flag: '/assets/img/flag/united-states.png' },
+    { name: 'United Kingdom', currency: 'Pound Sterling', flag: '/assets/img/flag/united-kingdom.png' },
+    { name: 'India', currency: 'Indian Rupees', flag: '/assets/img/flag/flag.png' },
+    { name: 'Belgium', currency: 'Euro', flag: '/assets/img/flag/belgium.png' },
+    { name: 'Brazil', currency: 'Australian Dollar', flag: '///assets/img/flag/brazil.png' },
+    { name: 'China', currency: 'Thai Baht', flag: '/assets/img/flag/china.png' },
   ];
 
   const allCountries = [
-    { name: 'United States', currency: 'United States Dollar', flag: '/src/assets/img/flag/united-states.png' },
-    { name: 'Vietnam', currency: 'Property Currency', flag: '/src/assets/img/flag/vietnam.png' },
-    { name: 'Turkey', currency: 'Argentine Peso', flag: '/src/assets/img/flag/turkey.png' },
-    { name: 'Spain', currency: 'Azerbaijani Manat', flag: '/src/assets/img/flag/spain.png' },
-    { name: 'Japan', currency: 'Australian Dollar', flag: '/src/assets/img/flag/japan.png' },
-    { name: 'Portugal', currency: 'Brazilian Real', flag: '/src/assets/img/flag/portugal.png' },
+    { name: 'United States', currency: 'United States Dollar', flag: '/assets/img/flag/united-states.png' },
+    { name: 'Vietnam', currency: 'Property Currency', flag: '/assets/img/flag/vietnam.png' },
+    { name: 'Turkey', currency: 'Argentine Peso', flag: '/assets/img/flag/turkey.png' },
+    { name: 'Spain', currency: 'Azerbaijani Manat', flag: '/assets/img/flag/spain.png' },
+    { name: 'Japan', currency: 'Australian Dollar', flag: '/assets/img/flag/japan.png' },
+    { name: 'Portugal', currency: 'Brazilian Real', flag: '/assets/img/flag/portugal.png' },
   ];
 
   const handleCountrySelect = (country) => {

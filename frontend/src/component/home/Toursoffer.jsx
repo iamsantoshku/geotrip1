@@ -68,7 +68,7 @@
 // 									<div class="offers-flex position-relative">
 // 										<div class="offer-tags position-absolute start-0 top-0 mt-2 ms-2"><span
 // 												class="label text-light bg-danger fw-medium">20% Off</span></div>
-// 										<div class="offers-pic"><img src="src/assets/img/city/ct-6.png" class="img-fluid rounded" width="110" alt="">
+// 										<div class="offers-pic"><img src="/assets/img/city/ct-6.png" class="img-fluid rounded" width="110" alt="">
 // 										</div>
 // 									</div>
 // 									<div class="offers-captions ps-3">
@@ -99,7 +99,7 @@
 // 									<div class="offers-flex position-relative">
 // 										<div class="offer-tags position-absolute start-0 top-0 mt-2 ms-2"><span
 // 												class="label text-light bg-danger fw-medium">15% Off</span></div>
-// 										<div class="offers-pic"><img src="src/assets/img/city/ct-5.png" class="img-fluid rounded" width="110" alt="">
+// 										<div class="offers-pic"><img src="/assets/img/city/ct-5.png" class="img-fluid rounded" width="110" alt="">
 // 										</div>
 // 									</div>
 // 									<div class="offers-captions ps-3">
@@ -130,7 +130,7 @@
 // 									<div class="offers-flex position-relative">
 // 										<div class="offer-tags position-absolute start-0 top-0 mt-2 ms-2"><span
 // 												class="label text-light bg-danger fw-medium">30% Off</span></div>
-// 										<div class="offers-pic"><img src="src/assets/img/city/ct-1.png" class="img-fluid rounded" width="110" alt="">
+// 										<div class="offers-pic"><img src="/assets/img/city/ct-1.png" class="img-fluid rounded" width="110" alt="">
 // 										</div>
 // 									</div>
 // 									<div class="offers-captions ps-3">
@@ -211,21 +211,21 @@ const Toursoffer = () => {
   const tours = [
     {
       discount: '20% Off',
-      imageSrc: 'src/assets/img/city/ct-6.png',
+      imageSrc: '/assets/img/city/ct-6.png',
       location: 'Los Angeles',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
       priceRange: '$849 - $999',
     },
     {
       discount: '15% Off',
-      imageSrc: 'src/assets/img/city/ct-5.png',
+      imageSrc: '/assets/img/city/ct-5.png',
       location: 'United Kingdom',
       tripDetails: ['Round-trip', '3D/4N', '2 Person'],
       priceRange: '$399 - $599',
     },
     {
       discount: '30% Off',
-      imageSrc: 'src/assets/img/city/ct-1.png',
+      imageSrc: '/assets/img/city/ct-1.png',
       location: 'France',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
       priceRange: '$569 - $799',

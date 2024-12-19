@@ -232,14 +232,14 @@ const LocationCard = ({ imageSrc, cityName, hotels, rentals }) => {
 // Main Location component
 const Location = () => {
   const locations = [
-    { imageSrc: 'src/assets/img/city/ct-7.png', cityName: 'New York', hotels: 10, rentals: 5 },
-    { imageSrc: 'src/assets/img/city/ct-2.png', cityName: 'Los Angeles', hotels: 12, rentals: 4 },
-    { imageSrc: 'src/assets/img/city/ct-3.png', cityName: 'San Diego', hotels: 8, rentals: 6 },
-    { imageSrc: 'src/assets/img/city/ct-4.png', cityName: 'San Francisco', hotels: 32, rentals: 12 },
-    { imageSrc: 'src/assets/img/city/ct-5.png', cityName: 'Houston', hotels: 22, rentals: 16 },
-    { imageSrc: 'src/assets/img/city/ct-6.png', cityName: 'San Jose', hotels: 25, rentals: 15 },
-    { imageSrc: 'src/assets/img/city/ct-1.png', cityName: 'Denver', hotels: 29, rentals: 14 },
-    { imageSrc: 'src/assets/img/city/ct-10.png', cityName: 'California', hotels: 22, rentals: 12 },
+    { imageSrc: '/assets/img/city/ct-7.png', cityName: 'New York', hotels: 10, rentals: 5 },
+    { imageSrc: '/assets/img/city/ct-2.png', cityName: 'Los Angeles', hotels: 12, rentals: 4 },
+    { imageSrc: '/assets/img/city/ct-3.png', cityName: 'San Diego', hotels: 8, rentals: 6 },
+    { imageSrc: '/assets/img/city/ct-4.png', cityName: 'San Francisco', hotels: 32, rentals: 12 },
+    { imageSrc: '/assets/img/city/ct-5.png', cityName: 'Houston', hotels: 22, rentals: 16 },
+    { imageSrc: '/assets/img/city/ct-6.png', cityName: 'San Jose', hotels: 25, rentals: 15 },
+    { imageSrc: '/assets/img/city/ct-1.png', cityName: 'Denver', hotels: 29, rentals: 14 },
+    { imageSrc: '/assets/img/city/ct-10.png', cityName: 'California', hotels: 22, rentals: 12 },
   ];
 
   return (

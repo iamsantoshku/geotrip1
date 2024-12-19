@@ -6,7 +6,7 @@ const Calltoaction = () => {
       <div
         className="position-relative bg-cover py-5 bg-primary"
         style={{
-          background: "url(src/assets/img/bg.jpg) no-repeat",
+          background: "url(/assets/img/bg.jpg) no-repeat",
           backgroundSize: "cover",
         }}
         data-overlay="5"

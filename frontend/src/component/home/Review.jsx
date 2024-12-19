@@ -5,35 +5,35 @@ const Review = () => {
     {
       name: "Aman Diwakar",
       country: "United States",
-      img: "src/assets/img/team-1.jpg",
+      img: "/assets/img/team-1.jpg",
       stars: 4,
       review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
     },
     {
       name: "Kunal M. Thakur",
       country: "United States",
-      img: "src/assets/img/team-2.jpg",
+      img: "/assets/img/team-2.jpg",
       stars: 4,
       review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
     },
     {
       name: "Divya Talwar",
       country: "United States",
-      img: "src/assets/img/team-3.jpg",
+      img: "/assets/img/team-3.jpg",
       stars: 4,
       review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
     },
     {
       name: "Karan Maheshwari",
       country: "United States",
-      img: "src/assets/img/team-4.jpg",
+      img: "/assets/img/team-4.jpg",
       stars: 4,
       review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
     },
     {
       name: "Ritika Mathur",
       country: "United States",
-      img: "src/assets/img/team-5.jpg",
+      img: "/assets/img/team-5.jpg",
       stars: 4,
       review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
     },
@@ -56,7 +56,7 @@ const Review = () => {
       <section
         className="gray-simple bg-cover"
         style={{
-          background: "url(src/assets/img/reviewbg.png) no-repeat",
+          background: "url(/assets/img/reviewbg.png) no-repeat",
           backgroundSize: "cover",
         }}
       >

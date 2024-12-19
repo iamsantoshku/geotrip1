@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const AvatarUpload = () => {
-  const [imagePreview, setImagePreview] = useState('src/assets/img/team-1.jpg'); // Default avatar image
+  const [imagePreview, setImagePreview] = useState('/assets/img/team-1.jpg'); // Default avatar image
 
   // Handle file upload and update the preview image
   const handleFileChange = (event) => {

@@ -6,21 +6,21 @@ import React from 'react';
 const Offer = () => {
   const offers = [
     {
-      imgSrc: "src/assets/img/air-4.png",
+      imgSrc: "/assets/img/air-4.png",
       discount: "30% Off",
       details: "On Domestic Flight For USA",
       validity: "Valid 31 March 2023",
       bgClass: "bg-light-success",
     },
     {
-      imgSrc: "src/assets/img/air-2.png",
+      imgSrc: "/assets/img/air-2.png",
       discount: "40% Off",
       details: "On International Routes",
       validity: "Valid 31 March 2023",
       bgClass: "bg-light-warning",
     },
     {
-      imgSrc: "src/assets/img/air-5.png",
+      imgSrc: "/assets/img/air-5.png",
       discount: "15% Off",
       details: "On National Routes",
       validity: "Valid 31 March 2023",

@@ -109,7 +109,7 @@
 // 											<div class="single-gstRevws rounded-2 border p-2 d-flex align-items-start mb-3">
 // 												<div class="single-gstRevws-thumb">
 // 													<div class="rounded-2 overflow-hidden w-25 h-25">
-// 														<img src="src/src/assets/img/team-1.jpg" class="img-fluid" alt="">
+// 														<img src="src//assets/img/team-1.jpg" class="img-fluid" alt="">
 // 													</div>
 // 												</div>
 // 												<div class="single-gstRevws-caps ps-3">
@@ -158,7 +158,7 @@
 // 											<div class="single-gstRevws rounded-2 border p-2 d-flex align-items-start mb-3">
 // 												<div class="single-gstRevws-thumb">
 // 													<div class="rounded-2 overflow-hidden w-25 h-25">
-// 														<img src="src/src/assets/img/team-3.jpg" class="img-fluid" alt="">
+// 														<img src="src//assets/img/team-3.jpg" class="img-fluid" alt="">
 // 													</div>
 // 												</div>
 // 												<div class="single-gstRevws-caps ps-3">
@@ -315,11 +315,12 @@ const GuestReview = () => {
             <div className="row align-items-center">
               <div className="col-xl-12 col-lg-12 col-md-12">
                 <div className="gstRevws-groups">
+
                   {/* Single Review */}
                   <div className="single-gstRevws rounded-2 border p-2 d-flex align-items-start mb-3">
                     <div className="single-gstRevws-thumb">
                       <div className="rounded-2 overflow-hidden w-25 h-25">
-                        <img src="src/assets/img/team-1.jpg" className="img-fluid" alt="" />
+                        <img src="/assets/img/team-1.jpg" className="img-fluid" alt="" />
                       </div>
                     </div>
                     <div className="single-gstRevws-caps ps-3">

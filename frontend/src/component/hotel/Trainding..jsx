@@ -3,21 +3,21 @@ import React from 'react';
 const Trending = () => {
   const articles = [
     {
-      imgSrc: "src/assets/img/blog-1.jpg",
+      imgSrc: "/assets/img/blog-1.jpg",
       category: "Destination",
       title: "Make Your Next Journey Delhi To Paris in Comfortable And Best Price",
       description: "Think of a news blog that's filled with content hourly. Besides, random text risks being unintentionally humorous or offensive on the day of going live.",
       link: "#"
     },
     {
-      imgSrc: "src/assets/img/blog-2.jpg",
+      imgSrc: "/assets/img/blog-2.jpg",
       category: "Journey",
       title: "Make Your Next Journey Delhi To Paris in Comfortable And Best Price",
       description: "Think of a news blog that's filled with content hourly. Besides, random text risks being unintentionally humorous or offensive on the day of going live.",
       link: "#"
     },
     {
-      imgSrc: "src/assets/img/blog-3.jpg",
+      imgSrc: "/assets/img/blog-3.jpg",
       category: "Business",
       title: "Make Your Next Journey Delhi To Paris in Comfortable And Best Price",
       description: "Think of a news blog that's filled with content hourly. Besides, random text risks being unintentionally humorous or offensive on the day of going live.",

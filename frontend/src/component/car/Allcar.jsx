@@ -7,7 +7,7 @@ const Allcar = () => {
   const cars = [
     {
       name: 'Carmy Accord',
-      image: 'src/assets/img/car.jpg',
+      image: '/assets/img/car.jpg',
       kmIncluded: 600,
       kmRate: 15,
       type: 'SEDAN',
@@ -23,7 +23,7 @@ const Allcar = () => {
     },
     {
         name: 'Carmy Accord',
-        image: 'src/assets/img/car.jpg',
+        image: '/assets/img/car.jpg',
         kmIncluded: 600,
         kmRate: 15,
         type: 'SEDAN',
@@ -39,7 +39,7 @@ const Allcar = () => {
       },
       {
         name: 'Carmy Accord',
-        image: 'src/assets/img/car.jpg',
+        image: '/assets/img/car.jpg',
         kmIncluded: 600,
         kmRate: 15,
         type: 'SEDAN',
@@ -55,7 +55,7 @@ const Allcar = () => {
       },
       {
         name: 'Carmy Accord',
-        image: 'src/assets/img/car.jpg',
+        image: '/assets/img/car.jpg',
         kmIncluded: 600,
         kmRate: 15,
         type: 'SEDAN',
@@ -71,7 +71,7 @@ const Allcar = () => {
       },
       {
         name: 'Carmy Accord',
-        image: 'src/assets/img/car.jpg',
+        image: '/assets/img/car.jpg',
         kmIncluded: 600,
         kmRate: 15,
         type: 'SEDAN',
@@ -87,7 +87,7 @@ const Allcar = () => {
       },
       {
         name: 'Carmy Accord',
-        image: 'src/assets/img/car.jpg',
+        image: '/assets/img/car.jpg',
         kmIncluded: 600,
         kmRate: 15,
         type: 'SEDAN',
@@ -103,7 +103,7 @@ const Allcar = () => {
       },
     {
       name: 'Toyota Camry',
-      image: 'src/assets/img/car.jpg',
+      image: '/assets/img/car.jpg',
       kmIncluded: 500,
       kmRate: 12,
       type: 'SUV',

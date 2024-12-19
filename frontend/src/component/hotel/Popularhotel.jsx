@@ -94,7 +94,7 @@ const Popularhotel = () => {
   // Sample data for hotels
   const hotels = [
     {
-      imgSrc: "src/assets/img/hotel/hotel-8.jpg",
+      imgSrc: "/assets/img/hotel/hotel-8.jpg",
       name: "Value Hotel Balestier",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -105,7 +105,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-      imgSrc: "src/assets/img/hotel/hotel-5.jpg",
+      imgSrc: "/assets/img/hotel/hotel-5.jpg",
       name: "Mercure Singapore Tyrwhitt",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -116,7 +116,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-      imgSrc: "src/assets/img/hotel/hotel-4.jpg",
+      imgSrc: "/assets/img/hotel/hotel-4.jpg",
       name: "Hotel Calmo Chinatown",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -127,7 +127,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-      imgSrc: "src/assets/img/hotel/hotel-8.jpg",
+      imgSrc: "/assets/img/hotel/hotel-8.jpg",
       name: "Value Hotel Balestier",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -138,7 +138,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-      imgSrc: "src/assets/img/hotel/hotel-4.jpg",
+      imgSrc: "/assets/img/hotel/hotel-4.jpg",
       name: "Hotel Calmo Chinatown",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -149,7 +149,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-      imgSrc: "src/assets/img/hotel/hotel-5.jpg",
+      imgSrc: "/assets/img/hotel/hotel-5.jpg",
       name: "Hotel Calmo Chinatown",
       location: "Delhi",
       distance: "3.5 Km From Delhi",
@@ -160,7 +160,7 @@ const Popularhotel = () => {
       discount: "15%",
     },
     {
-        imgSrc: "src/assets/img/hotel/hotel-6.jpg",
+        imgSrc: "/assets/img/hotel/hotel-6.jpg",
         name: "Hotel Calmo Chinatown",
         location: "Delhi",
         distance: "3.5 Km From Delhi",
@@ -171,7 +171,7 @@ const Popularhotel = () => {
         discount: "15%",
       },
       {
-        imgSrc: "src/assets/img/hotel/hotel-7.jpg",
+        imgSrc: "/assets/img/hotel/hotel-7.jpg",
         name: "Hotel Calmo Chinatown",
         location: "Delhi",
         distance: "3.5 Km From Delhi",

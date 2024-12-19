@@ -199,7 +199,7 @@ const SidebarFilter = () => {
                                                 <div
                                                     className="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
                                                     <div className="frms-flex d-flex align-items-center">
-                                                        <div className="frm-slicing-img"><img src="src/assets/img/air-1.png" className="img-fluid" width="25"
+                                                        <div className="frm-slicing-img"><img src="/assets/img/air-1.png" className="img-fluid" width="25"
                                                             alt="" /></div>
                                                         <div className="frm-slicing-title ps-2"><span className="text-muted-2">Air India</span></div>
                                                     </div>
@@ -219,7 +219,7 @@ const SidebarFilter = () => {
                                                 <div
                                                     className="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
                                                     <div className="frms-flex d-flex align-items-center">
-                                                        <div className="frm-slicing-img"><img src="src/assets/img/air-2.png" className="img-fluid" width="25"
+                                                        <div className="frm-slicing-img"><img src="/assets/img/air-2.png" className="img-fluid" width="25"
                                                             alt="" /></div>
                                                         <div className="frm-slicing-title ps-2"><span className="text-muted-2">Jal Airlines</span></div>
                                                     </div>
@@ -239,7 +239,7 @@ const SidebarFilter = () => {
                                                 <div
                                                     className="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
                                                     <div className="frms-flex d-flex align-items-center">
-                                                        <div className="frm-slicing-img"><img src="src/assets/img/air-3.png" className="img-fluid" width="25"
+                                                        <div className="frm-slicing-img"><img src="/assets/img/air-3.png" className="img-fluid" width="25"
                                                             alt="" /></div>
                                                         <div className="frm-slicing-title ps-2"><span className="text-muted-2">Indigo</span></div>
                                                     </div>
@@ -259,7 +259,7 @@ const SidebarFilter = () => {
                                                 <div
                                                     className="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
                                                     <div className="frms-flex d-flex align-items-center">
-                                                        <div className="frm-slicing-img"><img src="src/assets/img/air-4.png" className="img-fluid" width="25"
+                                                        <div className="frm-slicing-img"><img src="/assets/img/air-4.png" className="img-fluid" width="25"
                                                             alt="" /></div>
                                                         <div className="frm-slicing-title ps-2"><span className="text-muted-2">Air Asia</span></div>
                                                     </div>
@@ -279,7 +279,7 @@ const SidebarFilter = () => {
                                                 <div
                                                     className="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
                                                     <div className="frms-flex d-flex align-items-center">
-                                                        <div className="frm-slicing-img"><img src="src/assets/img/air-5.png" className="img-fluid" width="25"
+                                                        <div className="frm-slicing-img"><img src="/assets/img/air-5.png" className="img-fluid" width="25"
                                                             alt="" /></div>
                                                         <div className="frm-slicing-title ps-2"><span className="text-muted-2">Vistara</span></div>
                                                     </div>

@@ -5,7 +5,7 @@ const Bannercar = () => {
         <div>
             <div
                 className="image-cover hero-header bg-white"
-                style={{ background: 'url(src/assets/img/car-bg.jpg) no-repeat' }}
+                style={{ background: 'url(/assets/img/car-bg.jpg) no-repeat' }}
                 data-overlay="5"
             >
                 <div className="container">

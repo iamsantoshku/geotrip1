@@ -207,7 +207,7 @@ const Filtersidebar = () => {
 														<div
 															class="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
 															<div class="frms-flex d-flex align-items-center">
-																<div class="frm-slicing-img"><img src="src/assets/img/air-1.png" class="img-fluid" width="25"
+																<div class="frm-slicing-img"><img src="/assets/img/air-1.png" class="img-fluid" width="25"
 																		alt=""/></div>
 																<div class="frm-slicing-title ps-2"><span class="text-muted-2">Hyundai</span></div>
 															</div>
@@ -227,7 +227,7 @@ const Filtersidebar = () => {
 														<div
 															class="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
 															<div class="frms-flex d-flex align-items-center">
-																<div class="frm-slicing-img"><img src="src/assets/img/air-2.png" class="img-fluid" width="25"
+																<div class="frm-slicing-img"><img src="/assets/img/air-2.png" class="img-fluid" width="25"
 																		alt=""/></div>
 																<div class="frm-slicing-title ps-2"><span class="text-muted-2">Maruti Suzuki</span>
 																</div>
@@ -248,7 +248,7 @@ const Filtersidebar = () => {
 														<div
 															class="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
 															<div class="frms-flex d-flex align-items-center">
-																<div class="frm-slicing-img"><img src="src/assets/img/air-3.png" class="img-fluid" width="25"
+																<div class="frm-slicing-img"><img src="/assets/img/air-3.png" class="img-fluid" width="25"
 																		alt=""/></div>
 																<div class="frm-slicing-title ps-2"><span class="text-muted-2">Tata</span></div>
 															</div>
@@ -268,7 +268,7 @@ const Filtersidebar = () => {
 														<div
 															class="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
 															<div class="frms-flex d-flex align-items-center">
-																<div class="frm-slicing-img"><img src="src/assets/img/air-4.png" class="img-fluid" width="25"
+																<div class="frm-slicing-img"><img src="/assets/img/air-4.png" class="img-fluid" width="25"
 																		alt=""/></div>
 																<div class="frm-slicing-title ps-2"><span class="text-muted-2">Mahindra</span></div>
 															</div>
@@ -288,7 +288,7 @@ const Filtersidebar = () => {
 														<div
 															class="frm-slicing-end d-flex align-items-center justify-content-between full-width ps-1">
 															<div class="frms-flex d-flex align-items-center">
-																<div class="frm-slicing-img"><img src="src/assets/img/air-5.png" class="img-fluid" width="25"
+																<div class="frm-slicing-img"><img src="/assets/img/air-5.png" class="img-fluid" width="25"
 																		alt=""/></div>
 																<div class="frm-slicing-title ps-2"><span class="text-muted-2">Kia</span></div>
 															</div>

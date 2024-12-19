@@ -20,7 +20,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "120 Rooms",
-    image: "src/assets/img/attr/attr-1.jpg",
+    image: "/assets/img/attr/attr-1.jpg",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "78 Rooms",
-    image: "src/assets/img/attr/attr-2.jpg",
+    image: "/assets/img/attr/attr-2.jpg",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "65 Rooms",
-    image: "src/assets/img/attr/attr-3.jpg",
+    image: "/assets/img/attr/attr-3.jpg",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "23 Rooms",
-    image: "src/assets/img/attr/attr-4.jpg",
+    image: "/assets/img/attr/attr-4.jpg",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "45 Rooms",
-    image: "src/assets/img/attr/attr-5.jpg",
+    image: "/assets/img/attr/attr-5.jpg",
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "35 Rooms",
-    image: "src/assets/img/attr/attr-6.jpg",
+    image: "/assets/img/attr/attr-6.jpg",
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "48 Rooms",
-    image: "src/assets/img/attr/attr-8.jpg",
+    image: "/assets/img/attr/attr-8.jpg",
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ const venueData = [
       "Cicero famously orated against his political opponent Lucius Sergius Catilina.",
     priceRange: "$492 - $799",
     rooms: "85 Rooms",
-    image: "src/assets/img/attr/attr-7.jpg",
+    image: "/assets/img/attr/attr-7.jpg",
   },
 ];
 
