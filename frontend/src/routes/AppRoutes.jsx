@@ -26,6 +26,10 @@ import Roomdetails from '../pages/Roomdetails';
 import Roombook from '../component/room/Roombook';
 import Bookingform from '../component/room/Bookingform';
 import Bookingform3 from '../component/room/Bookingform3';
+import Successfull from '../component/room/Successfull';
+import TicketBooking from '../component/flight/TicketBooking';
+import Cardetails from '../component/carbooking/Cardetails';
+
 
 
 const ProtectedRoute = ({ element: Element, ...rest }) => {
@@ -52,11 +56,20 @@ const AppRoutes = () => {
        {/* <Route path='room-details' element = {<RoomDetails/>}></Route> */}
        {/* <Route path="/room-details/:hotelId" element={<RoomDetails />} /> */}
        <Route path="/room-details/:hotelId" element={<Roomdetails />} />
+       <Route path="/book/:id" element={<TicketBooking />} />
 
        {/* <Route path="/roomdetails/:hotelId" element={<RoomDetails />} /> */}
+       {/* correct  */}
        <Route path="/roombook" element={<Roombook />} />
        <Route path='bookingpage-02.html' element={<Bookingform/>}></Route>
        <Route path='bookingpage-03.html' element = {<Bookingform3/>}></Route>
+       <Route path='payment-complete' element = {<Successfull/>}></Route>
+
+       
+       <Route path='carbook' element = {<Cardetails/>}></Route>
+{/* <Route path="/hotel/:hotelId" element={<RoomDetails />} />
+        <Route path="/booking/:hotelId" element={<Bookingform />} />
+        <Route path="/finalize/:hotelId" element={<Bookingform3 />} /> */}
 
 
        {/* admin  */}

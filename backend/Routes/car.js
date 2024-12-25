@@ -5,7 +5,9 @@ import express from 'express'
 const router = express.Router();
 import {
   addCar,
+  // searchCar,
   searchCar,
+  // searchCars,
   getCar,
   getAllCars,
 } from '../controller/carController.js' // Import controller functions

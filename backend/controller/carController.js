@@ -40,6 +40,7 @@ export const addCar = async (req, res) => {
         rating: req.body.rating,
         isBooked: req.body.isBooked || false,
         bookingDetails: req.body.bookingDetails || {},
+        location:req.body.location,
       });
   
       // Save the new car to the database
@@ -52,22 +53,89 @@ export const addCar = async (req, res) => {
   };
 
 // Search Cars (dynamic filters)
+// export const searchCar = async (req, res) => {
+//   const { name, type, transmission, fuel } = req.query;
+
+//   const filters = {};
+//   if (name) filters.name = { $regex: name, $options: 'i' }; // Case-insensitive search
+//   if (type) filters.type = type;
+//   if (transmission) filters.transmission = transmission;
+//   if (fuel) filters.fuel = fuel;
+
+//   try {
+//     const cars = await Car.find(filters);
+//     res.status(200).json(cars);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// };
+
+
+// export const searchCars = async (req, res) => {
+//   try {
+//     const { pickupLocation, dropLocation, dateRange } = req.body;
+
+//     // Filter cars based on search criteria
+//     const cars = await Car.find({
+//       pickupLocation: { $regex: new RegExp(pickupLocation, 'i') }, // Case insensitive
+//       dropLocation: { $regex: new RegExp(dropLocation, 'i') },
+//       availableDates: {
+//         $gte: new Date(dateRange.start), 
+//         $lte: new Date(dateRange.end),
+//       },
+//     });
+
+//     res.status(200).json({ success: true, cars });
+//   } catch (error) {
+//     res.status(500).json({ success: false, message: 'Server Error', error });
+//   }
+// };
+
+
 export const searchCar = async (req, res) => {
-  const { name, type, transmission, fuel } = req.query;
-
-  const filters = {};
-  if (name) filters.name = { $regex: name, $options: 'i' }; // Case-insensitive search
-  if (type) filters.type = type;
-  if (transmission) filters.transmission = transmission;
-  if (fuel) filters.fuel = fuel;
-
   try {
-    const cars = await Car.find(filters);
-    res.status(200).json(cars);
+    const { location, pickUpDate, dropOffDate } = req.query;
+
+    // Validate required fields
+    if (!location || !pickUpDate || !dropOffDate) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide location, pick-up date, and drop-off date.",
+      });
+    }
+
+    // Convert dates to ISO format
+    const pickUp = new Date(pickUpDate);
+    const dropOff = new Date(dropOffDate);
+
+    if (pickUp >= dropOff) {
+      return res.status(400).json({
+        success: false,
+        message: "Drop-off date must be after pick-up date.",
+      });
+    }
+
+    // Query to find available cars
+    const availableCars = await Car.find({
+      location: { $regex: location, $options: "i" }, // Case-insensitive search
+      // "availability.from": { $lte: pickUp },
+      // "availability.to": { $gte: dropOff },
+    });
+
+    // Respond with the found cars
+    res.status(200).json({
+      success: true,
+      data: availableCars,
+    });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    console.error("Error searching cars:", error);
+    res.status(500).json({
+      success: false,
+      message: "An error occurred while searching for cars.",
+    });
   }
 };
+
 
 // Get a Single Car by ID
 export const getCar = async (req, res) => {

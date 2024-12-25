@@ -13,6 +13,7 @@ import path from 'path'
 // import carRoutes from './Routes/car.js'
 import carRoutes from './Routes/car.js'
 import roomRoutes from './Routes/room.js'
+import ticketRoute from './Routes/tickets.js'
 
 dotenv.config();
 
@@ -60,6 +61,7 @@ app.use('/api/v1/hotels', hotelRoutes);
 app.use("/api/v1/bookings", bookingRoute);
 app.use('/api/v1/cars', carRoutes);
 app.use("/api/v1/rooms", roomRoutes);
+app.use("/api/v1/tickets", ticketRoute);
 
 app.listen(4040, ()=>{
     connectDB();

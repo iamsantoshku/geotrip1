@@ -21,6 +21,7 @@ const AddCar = () => {
     reviews: 0,
     rating: 0,
     isBooked: false,
+    location: "",
     bookingDetails: {
       userId: "",
       fromDate: "",
@@ -97,6 +98,18 @@ const AddCar = () => {
               type="text"
               name="name"
               value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full p-2 border rounded"
+            />
+          </div>
+
+          <div>
+            <label>Location</label>
+            <input
+              type="text"
+              name="location"
+              value={formData.location}
               onChange={handleChange}
               required
               className="w-full p-2 border rounded"

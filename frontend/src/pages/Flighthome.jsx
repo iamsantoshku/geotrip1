@@ -238,7 +238,7 @@ import BookTicketBox from "../component/flight/BookTicketBox";
 import SearchedFlightCards from "../component/card/SearchedFlightCards.jsx";
 import { toast } from "react-toastify";
 import { BACKENDURL } from "../Config/Config";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Offer from '../component/flight/Offer'
 import Populardom from '../component/flight/Populardom'
 import Populardest from '../component/flight/Populardest'
@@ -373,7 +373,14 @@ const Flighthome = () => {
       {filteredFlights.length > 0 && (
         <div className="mt-5">
           {filteredFlights.map((flight, index) => (
+            <NavLink to={`/book/${flight._id}`}
+            key={index}
+            className="lg:w-full w-fit"
+            >
             <SearchedFlightCards flight={flight} key={index} />
+
+            </NavLink>
+            
           ))}
         </div>
       )}
