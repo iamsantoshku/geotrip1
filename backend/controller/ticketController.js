@@ -149,7 +149,6 @@ import Ticket from "../models/ticketShema.js"
 
 export const getTicket = async (req, res) => {
   const { uid } = req.params;
-
   try {
     const ticket = await Ticket.findOne({ uid });
 

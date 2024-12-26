@@ -406,7 +406,7 @@ import HotelsTab from '../card/HotelsTab';
 
 const HeroSearch = () => {
   return (
-    <div className="search-explore-wrap">
+    <div className="search-explore-wrap lg:px-10">
       <div className="container">
         <div className="row">
           <div className="col-xl-12 col-lg-12 col-md-12">

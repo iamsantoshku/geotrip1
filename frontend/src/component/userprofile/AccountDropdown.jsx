@@ -192,8 +192,6 @@
 
 
 
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -259,13 +257,13 @@ const AccountDropdown = () => {
               </a>
             </li>
             <li>
-              <a href="travelers.html">
+              <a href="travelers">
                 <i className="fa-solid fa-user-group me-2"></i>
                 Travelers
               </a>
             </li>
             <li>
-              <a href="payment-detail.html">
+              <a href="payment-detail">
                 <i className="fa-solid fa-wallet me-2"></i>
                 Payment Details
               </a>

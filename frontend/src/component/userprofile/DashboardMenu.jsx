@@ -9,19 +9,19 @@ const DashboardMenu = () => {
                     <div className="col-xl-12 col-lg-12 col-md-12">
                         <ul className="user-Dashboard-menu">
                             <li className="active">
-                                <a href="my-profile.html">
+                                <a href="my-profile">
                                     <i className="fa-regular fa-id-card me-2"></i>
                                     My Profile
                                 </a>
                             </li>
                             <li>
-                                <a href="my-booking.html">
+                                <a href="my-bookings">
                                     <i className="fa-solid fa-ticket me-2"></i>
                                     My Booking
                                 </a>
                             </li>
                             <li>
-                                <a href="travelers.html">
+                                <a href="travelers">
                                     <i className="fa-solid fa-user-group me-2"></i>
                                     Travelers
                                 </a>

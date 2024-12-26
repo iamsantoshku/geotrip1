@@ -29,6 +29,9 @@ import Bookingform3 from '../component/room/Bookingform3';
 import Successfull from '../component/room/Successfull';
 import TicketBooking from '../component/flight/TicketBooking';
 import Cardetails from '../component/carbooking/Cardetails';
+import MyBookings from '../component/userprofile/MyBookings';
+import Flightticket from '../component/ticket/Flightticket';
+
 
 
 
@@ -64,6 +67,8 @@ const AppRoutes = () => {
        <Route path='bookingpage-02.html' element={<Bookingform/>}></Route>
        <Route path='bookingpage-03.html' element = {<Bookingform3/>}></Route>
        <Route path='payment-complete' element = {<Successfull/>}></Route>
+       <Route path='my-bookings' element = {<MyBookings/>}></Route>
+       <Route path="/ticket/:ticketId" element={<Flightticket />} />
 
        
        <Route path='carbook' element = {<Cardetails/>}></Route>

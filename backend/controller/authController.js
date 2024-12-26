@@ -2,6 +2,8 @@ import User from "../models/userSchema.js";
 // import Ticket from "../models/ticketSchema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import Ticket from "../models/ticketShema.js";
+
 
 // const jwtSecretKey = "dkfjdslkfjlk43546kjsSak56g4"
   // "f64b6790ba78cd243e0c5849dc5e7fd97c47e8f37234fe6403b1432a4a7705caadcc729936593a00939b3bd0e3554533961121715e4ffeac1b84cc10835a4d95";
@@ -92,25 +94,125 @@ export const loginUser = async (req, res) => {
   }
 };
 
+
+// export const getUser = async (req, res) => {
+//   try {
+//     console.log(req.userId, "req.userid");
+//     const user = await User.findById(req.userId);
+
+//     if (!user) {
+//       return res.status(404).json({ message: "User not found" });
+//     }
+
+//     const tickets = user.bookings;
+//     const ticketObjects = [];
+
+//     for (let i = 0; i < tickets.length; i++) {
+//       const ticket = await Ticket.findById(tickets[i]);
+//       ticketObjects.push(ticket); // Add each ticket to the array
+//     }
+
+//     return res.status(200).json({ user, tickets: ticketObjects }); // Include tickets array in the response
+//   } catch (error) {
+//     return res.status(500).json({ message: "Something went wrong" });
+//   }
+// };
+
+
+
 export const getUser = async (req, res) => {
   try {
-    console.log(req.userId, "req.userid");
+    console.log(req.userId, "req.userId"); // Log user ID
+    if (!req.userId) {
+      return res.status(400).json({ message: "User ID not found in request" });
+    }
+
     const user = await User.findById(req.userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const tickets = user.flightBookings || [];
+    const ticketObjects = [];
+
+    for (let i = 0; i < tickets.length; i++) {
+      const ticket = await Ticket.findById(tickets[i]);
+      if (!ticket) {
+        console.error(`Ticket not found: ${tickets[i]}`);
+        continue;
+      }
+      ticketObjects.push(ticket);
+    }
+
+    return res.status(200).json({ user, tickets: ticketObjects });
+  } catch (error) {
+    console.error("Error in getUser:", error); // Detailed error log
+    return res.status(500).json({ message: "Something went wrong", error: error.message });
+  }
+};
+
+
+
+export const getUserBookings = async (req, res) => {
+  try {
+    const user = await User.findById(req.userId)
+      .populate("hotelBookings")
+      .populate("flightBookings")
+      .populate("carBookings");
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    const tickets = user.bookings;
-    const ticketObjects = [];
-
-    for (let i = 0; i < tickets.length; i++) {
-      const ticket = await Ticket.findById(tickets[i]);
-      ticketObjects.push(ticket); // Add each ticket to the array
-    }
-
-    return res.status(200).json({ user, tickets: ticketObjects }); // Include tickets array in the response
+    res.status(200).json({
+      hotelBookings: user.hotelBookings,
+      flightBookings: user.flightBookings,
+      carBookings: user.carBookings,
+    });
   } catch (error) {
-    return res.status(500).json({ message: "Something went wrong" });
+    console.error("Error fetching bookings:", error);
+    res.status(500).json({ message: "Something went wrong", error: error.message });
   }
 };
+
+
+
+// export const getUser = async (req, res) => {
+//   try {
+//     // Ensure userId exists
+//     if (!req.userId) {
+//       return res.status(400).json({ message: "User ID is required" });
+//     }
+
+//     console.log(req.userId, "req.userId");
+
+//     // Find user by ID
+//     const user = await User.findById(req.userId);
+
+//     if (!user) {
+//       return res.status(404).json({ message: "User not found" });
+//     }
+
+//     // Retrieve tickets in one query
+//     const tickets = await Ticket.find({ _id: { $in: user.bookings } });
+
+//     // Respond with user and their tickets
+//     return res.status(200).json({
+//       user: {
+//         id: user._id,
+//         firstName: user.firstName,
+//         lastName: user.lastName,
+//         email: user.email,
+//         mobile: user.mobile,
+//         dob: user.dob,
+//         gender: user.gender,
+//         avatar: user.avatar,
+//         about: user.about,
+//       },
+//       tickets,
+//     });
+//   } catch (error) {
+//     console.error("Error in getUser:", error.message);
+//     return res.status(500).json({ message: "Something went wrong", error: error.message });
+//   }
+// };
