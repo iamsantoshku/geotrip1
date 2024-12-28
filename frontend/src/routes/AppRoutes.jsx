@@ -31,7 +31,8 @@ import TicketBooking from '../component/flight/TicketBooking';
 import Cardetails from '../component/carbooking/Cardetails';
 import MyBookings from '../component/userprofile/MyBookings';
 import Flightticket from '../component/ticket/Flightticket';
-
+import UserList from '../admin/Userlist';
+import AllUserBookings from '../admin/AllUserBookings';
 
 
 
@@ -90,6 +91,8 @@ const AppRoutes = () => {
           <Route path="add-hotel" element={<HotelAdd/>} />
           <Route path="add-car" element={<AddCar/>} />
           <Route path="add-room" element={<AddRoom/>} />
+          <Route path='clients' element={<UserList/>}></Route>
+          <Route path='ticketlist' element = {<AllUserBookings/>}></Route>
 
           </Route>
        </Routes>

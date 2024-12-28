@@ -152,7 +152,6 @@ export const getUser = async (req, res) => {
 };
 
 
-
 export const getUserBookings = async (req, res) => {
   try {
     const user = await User.findById(req.userId)
@@ -174,6 +173,117 @@ export const getUserBookings = async (req, res) => {
     res.status(500).json({ message: "Something went wrong", error: error.message });
   }
 };
+
+
+export const getAllBookings = async (req, res) => {
+  try {
+      // Fetch all users and their associated bookings
+      const users = await User.find({}).populate('hotelBookings flightBookings carBookings');
+      res.status(200).json({ success: true, users });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: 'Failed to fetch bookings' });
+  }
+};
+
+
+// export const getAllUserBookings = async (req, res) => {
+//   try {
+//     // Fetch all users and populate their bookings
+//     const users = await User.find({})
+//       .populate("hotelBookings")
+//       .populate("flightBookings")
+//       .populate("carBookings");
+
+//     if (!users.length) {
+//       return res.status(404).json({ message: "No users found" });
+//     }
+
+//     // Map through users to structure booking details
+//     const userBookings = users.map((user) => ({
+//       user: {
+//         id: user._id,
+//         name: user.name,
+//         email: user.email,
+//       },
+//       hotelBookings: user.hotelBookings,
+//       flightBookings: user.flightBookings,
+//       carBookings: user.carBookings,
+//     }));
+
+//     res.status(200).json({ users: userBookings });
+//   } catch (error) {
+//     console.error("Error fetching all user bookings:", error);
+//     res.status(500).json({ message: "Something went wrong", error: error.message });
+//   }
+// };
+
+
+export const getAllUserBookings = async (req, res) => {
+  try {
+    const users = await User.find({})
+      .populate("hotelBookings")
+      .populate("flightBookings")
+      .populate("carBookings");
+
+    if (!users || users.length === 0) {
+      return res.status(404).json({ message: "No users found" });
+    }
+
+    const userBookings = users.map((user) => ({
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+      },
+      hotelBookings: user.hotelBookings,
+      flightBookings: user.flightBookings,
+      carBookings: user.carBookings,
+    }));
+
+    res.status(200).json({ users: userBookings });
+  } catch (error) {
+    console.error("Error fetching all user bookings:", error.message);
+    res.status(500).json({ message: "Something went wrong", error: error.message });
+  }
+};
+
+
+
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find({}); // Fetch all users
+
+    if (!users.length) {
+      return res.status(404).json({ message: "No users found" });
+    }
+
+    // Map through the users to fetch their booking details
+    const userDetails = await Promise.all(
+      users.map(async (user) => {
+        const tickets = await Promise.all(
+          user.flightBookings.map(async (bookingId) => await Ticket.findById(bookingId))
+        );
+
+        return {
+          user: {
+            id: user._id,
+            name: user.name,
+            email: user.email,
+          },
+          tickets,
+        };
+      })
+    );
+
+    return res.status(200).json({ users: userDetails });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    return res.status(500).json({ message: "Something went wrong" });
+  }
+};
+
 
 
 

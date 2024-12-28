@@ -56,14 +56,14 @@ const Adminhome = () => {
           </NavLink>
           
           <NavLink
-            to="/admin/clients"
+            to="/admin-panel/clients"
             className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
           >
             <FiUsers className="text-yellow-500" />
             Clients
           </NavLink>
           <NavLink
-            to="/admin/ticketlist"
+            to="/admin-panel/ticketlist"
             className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
           >
             <FiList className="text-orange-500" />

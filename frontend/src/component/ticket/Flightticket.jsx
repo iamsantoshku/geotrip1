@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 // import TicketContainer fro";
-import TicketContainer from "./Ticketcontainer";
+// import TicketContainer from "./TicketContainer";
+import TicketContainer from "./TicketContainer";
 import { BACKENDURL } from "../../Config/Config";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 import { IoShareSocialSharp } from "react-icons/io5";
-import { IoPrint } from "react-icons/io5";
+// import { IoPrint } from "react-icons/io5";
 import { IoMdDownload } from "react-icons/io";
 
 const Flightticket = () => {
@@ -55,7 +56,7 @@ const Flightticket = () => {
   };
 
   return (
-    <div className="w-full min-h-[100vh] bg-blue-300 mt-5 flex justify-center items-center bg-[url(https://images.unsplash.com/photo-1542349314-587b18ea1c2a)] bg-cover bg-center bg-no-repeat">
+    <div className="w-full min-h-[100vh] bg-blue-300 flex justify-center items-center bg-[url(https://images.unsplash.com/photo-1542349314-587b18ea1c2a)] bg-cover bg-center bg-no-repeat">
       <div className="w-full min-h-[500px] mx-auto px-5 max-w-[1200px]">
         <div>
           <p className="text-white font-bold text-[30px] text-center mt-[100px]">
@@ -63,9 +64,9 @@ const Flightticket = () => {
           </p>
           <div className="mb-10">
             {ticketData &&
-            ticketData.bookings &&
-            ticketData.bookings.length > 0 ? (
-              ticketData.bookings.map((booking) => (
+            ticketData.flightBookings &&
+            ticketData.flightBookings.length > 0 ? (
+              ticketData.flightBookings.map((booking) => (
                 <TicketContainer
                   key={booking._id} // Add a unique key prop
                   ticketData={ticketData}
