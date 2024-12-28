@@ -31,7 +31,7 @@ import TicketBooking from '../component/flight/TicketBooking';
 import Cardetails from '../component/carbooking/Cardetails';
 import MyBookings from '../component/userprofile/MyBookings';
 import Flightticket from '../component/ticket/Flightticket';
-import UserList from '../admin/Userlist';
+import UserList from '../admin/UserList';
 import AllUserBookings from '../admin/AllUserBookings';
 
 
