@@ -22,7 +22,7 @@
 
 
 import React from "react";
-import Carcard2 from "./Carcard2";
+import CarCard2 from "./CarCard2";
 import { useState } from "react";
 
 const CarList2 = ({ cars }) => {
@@ -35,7 +35,7 @@ const CarList2 = ({ cars }) => {
           key={index}
           className="w-full max-w-7xl bg-white border border-gray-300 rounded-lg shadow-md"
         >
-          <Carcard2 car={car} />
+          <CarCard2 car={car} />
         </div>
       ))}
     </div>
