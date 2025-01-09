@@ -515,11 +515,50 @@ const Roombook = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-12">
-                            <button className="btn btn-primary" onClick={handleNext}>
+
+                        <div class="col-xl-4 col-lg-4 col-md-12">
+                                    <div class="side-block card rounded-2 p-3">
+                                        <div className="bott-block d-block mb-3">
+                                            <h5 className="fw-semibold fs-6">Your Price Summary</h5>
+                                            <ul className="list-group list-group-borderless">
+                                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span className="fw-medium mb-0">Rooms charge</span>
+                                                    <span className="fw-semibold">₹{originalPrice.toFixed(2)}</span>
+                                                </li>
+                                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span className="fw-medium mb-0">Rooms charge in offer</span>
+                                                    <span className="fw-semibold">₹{discountedPrice.toFixed(2)}</span>
+                                                </li>
+                                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span className="fw-medium mb-0">
+                                                        Total Discount
+                                                        <span className="badge rounded-1 text-bg-danger smaller mb-0 ms-2"></span>
+                                                    </span>
+                                                    <span className="fw-semibold">{discount}%</span>
+                                                </li>
+                                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                    <span className="fw-medium text-success mb-0">Total Price</span>
+                                                    <span className="fw-semibold text-success">₹{totalPrice.toFixed(2)}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        {/* <div class="bott-block">
+                                            <button class="btn fw-medium btn-primary full-width" type="button">Request To Book</button>
+                                        </div> */}
+
+<div className="bott-block">
+                            <button className="btn btn fw-medium btn-primary full-width" onClick={handleNext}>
                                 Proceed to Traveler Info
                             </button>
                         </div>
+                                    </div>
+                                </div>
+                        {/* <div className="col-xl-4 col-lg-4 col-md-12">
+                            <button className="btn btn-primary" onClick={handleNext}>
+                                Proceed to Traveler Info
+                            </button>
+                        </div> */}
                     </div>
                 </div>
             </section>
