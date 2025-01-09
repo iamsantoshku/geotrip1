@@ -1,40 +1,65 @@
-import { useState } from 'react'
+// import { useState } from 'react'
+// // import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+// import Header from './component/Header'
+// import AppRoutes from './routes/AppRoutes'
+// import Footer from './component/Footer'
+// import { BrowserRouter as Router } from 'react-router-dom'
+// // import Login from './pages/Login'
+
+// function App() {
+//   // const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+
+//     <div className=''>
+//       {/* <Router> */}
+//       {/* <Header/> */}
+      
+//       <Header/>     
+
+      
+      
+//       <AppRoutes/>
+      
+//       <Footer/>
+
+//       {/* </Router> */}
+      
+//       {/* <Login/> */}
+      
+
+//     </div>
+      
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+
+import { useState } from "react";
 // import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './component/Header'
-import AppRoutes from './routes/AppRoutes'
-import Footer from './component/Footer'
-import { BrowserRouter as Router } from 'react-router-dom'
-// import Login from './pages/Login'
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Header from "./component/Header";
+import AppRoutes from "./routes/AppRoutes";
+import Footer from "./component/Footer";
+// Removed the import of BrowserRouter here
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-
-    <div className=''>
-      <Router>
-      {/* <Header/> */}
-      
-      <Header/>     
-
-      
-      
-      <AppRoutes/>
-      
-      <Footer/>
-
-      </Router>
-      
-      {/* <Login/> */}
-      
-
+    <div className="">
+      {/* Remove the Router here */}
+      <Header />
+      <AppRoutes />
+      <Footer />
     </div>
-      
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
