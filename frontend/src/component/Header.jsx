@@ -345,16 +345,12 @@ const Header = () => {
               </div>
             ):
            
-            <a href="#" onClick={() => setShowModal(true)}>
+            <a href="/#" onClick={() => setShowModal(true)}>
               <i className="fa-regular fa-circle-user fs-6 me-2"></i>
               Sign In / Register
-            </a>             
+            </a>                           
             }
              </li>
-
-
-
-
             </ul>
             {/* <Login/> */}
             <Login showModal={showModal} setShowModal={setShowModal} />

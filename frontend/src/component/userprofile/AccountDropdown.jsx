@@ -196,12 +196,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { authContext } from '../../context/authContext';
-import { use } from 'react';
+// import { use } from 'react';
 
 const AccountDropdown = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
-  const { dispatch, user } = useContext(authContext);
+  const { dispatch } = useContext(authContext);
 
   const isAdmin = localStorage.getItem("isAdmin") === "true";
 
@@ -211,7 +211,7 @@ const AccountDropdown = () => {
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
-    navigate("/#");
+    navigate("/");
   };
 
   return (
@@ -232,7 +232,7 @@ const AccountDropdown = () => {
         <div className="dropdown-menu pull-right animated flipInX show">
           {/* Dropdown Header */}
           <div className="drp_menu_headr d-flex justify-content-between align-items-center">
-            <h4>Hi, {user.name}</h4>
+            {/* <h4>Hi, {user.name}</h4> */}
             <button
               type="button"
               className="btn btn-md fw-medium btn-whites text-dark"
