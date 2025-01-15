@@ -40,12 +40,12 @@ const Adminhome = () => {
           darkMode ? "bg-gray-800" : "bg-gray-200"
         } shadow-md md:h-full md:flex-shrink-0`}
       >
-        <div className="p-4">
+        {/* <div className="p-4">
           <h1 className="text-xl font-bold flex items-center gap-2 text-gray-800 dark:text-white">
             <FiHome className="text-blue-500" />
-            Flyibi Admin
+            Geotrip Admin
           </h1>
-        </div>
+        </div> */}
         <nav className="mt-0 space-y-1">
           <NavLink
             to="/admin-panel/dashboard"
@@ -106,13 +106,7 @@ const Adminhome = () => {
             Add Flight
           </NavLink>
 
-          {/* <NavLink
-            to="/admin-panel/add-hotel"
-            className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
-          >
-            <FiPlusCircle className="text-teal-500" />
-            Add Hotel
-          </NavLink> */}
+          
 
 
 <div className="relative">
@@ -122,7 +116,7 @@ const Adminhome = () => {
         className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300 cursor-pointer"
       >
         <FiPlusCircle className="text-teal-500" />
-        <span>Add</span>
+        <span>Add hotel</span>
       </div>
 
       {/* Dropdown Links */}

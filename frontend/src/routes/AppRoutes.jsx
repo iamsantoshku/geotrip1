@@ -33,6 +33,7 @@ import MyBookings from '../component/userprofile/MyBookings';
 import Flightticket from '../component/ticket/Flightticket';
 import UserList from '../admin/UserList';
 import AllUserBookings from '../admin/AllUserBookings';
+import Cancelled from '../component/userprofile/Cancelled';
 
 
 
@@ -66,6 +67,7 @@ const AppRoutes = () => {
        <Route path='/my-bookings' element = {<MyBookings/>}></Route>
        <Route path="/ticket/:ticketId" element={<Flightticket />} />      
        <Route path='/carbook' element = {<Cardetails/>}></Route>
+       <Route path='/cancelled-bookings' element = {<Cancelled/>}></Route>
        {/* admin  */}
 
        <Route

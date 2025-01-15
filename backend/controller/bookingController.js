@@ -260,3 +260,50 @@ export const createCarBooking = async (req, res) => {
 };
 
 
+
+
+
+
+
+// controllers/carBookingController.js
+export const cancelCarBooking = async (req, res) => {
+  const { bookingId } = req.params; // Extract bookingId from the route params
+
+  try {
+    // Find the car booking by its ID
+    const booking = await CarBooking.findById(bookingId);
+
+    if (!booking) {
+      return res.status(404).json({ success: false, message: 'Car booking not found.' });
+    }
+
+    // Check if the booking is already canceled
+    if (booking.bookingStatus === 'cancelled') {
+      return res.status(400).json({ success: false, message: 'Car booking is already cancelled.' });
+    }
+
+    // Update the booking status to "cancelled"
+    booking.bookingStatus = 'cancelled';
+    await booking.save();
+
+    // Update the user's car bookings
+    const user = await User.findById(booking.user);
+    if (user) {
+      user.carBookings = user.carBookings.filter((id) => id.toString() !== bookingId);
+      await user.save();
+    }
+
+    // Respond with success
+    res.status(200).json({
+      success: true,
+      message: 'Car booking cancelled successfully.',
+      booking,
+    });
+  } catch (error) {
+    console.error('Error in cancelCarBooking:', error);
+    res.status(500).json({ success: false, message: 'Error cancelling car booking.' });
+  }
+};
+
+
+
