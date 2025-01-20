@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi"; // Correct icons for sections
 // Ensure this is correctly imported
 // import { FiPlusCircle } from "react-icons/fi";
+import Dashboard from "./Dashboard";
 
 
 
@@ -26,7 +27,7 @@ const Adminhome = () => {
     document.body.classList.toggle("dark", !darkMode);
   };
 
-  const isAdminPage = location.pathname === "/admin"; // Check if it's the admin home page
+  const isAdminPage = location.pathname === "/admin-panel"; // Check if it's the admin home page
 
   return (
     <div

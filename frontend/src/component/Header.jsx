@@ -196,9 +196,9 @@ const Header = () => {
                       Blog<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="classic-blog.html">Classic Blog</a></li>
-                      <li><a href="blog.html">Blog Grid Style</a></li>
-                      <li><a href="blog-detail.html">Single Blog</a></li>
+                      <li><a href="classic-blog">Classic Blog</a></li>
+                      {/* <li><a href="blog.html">Blog Grid Style</a></li>
+                      <li><a href="blog-detail.html">Single Blog</a></li> */}
                     </ul>
                   </li>
                   <li>

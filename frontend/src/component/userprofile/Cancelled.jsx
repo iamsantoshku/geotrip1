@@ -207,7 +207,8 @@ const Cancelled = () => {
       try {
         // Fetch cancelled car bookings
         const carResponse = await axios.get(
-          `${BACKENDURL}/api/v1/cancel/user/${userId}/cancelled-car-bookings`
+           `${BACKENDURL}/api/v1/cancel/user/${userId}/cancelled-car-bookings`
+// );
         );
         setCarBookings(carResponse.data.cancelledCarBookings);
 

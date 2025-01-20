@@ -248,7 +248,8 @@ const AccountDropdown = () => {
               <a href="user-profile">
                 <i className="fa-regular fa-id-card me-2"></i>
                 My Profile
-                <span className="notti_coun style-1">4</span>
+                {/* <span className="notti_coun style-1"></span> */}
+                
               </a>
             </li>
             <li>

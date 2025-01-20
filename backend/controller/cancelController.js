@@ -61,33 +61,33 @@ import CarBooking from "../models/carbookingSchema.js";
 import HotelBooking from "../models/bookingSchema.js";
 
 // Controller to get cancelled car bookings
-export const getCancelledCarBookings = async (req, res) => {
-  const { userId } = req.params;
+// export const getCancelledCarBookings = async (req, res) => {
+//   const { userId } = req.params;
 
-  try {
-    const cancelledCarBookings = await CarBooking.find({
-      user: userId,
-      bookingStatus: "cancelled",
-    });
+//   try {
+//     const cancelledCarBookings = await CarBooking.find({
+//       user: userId,
+//       bookingStatus: "cancelled",
+//     });
 
-    if (!cancelledCarBookings || cancelledCarBookings.length === 0) {
-      return res
-        .status(404)
-        .json({ success: false, message: "No cancelled car bookings found." });
-    }
+//     if (!cancelledCarBookings || cancelledCarBookings.length === 0) {
+//       return res
+//         .status(404)
+//         .json({ success: false, message: "No cancelled car bookings found." });
+//     }
 
-    res.status(200).json({
-      success: true,
-      message: "Cancelled car bookings fetched successfully.",
-      cancelledCarBookings,
-    });
-  } catch (error) {
-    console.error("Error in getCancelledCarBookings:", error);
-    res
-      .status(500)
-      .json({ success: false, message: "Error fetching cancelled car bookings." });
-  }
-};
+//     res.status(200).json({
+//       success: true,
+//       message: "Cancelled car bookings fetched successfully.",
+//       cancelledCarBookings,
+//     });
+//   } catch (error) {
+//     console.error("Error in getCancelledCarBookings:", error);
+//     res
+//       .status(500)
+//       .json({ success: false, message: "Error fetching cancelled car bookings." });
+//   }
+// };
 
 // Controller to get cancelled hotel bookings
 export const getCancelledHotelBookings = async (req, res) => {
@@ -117,3 +117,35 @@ export const getCancelledHotelBookings = async (req, res) => {
       .json({ success: false, message: "Error fetching cancelled hotel bookings." });
   }
 };
+
+
+export const getCancelledCarBookings = async (req, res) => {
+  const { userId } = req.params;
+  console.log("UserId received:", userId); // Debug log
+
+  try {
+    const cancelledCarBookings = await CarBooking.find({
+      user: userId,
+      bookingStatus: "cancelled",
+    });
+
+    if (!cancelledCarBookings || cancelledCarBookings.length === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "No cancelled car bookings found." });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Cancelled car bookings fetched successfully.",
+      cancelledCarBookings,
+    });
+  } catch (error) {
+    console.error("Error in getCancelledCarBookings:", error);
+    res.status(500).json({
+      success: false,
+      message: "Error fetching cancelled car bookings.",
+    });
+  }
+};
+
