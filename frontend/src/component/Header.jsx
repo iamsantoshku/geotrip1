@@ -110,14 +110,7 @@ const Header = () => {
                 </a>
 
                 
-                <ul className="nav-dropdown nav-submenu">
-                  <li><a href="index.html">Home version 01</a></li>
-                  <li><a href="home-2.html">Home version 02</a></li>
-                  <li><a href="home-3.html">Home version 03</a></li>
-                  <li><a href="home-4.html">Home version 04</a></li>
-                  <li><a href="home-5.html">Home version 05</a></li>
-                  <li><a href="slider-home.html">Home version 06</a></li>
-                </ul>
+                
               </li>
               <li>
                 <a href="JavaScript:Void(0);">
@@ -130,7 +123,7 @@ const Header = () => {
                       Hotel<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="hotel-list-01">Hotel list 01</a></li>
+                      <li><a href="hotel-list">Hotel list 01</a></li>
                       
                       <li><a href="hotel-details">Hotel Detail 01</a></li>
                      
@@ -178,11 +171,11 @@ const Header = () => {
                       <li><a href="destination-detail.html">Destination Detail</a></li>
                     </ul>
                   </li>
-                  <li><a href="join-us.html">Join with GeoTrip</a></li>
+                  {/* <li><a href="join-us.html">Join with GeoTrip</a></li>
                   <li><a href="add-listing.html">Add Listing</a></li>
                   <li><a href="compare-listing.html">Compare Listing</a></li>
                   <li><a href="booking-page.html">Booking Page</a></li>
-                  <li><a href="my-profile.html">User Dashboard</a></li>
+                  <li><a href="my-profile.html">User Dashboard</a></li> */}
                 </ul>
               </li>
               <li>
@@ -201,7 +194,7 @@ const Header = () => {
                       <li><a href="blog-detail.html">Single Blog</a></li> */}
                     </ul>
                   </li>
-                  <li>
+                  {/* <li>
                     <a href="JavaScript:Void(0);">
                       Authentication<span className="submenu-indicator"></span>
                     </a>
@@ -211,14 +204,9 @@ const Header = () => {
                       <li><a href="forgot-password.html">Forgot Password</a></li>
                       <li><a href="two-factor-auth.html">Two factor authentication</a></li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="career-page.html">Career Page</a></li>
-                  <li><a href="help-center.html">Help Center</a></li>
-                  <li><a href="faq.html">FAQ's</a></li>
-                  <li><a href="404.html">Error Page</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  
                   <li>
                     <a href="JavaScript:Void(0);">
                       Contact Us<span className="submenu-indicator"></span>
@@ -237,13 +225,13 @@ const Header = () => {
                 
                 <ul className="nav-dropdown nav-submenu xxl-menu">
                   <li>
-                    <a href="home-stay">
+                    <a href="stay">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
                           <i className="fa-solid fa-spa"></i>
                         </div>
                         <div className="mega-last ps-2">
-                          <h6 className="mb-0 ft-bold fs-13">Home Stay</h6>
+                          <h6 className="mb-0 ft-bold fs-13">Stay</h6>
                           <p className="m-0 fs-10 text-muted">Top Rated Hotels</p>
                         </div>
                       </div>
@@ -264,24 +252,24 @@ const Header = () => {
                   </li>
 
                   <li>
-										<a href="home-hotel">
+										<a href="hotel">
 											<div className="mega-advance-menu">
 												<div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
 														className="fa-solid fa-hotel"></i></div>
 												<div className="mega-last ps-2">
-													<h6 className="lh-base fs-6 font--bold m-0">Home Hotel</h6>
+													<h6 className="lh-base fs-6 font--bold m-0">Hotel</h6>
 													<p className="text-sm-muted m-0">Beautiful Place for stays</p>
 												</div>
 											</div>
 										</a>
 									</li>
                   <li>
-										<a href="home-car">
+										<a href="car">
 											<div className="mega-advance-menu">
 												<div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
 														className="fa-brands fa-dropbox"></i></div>
 												<div className="mega-last ps-2">
-													<h6 className="lh-base fs-6 font--bold m-0">Home Cabs</h6>
+													<h6 className="lh-base fs-6 font--bold m-0">Cabs</h6>
 													<p className="text-sm-muted m-0">Beautiful Place for stays</p>
 												</div>
 											</div>

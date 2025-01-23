@@ -51,20 +51,20 @@ const AppRoutes = () => {
        {/* <Route path='/login' element={<Login/>}></Route> */}
        <Route path='/user-profile' element={<Profile/>}></Route>
        <Route path='/my-booking' element={<MyBookingsDashboard/>}></Route>
-       <Route path='/hotel-list-01' element={<Hotel/>}></Route>
+       <Route path='/hotel-list' element={<Hotel/>}></Route>
        <Route path='/hotel-details' element={<Hoteldetails/>}></Route>
        <Route path='/flight-list-01' element={<Flight/>}></Route>
        <Route path='/flight-home' element={<Flighthome/>}></Route>
-       <Route path='/home-stay' element = {<Stayhome/>}></Route>
-       <Route path='/home-hotel' element = {<Hotelhome/>}></Route>
-       <Route path='/home-car' element = {<Car/>}></Route>
+       <Route path='/stay' element = {<Stayhome/>}></Route>
+       <Route path='/hotel' element = {<Hotelhome/>}></Route>
+       <Route path='/car' element = {<Car/>}></Route>
        <Route path='/car-list' element = {<Carlisting/>}></Route>       
-       <Route path="/room-details/:hotelId" element={<Roomdetails />} />
+       <Route path="/hotel-details/:hotelId" element={<Roomdetails />} />
        <Route path="/book/:id" element={<TicketBooking />} />      
        <Route path="/roombook" element={<Roombook />} />
        <Route path='/bookingpage-02.html' element={<Bookingform/>}></Route>
        <Route path='/bookingpage-03.html' element = {<Bookingform3/>}></Route>
-       <Route path='/payment-complete' element = {<Successfull/>}></Route>
+       <Route path='/success' element = {<Successfull/>}></Route>
        <Route path='/my-bookings' element = {<MyBookings/>}></Route>
        <Route path="/ticket/:ticketId" element={<Flightticket />} />      
        <Route path='/carbook' element = {<Cardetails/>}></Route>

@@ -271,7 +271,7 @@ const HotelCard = ({ hotel }) => {
   // Navigate to Room Details page when a user clicks on the card
   const handleCardClick = (e) => {
     e.preventDefault();
-    navigate(`/room-details/${hotel._id}`);
+    navigate(`/hotel-details/${hotel._id}`);
   };
   
   return (

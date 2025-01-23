@@ -1,8 +1,4 @@
 
-
-
-
-
 import React, { useState } from "react";
 import axios from "axios";
 // import HotelCard from "./HotelCard"; // Import your HotelCard component
@@ -161,23 +157,7 @@ const Bannerhomeht = () => {
         </div>
       </div>
 
-      {/* Displaying Hotels */}
-      {/* <div className="container mt-5">
-        {loading && <p>Loading...</p>}
-        {error && <p className="text-danger">{error}</p>}
-        {hotels.length > 0 ? (
-          <div className="row">
-            {hotels.map((hotel, index) => (
-              <div className="col-md-4" key={index}>
-                <HotelList hotel = {hotels} />
-               
-              </div>
-            ))}
-          </div>
-        ) : (
-          !loading && <p>No hotels found. Try a different search.</p>
-        )}
-      </div> */}
+     
 
 <div className="container mt-5">
   {loading && <p>Loading...</p>}

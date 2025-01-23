@@ -1,7 +1,15 @@
 import React from "react";
 import { BACKENDURL } from "../../Config/Config";
+import { useNavigate } from "react-router-dom";
+
 
 const Carcard1 = ({ car }) => {
+  const navigate = useNavigate();
+
+  const handleAvailabilityClick = () => {
+    // Redirect to the Car Booking page with car details
+    navigate("/carbook", { state: { car } });
+  };
   return (
     <div>
         <div className="col-xl-12 col-lg-12 col-md-12">
@@ -95,11 +103,16 @@ const Carcard1 = ({ car }) => {
                 <div className="text-dark fw-bold fs-3">${car.price}</div>
               </div>
               <div className="text-muted-2 text-sm">+$22 taxes & Fees</div>
-              <div className="mt-2">
-                <a href="#" className="btn btn-md btn-primary full-width fw-medium">
-                  See Availability<i className="fa-solid fa-arrow-trend-up ms-2"></i>
-                </a>
-              </div>
+              
+
+<div className="mt-2">
+                  <button
+                    onClick={handleAvailabilityClick}
+                    className="btn btn-md btn-primary full-width fw-medium"
+                  >
+                    See Availability<i className="fa-solid fa-arrow-trend-up ms-2"></i>
+                  </button>
+                </div>
             </div>
           </div>
         </div>

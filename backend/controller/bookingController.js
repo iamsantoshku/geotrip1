@@ -77,7 +77,7 @@ export const getFlightCheckoutSession = async (req, res) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
-      success_url: `${process.env.CLIENT_SITE_URL}payment-complete`,
+      success_url: `${process.env.CLIENT_SITE_URL}success`,
       cancel_url: `${process.env.CLIENT_SITE_URL}`,
       customer_email: user.email,
       client_reference_id: req.params.flightId,
@@ -126,7 +126,8 @@ export const createBooking = async (req, res) => {
       payment_method: paymentMethodId,
       confirm: true,
       payment_method_types: ['card'],
-      return_url: 'http://localhost:5173/payment-complete',
+      // return_url: 'http://localhost:5173/success',
+      return_url: `${process.env.CLIENT_SITE_URL}success`,
     });
 
     if (paymentIntent.status !== "succeeded") {
@@ -240,6 +241,7 @@ export const createCarBooking = async (req, res) => {
             currency: "usd",
             product_data: {
               name: carName,
+        
             },
             unit_amount: price * 100, // Convert to cents
           },
