@@ -183,6 +183,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import HotelList from "./HotelList";
 import RoomDetails from "../room/RoomDetails";
+import { BACKENDURL } from "../../Config/Config";
 
 const Bannerhomeht = () => {
   // State variables for user input
@@ -210,7 +211,7 @@ const Bannerhomeht = () => {
     try {
       // API call to fetch hotels based on search criteria
       const response = await axios.get(
-        `http://localhost:4040/api/v1/hotels/search`,
+        BACKENDURL + `/api/v1/hotels/search`,
         {
           params: {
             location: city,
@@ -222,10 +223,7 @@ const Bannerhomeht = () => {
       );
 
       console.log("Search Results:", response.data);
-      setHotels(response.data); // Save search results to state
-
-      // Navigate to the hotel search results page with the city name in the URL
-      // navigate(`/hotel/${city}`);
+      setHotels(response.data); // Save search results to state    
       navigate(`/hotel/${city}/hotel-list`, { state: { hotels: response.data } });
     } catch (error) {
       console.error("Error searching hotels:", error);
