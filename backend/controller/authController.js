@@ -95,28 +95,7 @@ export const loginUser = async (req, res) => {
 };
 
 
-// export const getUser = async (req, res) => {
-//   try {
-//     console.log(req.userId, "req.userid");
-//     const user = await User.findById(req.userId);
 
-//     if (!user) {
-//       return res.status(404).json({ message: "User not found" });
-//     }
-
-//     const tickets = user.bookings;
-//     const ticketObjects = [];
-
-//     for (let i = 0; i < tickets.length; i++) {
-//       const ticket = await Ticket.findById(tickets[i]);
-//       ticketObjects.push(ticket); // Add each ticket to the array
-//     }
-
-//     return res.status(200).json({ user, tickets: ticketObjects }); // Include tickets array in the response
-//   } catch (error) {
-//     return res.status(500).json({ message: "Something went wrong" });
-//   }
-// };
 
 
 
@@ -157,7 +136,8 @@ export const getUserBookings = async (req, res) => {
     const user = await User.findById(req.userId)
       .populate("hotelBookings")
       .populate("flightBookings")
-      .populate("carBookings");
+      .populate("carBookings")
+      .populate("rentalBookings");
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
@@ -167,6 +147,7 @@ export const getUserBookings = async (req, res) => {
       hotelBookings: user.hotelBookings,
       flightBookings: user.flightBookings,
       carBookings: user.carBookings,
+      rentalBookings:user.rentalBookings,
     });
   } catch (error) {
     console.error("Error fetching bookings:", error);
@@ -187,36 +168,6 @@ export const getAllBookings = async (req, res) => {
 };
 
 
-// export const getAllUserBookings = async (req, res) => {
-//   try {
-//     // Fetch all users and populate their bookings
-//     const users = await User.find({})
-//       .populate("hotelBookings")
-//       .populate("flightBookings")
-//       .populate("carBookings");
-
-//     if (!users.length) {
-//       return res.status(404).json({ message: "No users found" });
-//     }
-
-//     // Map through users to structure booking details
-//     const userBookings = users.map((user) => ({
-//       user: {
-//         id: user._id,
-//         name: user.name,
-//         email: user.email,
-//       },
-//       hotelBookings: user.hotelBookings,
-//       flightBookings: user.flightBookings,
-//       carBookings: user.carBookings,
-//     }));
-
-//     res.status(200).json({ users: userBookings });
-//   } catch (error) {
-//     console.error("Error fetching all user bookings:", error);
-//     res.status(500).json({ message: "Something went wrong", error: error.message });
-//   }
-// };
 
 
 export const getAllUserBookings = async (req, res) => {
@@ -224,7 +175,8 @@ export const getAllUserBookings = async (req, res) => {
     const users = await User.find({})
       .populate("hotelBookings")
       .populate("flightBookings")
-      .populate("carBookings");
+      .populate("carBookings")
+      .populate("rentalBookings");
 
     if (!users || users.length === 0) {
       return res.status(404).json({ message: "No users found" });
@@ -239,6 +191,7 @@ export const getAllUserBookings = async (req, res) => {
       hotelBookings: user.hotelBookings,
       flightBookings: user.flightBookings,
       carBookings: user.carBookings,
+      rentalBookings:user.rentalBookings,
     }));
 
     res.status(200).json({ users: userBookings });

@@ -81,7 +81,7 @@ const HotelList = ({ hotel = [] }) => {
   // Navigate to Room Details page
   const handleCardClick = (e, hotelId) => {
     e.preventDefault();
-    navigate(`/room-details/${hotelId}`);
+    navigate(`/hotel-details/${hotelId}`);
   };
 
   return (

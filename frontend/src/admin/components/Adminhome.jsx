@@ -146,6 +146,14 @@ const Adminhome = () => {
             <FiPlusCircle className="text-teal-500" />
             Add Car
           </NavLink>
+
+          <NavLink
+            to="/admin-panel/add-rental"
+            className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
+          >
+            <FiPlusCircle className="text-teal-500" />
+            Add rental
+          </NavLink>
           <NavLink
             to="/admin/settings"
             className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"

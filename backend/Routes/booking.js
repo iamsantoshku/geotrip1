@@ -11,6 +11,7 @@ import { createBooking, getUserBookings } from "../controller/bookingController.
 import { createCarBooking } from "../controller/bookingController.js";
 import { cancelBooking } from "../controller/bookingController.js";
 import { cancelCarBooking } from "../controller/bookingController.js";
+import { createrentalBooking } from "../controller/bookingController.js";
 
 const router = express.Router();
 
@@ -23,6 +24,7 @@ router.get("/", authenticate, getUserBookings);
 router.post("/flight/checkout-session/:flightId", authenticate, getFlightCheckoutSession);
 router.post('/carbookings',authenticate, createCarBooking);
 router.patch('/carcancelled/:bookingId', authenticate, cancelCarBooking);
+router.post("/book",authenticate, createrentalBooking);
 
 // Hotel Booking Routes
 // router.post("/hotel/checkout-session/:hotelId", authenticate, getHotelCheckoutSession);

@@ -144,9 +144,8 @@ const Header = () => {
                       Rental<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="property-list-01.html">Rental List 01</a></li>
-                      <li><a href="property-list-02.html">Rental List 02</a></li>
-                      <li><a href="property-list-03.html">Rental List 03</a></li>
+                      <li><a href="property-list">Rental List 01</a></li>
+                     
                       <li><a href="rental-detail.html">Rental Detail</a></li>
                     </ul>
                   </li>
@@ -190,21 +189,10 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="classic-blog">Classic Blog</a></li>
-                      {/* <li><a href="blog.html">Blog Grid Style</a></li>
-                      <li><a href="blog-detail.html">Single Blog</a></li> */}
+                      
                     </ul>
                   </li>
-                  {/* <li>
-                    <a href="JavaScript:Void(0);">
-                      Authentication<span className="submenu-indicator"></span>
-                    </a>
-                    <ul className="nav-dropdown nav-submenu">
-                      <li><a href="login.html">Sign In</a></li>
-                      <li><a href="register.html">Sign Up</a></li>
-                      <li><a href="forgot-password.html">Forgot Password</a></li>
-                      <li><a href="two-factor-auth.html">Two factor authentication</a></li>
-                    </ul>
-                  </li> */}
+                  
                   <li><a href="about-us.html">About Us</a></li>
                   
                   <li>
@@ -238,7 +226,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="flight-home">
+                    <a href="flight">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
                           <i className="fa-solid fa-plane-departure"></i>

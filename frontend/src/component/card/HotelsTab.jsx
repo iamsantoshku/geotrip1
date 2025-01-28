@@ -180,7 +180,7 @@ const HotelsTab = () => {
     }
 
     navigate(
-      `/home-hotel?city=${encodeURIComponent(
+      `/hotel?city=${encodeURIComponent(
         city
       )}&checkInDate=${checkInDate}&guests=${guests}`
     );

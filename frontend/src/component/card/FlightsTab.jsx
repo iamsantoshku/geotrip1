@@ -273,7 +273,7 @@ const FlightsTab = () => {
 
   const navToSearchPage = () => {
     const { from, to, departDate, returnDate } = formData;
-    navigate(`/flight-home?from=${from}&to=${to}&departDate=${departDate}&returnDate=${returnDate}`);
+    navigate(`/flight?from=${from}&to=${to}&departDate=${departDate}&returnDate=${returnDate}`);
   };
 
   const handleInputChange = (e) => {

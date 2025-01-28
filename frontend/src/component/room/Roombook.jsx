@@ -446,7 +446,7 @@ const Roombook = () => {
     };
 
     const handleNext = () => {
-        navigate('/bookingpage-02.html', {
+        navigate('/bookingpage-02', {
             state: {
                 room,
                 hotelName,

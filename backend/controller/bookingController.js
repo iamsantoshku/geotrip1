@@ -309,3 +309,47 @@ export const cancelCarBooking = async (req, res) => {
 
 
 
+
+// const Booking = require("../models/rentalbookingSchema.js"); // Assuming Booking model is defined in models/Booking.js
+
+import Booking from "../models/rentalbookingSchema.js"
+// Controller to handle booking creation
+export const createrentalBooking = async (req, res) => {
+    try {
+      const user = await User.findById(req.userId);
+
+      if (!user) {
+        return res.status(404).json({ message: "User not found." });
+      }
+        const { rentalId, guests, totalPrice } = req.body;
+
+        // Validate required fields
+        if (!user || !rentalId || !guests || guests.length === 0 || !totalPrice) {
+            return res.status(400).json({ message: "All fields are required." });
+        }
+
+        // Save booking details to the database
+        const newBooking = new Booking({
+            user:user._id,
+            rentalId,
+            guests,
+            totalPrice,
+            bookingDate: new Date(), // Auto-generate booking date
+        });
+
+        await newBooking.save();
+
+        res.status(201).json({
+            message: "Booking created successfully!",
+            booking: newBooking,
+        });
+    } catch (error) {
+        console.error("Error creating booking:", error);
+        res.status(500).json({ message: "Failed to create booking." });
+    }
+};
+
+// module.exports = { createBooking };
+
+
+

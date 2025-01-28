@@ -74,6 +74,12 @@ const userSchema = new mongoose.Schema({
       ref: "CarBooking", // Referencing the flight bookings schema
     },
   ],
+  rentalBookings: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "RentalBooking", // Referencing the flight bookings schema
+    },
+  ],
 });
 
 export default mongoose.model("User", userSchema);

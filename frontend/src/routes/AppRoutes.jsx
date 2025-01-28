@@ -35,6 +35,12 @@ import UserList from '../admin/UserList';
 import AllUserBookings from '../admin/AllUserBookings';
 import Cancelled from '../component/userprofile/Cancelled';
 import Blog from '../pages/Blog';
+import HotelCity from '../component/hotel/HotelCity';
+import SearchedCityCar from '../component/car/SearchedCityCar';
+import Rental from '../pages/Rental';
+import AddRental from '../admin/AddRental';
+import RentalResults from '../component/stay/RentalResults';
+import RentalDetails from '../component/rental/RentalDetails';
 
 
 
@@ -54,7 +60,7 @@ const AppRoutes = () => {
        <Route path='/hotel-list' element={<Hotel/>}></Route>
        <Route path='/hotel-details' element={<Hoteldetails/>}></Route>
        <Route path='/flight-list-01' element={<Flight/>}></Route>
-       <Route path='/flight-home' element={<Flighthome/>}></Route>
+       <Route path='/flight' element={<Flighthome/>}></Route>
        <Route path='/stay' element = {<Stayhome/>}></Route>
        <Route path='/hotel' element = {<Hotelhome/>}></Route>
        <Route path='/car' element = {<Car/>}></Route>
@@ -62,7 +68,7 @@ const AppRoutes = () => {
        <Route path="/hotel-details/:hotelId" element={<Roomdetails />} />
        <Route path="/book/:id" element={<TicketBooking />} />      
        <Route path="/roombook" element={<Roombook />} />
-       <Route path='/bookingpage-02.html' element={<Bookingform/>}></Route>
+       <Route path='/bookingpage-02' element={<Bookingform/>}></Route>
        <Route path='/bookingpage-03.html' element = {<Bookingform3/>}></Route>
        <Route path='/success' element = {<Successfull/>}></Route>
        <Route path='/my-bookings' element = {<MyBookings/>}></Route>
@@ -70,6 +76,11 @@ const AppRoutes = () => {
        <Route path='/carbook' element = {<Cardetails/>}></Route>
        <Route path='/cancelled-bookings' element = {<Cancelled/>}></Route>
        <Route path='/classic-blog' element = {<Blog/>}></Route>
+       <Route path="/hotel/:city/hotel-list" element={<HotelCity />} />
+       <Route path="/car/:formattedLocation" element={<SearchedCityCar />} />
+       <Route path='/property-list' element = {<Rental/>}></Route>
+       <Route path="/rental/:city/rental-list" element = {<RentalResults/>} />
+       <Route path="/rental" element={<RentalDetails />} />
        {/* admin  */}
 
        <Route
@@ -85,6 +96,7 @@ const AppRoutes = () => {
           <Route path="add-room" element={<AddRoom/>} />
           <Route path='clients' element={<UserList/>}></Route>
           <Route path='ticketlist' element = {<AllUserBookings/>}></Route>
+          <Route path='add-rental' element = {<AddRental/>}></Route>
 
           </Route>
        </Routes>
