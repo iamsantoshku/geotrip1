@@ -191,7 +191,7 @@ const Bannerhomeht = () => {
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
   const [guests, setGuests] = useState(1);
-  const [hotel, setHotels] = useState([]); // State to store search results
+  // const [hotel, setHotels] = useState([]); // State to store search results
   const [loading, setLoading] = useState(false); // Loading state
   const [error, setError] = useState(""); // Error state
 
@@ -206,7 +206,7 @@ const Bannerhomeht = () => {
 
     setLoading(true);
     setError("");
-    setHotels([]);
+    // setHotels([]);
 
     try {
       // API call to fetch hotels based on search criteria
@@ -222,8 +222,8 @@ const Bannerhomeht = () => {
         }
       );
 
-      console.log("Search Results:", response.data);
-      setHotels(response.data); // Save search results to state    
+      // console.log("Search Results:", response.data);
+      // setHotels(response.data); // Save search results to state    
       navigate(`/hotel/${city}/hotel-list`, { state: { hotels: response.data } });
     } catch (error) {
       console.error("Error searching hotels:", error);
@@ -340,7 +340,7 @@ const Bannerhomeht = () => {
         </div>
       </div>
 
-      <div className="container mt-5">
+      {/* <div className="container mt-5">
         {loading && <p>Loading...</p>}
         {error && <p className="text-danger">{error}</p>}
         {hotel.length > 0 ? (
@@ -348,7 +348,7 @@ const Bannerhomeht = () => {
         ) : (
           !loading && <p>No hotels found. Try a different search.</p>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
