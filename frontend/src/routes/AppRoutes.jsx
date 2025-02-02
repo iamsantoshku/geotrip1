@@ -41,6 +41,11 @@ import Rental from '../pages/Rental';
 import AddRental from '../admin/AddRental';
 import RentalResults from '../component/stay/RentalResults';
 import RentalDetails from '../component/rental/RentalDetails';
+import About from '../pages/About';
+import TravelerDetails from '../component/userprofile/TravelerDetails';
+import PaymentDetails from '../component/ticket/PaymentDetails';
+import ContactPage from '../pages/ContactPage';
+import Usersupport from '../admin/Usersupport';
 
 
 
@@ -81,6 +86,10 @@ const AppRoutes = () => {
        <Route path='/property-list' element = {<Rental/>}></Route>
        <Route path="/rental/:city/rental-list" element = {<RentalResults/>} />
        <Route path="/rental" element={<RentalDetails />} />
+       <Route path='/about-us' element={<About/>}></Route>
+       <Route path='/travelers'element= {<TravelerDetails/>}></Route>
+       <Route path='/payment-detail' element = {<PaymentDetails/>}></Route>
+       {/* <Route path='contact-us' element = {<ContactPage/>}></Route> */}
        {/* admin  */}
 
        <Route
@@ -97,6 +106,7 @@ const AppRoutes = () => {
           <Route path='clients' element={<UserList/>}></Route>
           <Route path='ticketlist' element = {<AllUserBookings/>}></Route>
           <Route path='add-rental' element = {<AddRental/>}></Route>
+          <Route path='usersupport' element = {<Usersupport/>}></Route>
 
           </Route>
        </Routes>

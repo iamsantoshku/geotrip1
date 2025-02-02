@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
+// import
+import { authContext } from "../../context/authContext";
 
 const Usercard = () => {
+    const {user} = useContext(authContext)
   return (
     <div className="col-xl-4 col-lg-4 col-md-12">
                         <div className="card rounded-2 me-xl-5 mb-4">
                             <div className="card-top bg-primary position-relative">
                                 <div className="position-absolute end-0 top-0 mt-4 me-3">
-                                    <a href="login.html" className="square--40 circle bg-light-dark text-light">
+                                    <a href="my-bookings" className="square--40 circle bg-light-dark text-light">
                                         <i className="fa-solid fa-right-from-bracket"></i>
                                     </a>
                                 </div>
@@ -22,9 +25,9 @@ const Usercard = () => {
                                         </div>
                                     </div>
                                     <div className="crd-capser text-center">
-                                        <h5 className="mb-0 text-light fw-semibold">Adam K. Divliars</h5>
+                                        <h5 className="mb-0 text-light fw-semibold">{user.name}</h5>
                                         <span className="text-light opacity-75 fw-medium text-md">
-                                            <i className="fa-solid fa-location-dot me-2"></i>California, USA
+                                            <i className="fa-solid fa-location-dot me-2"></i>Delhi, India
                                         </span>
                                     </div>
                                 </div>
@@ -49,11 +52,11 @@ const Usercard = () => {
                                         <div className="progress-bar bg-success" style={{ width: "87%" }}></div>
                                     </div>
                                 </div>
-                                <div className="crd-upgrades">
+                                {/* <div className="crd-upgrades">
                                     <button className="btn btn-light-primary fw-medium full-width rounded-2" type="button">
                                         <i className="fa-solid fa-sun me-2"></i>Upgrade Pro
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div> 

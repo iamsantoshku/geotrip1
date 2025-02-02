@@ -196,18 +196,7 @@ const Bookingdas = ({ bookings }) => {
                   All Booking: {bookings.length}
                 </button>
               </li>
-              <li className="col-md-3 col-6">
-                <button
-                  className={`btn btn-sm ${
-                    activeFilter === "processing"
-                      ? "btn-primary"
-                      : "btn-secondary"
-                  } rounded-1 fw-medium px-4 full-width`}
-                  onClick={() => handleFilterClick("processing")}
-                >
-                  Processing (02)
-                </button>
-              </li>
+             
               <li className="col-md-3 col-6">
                 <button
                   className={`btn btn-sm ${

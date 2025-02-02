@@ -16,6 +16,7 @@ import roomRoutes from './Routes/room.js'
 import ticketRoute from './Routes/tickets.js'
 import cancelRoute from './Routes/cancel.js'
 import rentalRoute from './Routes/rental.js'
+import { Contactrouter } from "./Routes/contactroute.js";
 
 dotenv.config();
 
@@ -66,6 +67,7 @@ app.use("/api/v1/rooms", roomRoutes);
 app.use("/api/v1/tickets", ticketRoute);
 app.use("/api/v1/cancel", cancelRoute);
 app.use("/api/v1/rental", rentalRoute);
+app.use('/api/v1/contacts', Contactrouter);
 
 app.listen(4040, ()=>{
     connectDB();

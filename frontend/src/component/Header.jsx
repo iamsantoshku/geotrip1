@@ -125,7 +125,7 @@ const Header = () => {
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="hotel-list">Hotel list 01</a></li>
                       
-                      <li><a href="hotel-details">Hotel Detail 01</a></li>
+                      {/* <li><a href="hotel-details">Hotel Detail 01</a></li> */}
                      
                     </ul>
                   </li>
@@ -135,8 +135,8 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="flight-list-01">Flight List 01</a></li>
-                      <li><a href="flight-list-02.html">Flight List 02</a></li>
-                      <li><a href="Flight-detail.html">Flight Detail</a></li>
+                      {/* <li><a href="flight-list-02.html">Flight List 02</a></li>
+                      <li><a href="Flight-detail.html">Flight Detail</a></li> */}
                     </ul>
                   </li>
                   <li>
@@ -146,7 +146,7 @@ const Header = () => {
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="property-list">Rental List 01</a></li>
                      
-                      <li><a href="rental-detail.html">Rental Detail</a></li>
+                      {/* <li><a href="rental-detail.html">Rental Detail</a></li> */}
                     </ul>
                   </li>
                   <li>
@@ -156,25 +156,11 @@ const Header = () => {
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="car-list">Car List 01</a></li>
                       
-                      <li><a href="car-detail.html">Car Detail</a></li>
+                      {/* <li><a href="car-detail.html">Car Detail</a></li> */}
                     </ul>
                   </li>
-                  <li>
-                    <a href="JavaScript:Void(0);">
-                      Destination<span className="submenu-indicator"></span>
-                    </a>
-                    <ul className="nav-dropdown nav-submenu">
-                      <li><a href="destination-01.html">Destination List 01</a></li>
-                      <li><a href="destination-02.html">Destination List 02</a></li>
-                      <li><a href="destination-03.html">Destination List 03</a></li>
-                      <li><a href="destination-detail.html">Destination Detail</a></li>
-                    </ul>
-                  </li>
-                  {/* <li><a href="join-us.html">Join with GeoTrip</a></li>
-                  <li><a href="add-listing.html">Add Listing</a></li>
-                  <li><a href="compare-listing.html">Compare Listing</a></li>
-                  <li><a href="booking-page.html">Booking Page</a></li>
-                  <li><a href="my-profile.html">User Dashboard</a></li> */}
+                  
+                  
                 </ul>
               </li>
               <li>
@@ -193,16 +179,13 @@ const Header = () => {
                     </ul>
                   </li>
                   
-                  <li><a href="about-us.html">About Us</a></li>
+                  <li><a href="about-us">About Us</a></li>
                   
                   <li>
-                    <a href="JavaScript:Void(0);">
+                    <a href="contact-us">
                       Contact Us<span className="submenu-indicator"></span>
                     </a>
-                    <ul className="nav-dropdown nav-submenu">
-                      <li><a href="contact-v1.html">Contact V.01</a></li>
-                      <li><a href="contact-v2.html">Contact V.02</a></li>
-                    </ul>
+                    
                   </li>
                 </ul>
               </li>

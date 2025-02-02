@@ -12,6 +12,11 @@ const carBookingSchema = new mongoose.Schema(
     carName: { type: String, required: true },
     price: { type: Number, required: true },
     pickupAddress: { type: String, required: true },
+    bookingStatus: {
+      type: String,
+      enum: ["cancelled", "upcoming", "completed"],
+      default: "upcoming",
+    },
     dropAddress: { type: String, required: true },
   },
   { timestamps: true }

@@ -78,20 +78,7 @@ const Adminhome = () => {
             <FiList className="text-orange-500" />
             Cancelled-ticket
           </NavLink>
-          <NavLink
-            to="/admin/mysite"
-            className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
-          >
-            <FiGlobe className="text-purple-500" />
-            My Site
-          </NavLink>
-          <NavLink
-            to="/admin/messages"
-            className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
-          >
-            <FiMessageCircle className="text-red-500" />
-            Messages
-          </NavLink>
+          
           <NavLink
             to="/admin-panel/add-airline"
             className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
@@ -155,11 +142,11 @@ const Adminhome = () => {
             Add rental
           </NavLink>
           <NavLink
-            to="/admin/settings"
+            to="/admin-panel/usersupport"
             className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
           >
             <FiSettings className="text-gray-500" />
-            Settings
+            User support
           </NavLink>
           <div className="p-3">
             <button

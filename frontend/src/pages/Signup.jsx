@@ -252,7 +252,7 @@ const Signup = ({ showSignupModal, setShowSignupModal }) => {
               </form>
             </div>
 
-            <div className="social-login py-4 px-2">
+            {/* <div className="social-login py-4 px-2">
               <p className="text-center mb-3">Or Sign Up with</p>
               <ul className="row align-items-center justify-content-between g-3 p-0 m-0">
                 <li className="col">
@@ -271,7 +271,7 @@ const Signup = ({ showSignupModal, setShowSignupModal }) => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="modal-footer align-items-center justify-content-center">
             <p>

@@ -196,6 +196,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { authContext } from '../../context/authContext';
+import { FaUser } from "react-icons/fa";
 // import { use } from 'react';
 
 const AccountDropdown = () => {
@@ -217,7 +218,7 @@ const AccountDropdown = () => {
   return (
     <div className="btn-group account-drop">
       {/* Button to toggle dropdown */}
-      <button
+      {/* <button
         type="button"
         className="btn btn-order-by-filt"
         onClick={toggleDropdown}
@@ -225,7 +226,28 @@ const AccountDropdown = () => {
         aria-expanded={showDropdown}
       >
         <img src="/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
-      </button>
+      </button> */}
+
+{/* <button
+  type="button"
+  className="btn btn-order-by-filt"
+  onClick={toggleDropdown}
+  aria-haspopup="true"
+  aria-expanded={showDropdown}
+>
+  <FaUser className="text-gray-600 text-3xl bg-white" />
+</button> */}
+<button
+  type="button"
+  className="btn btn-order-by-filt"
+  onClick={toggleDropdown}
+  aria-haspopup="true"
+  aria-expanded={showDropdown}
+>
+  <div className="bg-gray-200 w-12 h-12 flex items-center justify-center rounded-half shadow">
+    <FaUser className="text-gray-600 text-2xl" />
+  </div>
+</button>
 
       {/* Dropdown Menu */}
       {showDropdown && (
@@ -270,12 +292,12 @@ const AccountDropdown = () => {
                 Payment Details
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="my-wishlists.html">
                 <i className="fa-solid fa-shield-heart me-2"></i>
                 My Wishlist
               </a>
-            </li>
+            </li> */}
             {/* Admin Panel Section */}
             {isAdmin && (
               <li>
@@ -286,7 +308,7 @@ const AccountDropdown = () => {
               </li>
             )}
             <li>
-              <a href="login.html">
+              <a onClick={handleLogout}>
                 <i className="fa-solid fa-power-off me-2"></i>
                 Sign Out
               </a>
