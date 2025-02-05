@@ -506,10 +506,23 @@ const MyBookings = () => {
   if (loading) return <div className="text-center mt-5">Loading...</div>;
   if (error) return <div className="text-center mt-5 text-red-500">{error}</div>;
 
+    const hasBookings =
+    bookings.hotelBookings.length > 0 ||
+    bookings.flightBookings.length > 0 ||
+    bookings.carBookings.length > 0;
+
   return (
+
     <div className="container mx-auto p-4">
       <Bookingdas bookings={bookings} />
-      <section>
+
+      {!hasBookings ? (
+        <div className="text-center text-gray-500 text-lg font-semibold">
+          No bookings available.
+        </div>
+      ) : (
+        <>
+        <section>
         <h2 className="text-xl font-semibold mb-4">Hotel Bookings</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
           {bookings.hotelBookings.length > 0 ? (
@@ -692,9 +705,168 @@ const MyBookings = () => {
           )}
         </div>
       </section>;
+            
+
+        </>
+        
+        
+        )}
+          
+
     </div>
   );
 };
 
 export default MyBookings;
 
+
+
+
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import { BACKENDURL } from "../../Config/Config";
+// import Bookingdas from "./Bookingdas";
+// import Flightbook from "./Flightbook";
+
+// const MyBookings = () => {
+//   const [bookings, setBookings] = useState({
+//     hotelBookings: [],
+//     flightBookings: [],
+//     carBookings: [],
+//   });
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState("");
+
+//   const handleCancelBooking = async (bookingId, type) => {
+//     try {
+//       const token = localStorage.getItem("token");
+//       const endpoint = type === "car" 
+//         ? `${BACKENDURL}/api/v1/bookings/carcancelled/${bookingId}`
+//         : `${BACKENDURL}/api/v1/bookings/cancel/${bookingId}`;
+      
+//       const response = await axios.patch(
+//         endpoint,
+//         {},
+//         {
+//           headers: { Authorization: `Bearer ${token}` },
+//         }
+//       );
+      
+//       if (response.data.success) {
+//         alert("Booking cancelled successfully!");
+//         setBookings((prevBookings) => ({
+//           ...prevBookings,
+//           [`${type}Bookings`]: prevBookings[`${type}Bookings`].map((booking) =>
+//             booking._id === bookingId
+//               ? { ...booking, bookingStatus: "cancelled" }
+//               : booking
+//           ),
+//         }));
+//       }
+//     } catch (err) {
+//       console.error(err);
+//       alert("Failed to cancel booking. Please try again.");
+//     }
+//   };
+
+//   useEffect(() => {
+//     const fetchBookings = async () => {
+//       try {
+//         const token = localStorage.getItem("token");
+//         const response = await axios.get(`${BACKENDURL}/api/v1/auth/myBookings`, {
+//           headers: { Authorization: `Bearer ${token}` },
+//         });
+//         setBookings(response.data);
+//       } catch (err) {
+//         console.error(err);
+//         setError("Failed to fetch bookings. Please try again.");
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchBookings();
+//   }, []);
+
+//   if (loading) return <div className="text-center mt-5">Loading...</div>;
+//   if (error) return <div className="text-center mt-5 text-red-500">{error}</div>;
+
+//   const hasBookings =
+//     bookings.hotelBookings.length > 0 ||
+//     bookings.flightBookings.length > 0 ||
+//     bookings.carBookings.length > 0;
+
+//   return (
+//     <div className="container mx-auto p-4">
+//       <Bookingdas bookings={bookings} />
+//       {!hasBookings ? (
+//         <div className="text-center text-gray-500 text-lg font-semibold">
+//           No bookings available.
+//         </div>
+//       ) : (
+//         <>
+          
+//           <section>
+//             <h2 className="text-xl font-semibold mb-4">Hotel Bookings</h2>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+//               {bookings.hotelBookings.map((hotel) => (
+//                 <div key={hotel._id} className={`card border ${hotel.bookingStatus === "cancelled" ? "bg-gray-200" : ""} br-dashed mb-6 w-full lg:w-[36rem]`}>
+//                   <div className="card-header p-6 border-bottom flex flex-col lg:flex-row justify-between items-start lg:items-center">
+//                     <div>
+//                       <h6 className="card-title text-dark text-lg font-bold mb-1">
+//                         {hotel.hotelName}
+//                       </h6>
+//                       <p>Booking ID: {hotel._id}</p>
+//                     </div>
+//                     {hotel.bookingStatus !== "cancelled" ? (
+//                       <button
+//                         onClick={() => handleCancelBooking(hotel._id, "hotel")}
+//                         className="btn btn-md btn-light-danger font-medium px-6 py-2 mr-2"
+//                       >
+//                         Cancel Booking
+//                       </button>
+//                     ) : (
+//                       <span className="text-red-500 font-medium">Cancelled</span>
+//                     )}
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </section>
+//           <section className="mt-8">
+//             <h2 className="text-xl font-semibold mb-4">Flight Bookings</h2>
+//             <Flightbook />
+//           </section>
+//           <section className="mt-3">
+//             <h2 className="text-xl font-semibold mb-4">Car Bookings</h2>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+//               {bookings.carBookings.map((car) => (
+//                 <div key={car._id} className="card border br-dashed mb-4">
+//                   <div className="card-header border-b flex justify-between items-center p-4">
+//                     <div>
+//                       <h6 className="card-title text-dark text-lg font-bold mb-1">
+//                         {car.carName}
+//                       </h6>
+//                       <p>Booking ID: {car._id}</p>
+//                     </div>
+//                     {car.bookingStatus !== "cancelled" ? (
+//                       <button
+//                         onClick={() => handleCancelBooking(car._id, "car")}
+//                         className="btn btn-md btn-light-danger font-medium px-6 py-2 mr-2"
+//                       >
+//                         Cancel Booking
+//                       </button>
+//                     ) : (
+//                       <span className="text-red-500 font-medium">Cancelled</span>
+//                     )}
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </section>
+//         </>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default MyBookings;

@@ -313,7 +313,7 @@ const Cancelled = () => {
         setError("");
       } catch (err) {
         console.error("Error fetching cancelled bookings:", err);
-        setError("Failed to fetch cancelled bookings. Please try again.");
+        setError("you have't any cancelled bookings.");
       } finally {
         setLoading(false);
       }

@@ -56,6 +56,12 @@ const userSchema = new mongoose.Schema({
     default:
       "https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png",
   },
+  resetPasswordToken: {
+    type: String,
+  },
+  resetPasswordExpires: {
+    type: Date,
+  },
   hotelBookings: [
     {
       type: mongoose.Schema.Types.ObjectId,

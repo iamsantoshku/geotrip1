@@ -14,6 +14,8 @@ import {
   getAllUsers,
   getAllUserBookings,
   getAllBookings,
+  forgotPassword,
+  resetPassword,
   
   
 } from "../controller/authController.js";
@@ -26,51 +28,10 @@ router.get("/getUser",authenticate,getUser);
 router.get("/myBookings", authenticate, getUserBookings);
 router.get("/allusers", getAllUsers);
 router.get('/all-bookings', getAllBookings);
+router.post('/forgot-password', forgotPassword);
+router.post('/reset-password', resetPassword);
 
 router.get("/all-user-bookings", getAllUserBookings);
-
-// const { OAuth2Client } = require("google-auth-library");
-// import { OAuth2Client } from "google-auth-library";
-// const client = new OAuth2Client("YOUR_GOOGLE_CLIENT_ID");
-
-// router.post("/api/v1/auth/google-login", async (req, res) => {
-//     try {
-//         const { token } = req.body;
-//         if (!token) {
-//             return res.status(400).json({ error: "Missing Google token" });
-//         }
-
-//         // Verify token with Google
-//         const ticket = await client.verifyIdToken({
-//             idToken: token,
-//             audience: "YOUR_GOOGLE_CLIENT_ID",
-//         });
-
-//         const payload = ticket.getPayload();
-//         if (!payload.email) {
-//             return res.status(400).json({ error: "Invalid Google token" });
-//         }
-
-//         // Find user in the database
-//         let user = await User.findOne({ email: payload.email });
-
-//         if (!user) {
-//             user = await User.create({
-//                 email: payload.email,
-//                 name: payload.name,
-//                 isAdmin: false,
-//             });
-//         }
-
-//         res.json({ token: generateJWT(user), user });
-//     } catch (error) {
-//         console.error("Google login error:", error);
-//         res.status(500).json({ error: "Internal server error" });
-//     }
-// });
-
-// const express = require("express");
-
 
 
 

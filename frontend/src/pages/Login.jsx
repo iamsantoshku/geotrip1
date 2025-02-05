@@ -199,7 +199,11 @@ import { BACKENDURL } from "../Config/Config";
 import { authContext } from "../context/authContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+
 import { auth, provider, signInWithPopup } from "../firebase"; // Import Firebase auth
+
+
+import AccountDropdown from "../component/userprofile/AccountDropdown";
 
 const Login = ({ showModal, setShowModal }) => {
   const [email, setEmail] = useState("");
@@ -208,6 +212,7 @@ const Login = ({ showModal, setShowModal }) => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
+  const [forgotPasswordMode, setForgotPasswordMode] = useState(false);
 
   const { dispatch } = useContext(authContext);
   const navigate = useNavigate();
@@ -261,53 +266,41 @@ const Login = ({ showModal, setShowModal }) => {
   };
 
 
+
   const handleGoogleLogin = async () => {
-      try {
-          const result = await signInWithPopup(auth, provider);
-          const user = result.user;
-          const idToken = await user.getIdToken(); // Get Google token
-  
-          // Send user data to backend
-          const response = await fetch(`${BACKENDURL}/api/v1/auth/google-login`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ token: idToken }),
-          });
-  
-          const data = await response.json();
-  
-          if (!response.ok) {
-              toast.error(data.error || "Google login failed");
-              return;
-          }
-  
-          // Store user data in localStorage or Context API
-          localStorage.setItem("token", data.token);
-          localStorage.setItem("user", JSON.stringify(data.user));
-  
-          dispatch({
-              type: "LOGIN_SUCCESS",
-              payload: { user: data.user, token: data.token },
-          });
-  
-          toast.success("Google login successful!");
-          navigate("/profile"); // Redirect to profile page
-      } catch (error) {
-          console.error("Google login error:", error);
-          toast.error("Failed to login with Google");
-      }
+    try {
+      const result = await signInWithPopup(auth, provider);
+      setUser(result.user);
+    } catch (error) {
+      console.error("Error during Google Sign-In:", error);
+    }
   };
-  
 
+    const handleForgotPassword = async () => {
+    if (!email) {
+      toast.error("Please enter your email");
+      return;
+    }
 
-  // const handleGoogleLogin = async () => {
-  //   try {
-  //     const result = await signInWithPopup(auth, provider);
-  //     setUser(result.user);
-  //   } catch (error) {
-  //     console.error("Error during Google Sign-In:", error);
-  //   }
-  // };
+    try {
+      const response = await fetch(`${BACKENDURL}/api/v1/auth/forgot-password`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        toast.error(data.error || "Something went wrong");
+        return;
+      }
+
+      toast.success("Password reset link sent to your email");
+    } catch (error) {
+      console.error("Forgot Password error:", error);
+      toast.error("Something went wrong. Try again.");
+    }
+  };
 
   const handleShowSignup = () => {
     setShowModal(false);
@@ -389,36 +382,36 @@ const Login = ({ showModal, setShowModal }) => {
                     </div>
                   </div>
                   <div className="modal-flex-last">
-                    <a href="#" className="text-primary fw-medium">
+                    <button onClick={handleForgotPassword} className="text-primary fw-medium">
                       Forget Password?
-                    </a>
+                    </button>
                   </div>
                 </div>
-
-                <div className="prixer px-3">
+                {/* <div className="prixer px-3">
                   <div className="devider-wraps position-relative">
                     <div className="devider-text text-muted-2 text-md">Sign In with More Methods</div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="social-login py-2 px-1">
                   <ul className="row align-items-center justify-content-between g-1 p-0 m-0">
                     <li className="col">
                       
-                      <button onClick={handleGoogleLogin} className="square--60 border br-dashed rounded-2 full-width">
+                      {/* <button onClick={handleGoogleLogin} className="square--60 border br-dashed rounded-2 full-width">
                         <i className="fa-brands fa-google color--facebook fs-2"></i>
-                      </button>
-                      {/* {user ? (
+                      </button> */}
+                      {user ? (
         <div>
-          <p>Welcome, {user.displayName}</p>
+          {/* <p>Welcome, {user.displayName}</p>
           <img src={user.photoURL} alt="User Profile" />
-          <button onClick={handleLogout}>Logout</button>
+          <button onClick={handleLogout}>Logout</button> */}
+          <AccountDropdown/>
         </div>
       ) : (
         <div>
-          <button onClick={handleGoogleLogin}>Login with Google</button>
+          {/* <button onClick={handleGoogleLogin}>Login with Google</button> */}
         </div>
-      )} */}
+      )}
                     </li>
                   </ul>
                 </div>
@@ -442,3 +435,136 @@ const Login = ({ showModal, setShowModal }) => {
 };
 
 export default Login;
+
+
+
+
+// import React, { useState } from "react";
+// import { toast } from "react-toastify";
+// import { BACKENDURL } from "../Config/Config";
+
+// const Login = ({ showModal, setShowModal }) => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [loading, setLoading] = useState(false);
+//   const [forgotPasswordMode, setForgotPasswordMode] = useState(false);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+
+//     try {
+//       const response = await fetch(`${BACKENDURL}/api/v1/auth/login`, {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ email, password }),
+//       });
+
+//       const data = await response.json();
+//       if (!response.ok) {
+//         toast.error(data.error || "Invalid credentials");
+//         setLoading(false);
+//         return;
+//       }
+
+//       toast.success("Login successful");
+//       setShowModal(false);
+//     } catch (error) {
+//       console.error("Login error:", error);
+//       toast.error("An error occurred. Please try again later.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   const handleForgotPassword = async () => {
+//     if (!email) {
+//       toast.error("Please enter your email");
+//       return;
+//     }
+
+//     try {
+//       const response = await fetch(`${BACKENDURL}/api/v1/auth/forgot-password`, {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify({ email }),
+//       });
+
+//       const data = await response.json();
+//       if (!response.ok) {
+//         toast.error(data.error || "Something went wrong");
+//         return;
+//       }
+
+//       toast.success("Password reset link sent to your email");
+//     } catch (error) {
+//       console.error("Forgot Password error:", error);
+//       toast.error("Something went wrong. Try again.");
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <div className="modal-content">
+//         <div className="modal-header">
+//           <h4 className="modal-title fs-6">{forgotPasswordMode ? "Forgot Password" : "Sign In"}</h4>
+//           <button type="button" className="text-muted fs-4" onClick={() => setShowModal(false)}>
+//             <i className="fa-solid fa-square-xmark"></i>
+//           </button>
+//         </div>
+
+//         <div className="modal-body">
+//           <form onSubmit={forgotPasswordMode ? handleForgotPassword : handleSubmit}>
+//             <div className="form-floating mb-4">
+//               <input
+//                 type="email"
+//                 className="form-control"
+//                 placeholder="name@example.com"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//                 required
+//               />
+//               <label>User Email</label>
+//             </div>
+
+//             {!forgotPasswordMode && (
+//               <div className="form-floating mb-4">
+//                 <input
+//                   type="password"
+//                   className="form-control"
+//                   placeholder="Password"
+//                   value={password}
+//                   onChange={(e) => setPassword(e.target.value)}
+//                   required
+//                 />
+//                 <label>Password</label>
+//               </div>
+//             )}
+
+//             <div className="form-group">
+//               <button type="submit" className="btn btn-primary full-width" disabled={loading}>
+//                 {loading ? "Processing..." : forgotPasswordMode ? "Send Reset Link" : "Log In"}
+//               </button>
+//             </div>
+//           </form>
+
+//           {!forgotPasswordMode ? (
+//             <div className="text-center">
+//               <a href="#" className="text-primary" onClick={() => setForgotPasswordMode(true)}>
+//                 Forgot Password?
+//               </a>
+//             </div>
+//           ) : (
+//             <div className="text-center">
+//               <a href="#" className="text-primary" onClick={() => setForgotPasswordMode(false)}>
+//                 Back to Login
+//               </a>
+//             </div>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;

@@ -46,6 +46,7 @@ import TravelerDetails from '../component/userprofile/TravelerDetails';
 import PaymentDetails from '../component/ticket/PaymentDetails';
 import ContactPage from '../pages/ContactPage';
 import Usersupport from '../admin/Usersupport';
+import ResetPassword from '../pages/ResetPassword';
 
 
 
@@ -89,7 +90,9 @@ const AppRoutes = () => {
        <Route path='/about-us' element={<About/>}></Route>
        <Route path='/travelers'element= {<TravelerDetails/>}></Route>
        <Route path='/payment-detail' element = {<PaymentDetails/>}></Route>
-       {/* <Route path='contact-us' element = {<ContactPage/>}></Route> */}
+       <Route path='/contact-us' element = {<ContactPage/>}></Route>
+       <Route path="/reset-password/:token" element={<ResetPassword />} />
+
        {/* admin  */}
 
        <Route
