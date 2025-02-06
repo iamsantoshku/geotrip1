@@ -11,7 +11,7 @@ import Gallerybanner from '../component/room/Gallerybanner'
 const Roomdetails = () => {
   return (
     <div>
-        <Hoteldetailban/>
+        {/* <Hoteldetailban/> */}
         {/* <Roomdetails/> */}
         <Gallerybanner/>
         <RoomDetails/>

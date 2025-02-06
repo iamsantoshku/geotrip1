@@ -39,7 +39,7 @@ const Dasborad = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="my-booking">
+                        <a href="my-bookings">
                             <i className="fa-solid fa-ticket me-2"></i>My Booking
                         </a>
                     </li>
@@ -55,8 +55,7 @@ const Dasborad = () => {
                     </li>
                     
                     
-                    
-                    
+                                   
                 </ul>
             </div>
         </div>

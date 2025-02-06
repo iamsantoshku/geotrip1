@@ -218,36 +218,17 @@ const AccountDropdown = () => {
   return (
     <div className="btn-group account-drop">
       {/* Button to toggle dropdown */}
-      {/* <button
+      <button
         type="button"
         className="btn btn-order-by-filt"
         onClick={toggleDropdown}
         aria-haspopup="true"
         aria-expanded={showDropdown}
       >
-        <img src="/assets/img/team-5.jpg" className="img-fluid" alt="Profile" />
-      </button> */}
-
-{/* <button
-  type="button"
-  className="btn btn-order-by-filt"
-  onClick={toggleDropdown}
-  aria-haspopup="true"
-  aria-expanded={showDropdown}
->
-  <FaUser className="text-gray-600 text-3xl bg-white" />
-</button> */}
-<button
-  type="button"
-  className="btn btn-order-by-filt"
-  onClick={toggleDropdown}
-  aria-haspopup="true"
-  aria-expanded={showDropdown}
->
-  <div className="bg-gray-200 w-12 h-12 flex items-center justify-center rounded-half shadow">
-    <FaUser className="text-gray-600 text-2xl" />
-  </div>
-</button>
+        <div className="bg-gray-200 w-12 h-12 flex items-center justify-center rounded-half shadow">
+          <FaUser className="text-gray-600 text-2xl" />
+        </div>
+      </button>
 
       {/* Dropdown Menu */}
       {showDropdown && (
@@ -265,10 +246,11 @@ const AccountDropdown = () => {
           </div>
 
           {/* Dropdown Items */}
-          <ul>
+          {/* <div className=''> */}
+          <ul className='flex flex-col'>
             <li>
               <a href="user-profile">
-                <i className="fa-regular fa-id-card me-2"></i>
+                <i className="fa-regular fa-id-card me-2 pl-1 lg:pl-0"></i>
                 My Profile
                 {/* <span className="notti_coun style-1"></span> */}
                 
@@ -276,33 +258,28 @@ const AccountDropdown = () => {
             </li>
             <li>
               <a href="my-bookings">
-                <i className="fa-solid fa-ticket me-2"></i>
+                <i className="fa-solid fa-ticket me-2 pl-4 lg:pl-0"></i>
                 My Booking
               </a>
             </li>
             <li>
               <a href="travelers">
-                <i className="fa-solid fa-user-group me-2"></i>
+                <i className="fa-solid fa-user-group me-2 pl-0 lg:pl-0"></i>
                 Travelers
               </a>
             </li>
             <li>
               <a href="payment-detail">
-                <i className="fa-solid fa-wallet me-2"></i>
+                <i className="fa-solid fa-wallet me-2 pl-10 lg:pl-0"></i>
                 Payment Details
               </a>
             </li>
-            {/* <li>
-              <a href="my-wishlists.html">
-                <i className="fa-solid fa-shield-heart me-2"></i>
-                My Wishlist
-              </a>
-            </li> */}
+            
             {/* Admin Panel Section */}
             {isAdmin && (
               <li>
                 <a href="admin-panel">
-                  <i className="fa-solid fa-tools me-2"></i>
+                  <i className="fa-solid fa-tools me-2 pl-5 lg:pl-0"></i>
                   Admin Panel
                 </a>
               </li>
@@ -314,10 +291,16 @@ const AccountDropdown = () => {
               </a>
             </li>
           </ul>
-        </div>
+
+          </div>
+          
+        // </div>
       )}
     </div>
   );
 };
 
 export default AccountDropdown;
+
+
+
