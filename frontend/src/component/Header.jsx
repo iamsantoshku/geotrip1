@@ -9,6 +9,8 @@ import Country from './Country';
 import { authContext } from '../context/authContext';
 import { useContext } from 'react';
 import AccountDropdown from './userprofile/AccountDropdown';
+import { FaTaxi } from "react-icons/fa";
+import { MdHotel } from "react-icons/md";
 
 // SkqQGUBOM7pWq44o-pass 
 const Header = () => {
@@ -189,6 +191,7 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
+              
               <li>
                 <a href="JavaScript:Void(0);">
                   Menu<span className="submenu-indicator"></span>
@@ -199,11 +202,11 @@ const Header = () => {
                     <a href="stay">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
-                          <i className="fa-solid fa-spa"></i>
+                          <i className="fa-solid fa-hotel"></i>
                         </div>
                         <div className="mega-last ps-2">
                           <h6 className="mb-0 ft-bold fs-13">Stay</h6>
-                          <p className="m-0 fs-10 text-muted">Top Rated Hotels</p>
+                          <p className="m-0 fs-10 text-muted">Top Rated Rentals</p>
                         </div>
                       </div>
                     </a>
@@ -226,7 +229,9 @@ const Header = () => {
 										<a href="hotel">
 											<div className="mega-advance-menu">
 												<div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
-														className="fa-solid fa-hotel"></i></div>
+														className="fa-solid  text-green-700"></i>
+                            <MdHotel className='text-green-700' />
+                            </div>
 												<div className="mega-last ps-2">
 													<h6 className="lh-base fs-6 font--bold m-0">Hotel</h6>
 													<p className="text-sm-muted m-0">Beautiful Place for stays</p>
@@ -238,16 +243,20 @@ const Header = () => {
 										<a href="car">
 											<div className="mega-advance-menu">
 												<div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
-														className="fa-brands fa-dropbox"></i></div>
+														className="fa-brands "></i>
+                            <FaTaxi />
+                            </div>
+                            
 												<div className="mega-last ps-2">
 													<h6 className="lh-base fs-6 font--bold m-0">Cabs</h6>
-													<p className="text-sm-muted m-0">Beautiful Place for stays</p>
+													<p className="text-sm-muted m-0">Book your Cabs</p>
 												</div>
 											</div>
 										</a>
 									</li>
                 </ul>
               </li>
+              {/* <li><a href="about-us">About Us</a></li> */}
             </ul>
             <ul className="nav-menu nav-menu-social align-to-right">
               <li className="currencyDropdown me-2">
