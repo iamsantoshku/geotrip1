@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import AirplaneHead from "../../component/Flightbookingform/airplaneHead.png";
+import AirplaneHead from "/airplaneHead.png";
 import { toast } from "react-toastify";
 
 const SeatReservation = ({
@@ -112,13 +112,13 @@ const SeatReservation = ({
           className="flex flex-row md:flex-col gap-1 sm:gap-4 w-fit h-fit p-5 bg-[#f3f5f8] rounded-b-[15px] md:rounded-s-[15px] md:w-auto"
         >
           {Object.keys(seats).map((row) => (
-            <div key={row} className="flex flex-col md:flex-row gap-1">
+            <div key={row} className="md:flex-row gap-1">
               {renderSeats(row)}
             </div>
           ))}
         </div>
 
-        <div className="w-[150vw] hidden md:block mt-[3vw] ">
+        <div className="w-[150vw] hidden md:block mt-[0vw] ">
           <img
             ref={imageRef}
             src={AirplaneHead}
@@ -139,3 +139,109 @@ const SeatReservation = ({
 };
 
 export default SeatReservation;
+
+
+
+
+// import React, { useEffect, useRef, useState } from "react";
+// import AirplaneHead from "../../component/Flightbookingform/airplaneHead.png";
+// import { toast } from "react-toastify";
+
+// const SeatReservation = ({
+//   setCurrentActiveForm,
+//   numberOfPassengers,
+//   setNumberOfPassengers,
+//   selectedSeats,
+//   setSelectedSeats,
+//   reservedSeats,
+// }) => {
+//   const seats = {
+//     A: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//     B: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//     C: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//     D: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//     E: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//     F: [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+//   };
+
+//   const [bookedSeats, setBookedSeats] = useState(reservedSeats);
+
+//   const handleNextClick = () => {
+//     if (numberOfPassengers === 0) {
+//       toast.warn("Please select at least one seat to proceed", {
+//         position: "top-right",
+//         autoClose: 5000,
+//       });
+//     } else {
+//       setCurrentActiveForm(1);
+//     }
+//   };
+
+//   const handleSeatClick = (row, seat) => {
+//     if (!bookedSeats.includes(row + seat)) {
+//       setSelectedSeats((prevSelectedSeats) => ({
+//         ...prevSelectedSeats,
+//         [row]: prevSelectedSeats[row]?.includes(seat)
+//           ? prevSelectedSeats[row].filter((s) => s !== seat)
+//           : [...(prevSelectedSeats[row] || []), seat],
+//       }));
+//     }
+//   };
+
+//   useEffect(() => {
+//     setNumberOfPassengers(
+//       Object.values(selectedSeats).reduce((total, seats) => total + seats.length, 0)
+//     );
+//   }, [selectedSeats, setNumberOfPassengers]);
+
+//   const renderSeats = (row) => {
+//     return (
+//       <div key={row} className="flex gap-2">
+//         {seats[row].map((seat) => (
+//           <div
+//             key={seat}
+//             className={`seatContainer p-2 border rounded-md w-10 h-10 flex items-center justify-center text-sm font-medium cursor-pointer transition-all duration-300
+//               ${selectedSeats[row]?.includes(seat) ? "bg-blue-500 text-white" : bookedSeats.includes(row + seat) ? "bg-gray-300 cursor-not-allowed" : "hover:bg-blue-200"}`}
+//             onClick={() => handleSeatClick(row, seat)}
+//           >
+//             {row}{seat}
+//           </div>
+//         ))}
+//       </div>
+//     );
+//   };
+
+//   const numPassengersText = `${Object.values(selectedSeats).reduce(
+//     (total, seats) => total + seats.length,
+//     0
+//   )} Passenger(s)`;
+
+//   return (
+//     <div className="my-5 bg-white border border-gray-200 rounded-2xl p-5 w-full max-w-4xl mx-auto">
+//       <p className="mb-5 text-4xl font-semibold text-center">Seat Booking</p>
+//       <p className="mb-2 text-center">{numPassengersText}</p>
+//       <div className="flex flex-col md:flex-row mt-5 gap-6 justify-center items-center">
+//         <div className="grid grid-cols-3 gap-4 bg-[#f3f5f8] p-5 rounded-xl">
+//           {Object.keys(seats).map((row) => renderSeats(row))}
+//         </div>
+//         <div className="hidden md:block">
+//           <img
+//             src={AirplaneHead}
+//             alt="Airplane Head"
+//             className="w-40 md:w-56"
+//           />
+//         </div>
+//       </div>
+//       <div className="flex justify-center mt-6">
+//         <button
+//           className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-all duration-300"
+//           onClick={handleNextClick}
+//         >
+//           Next
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default SeatReservation;

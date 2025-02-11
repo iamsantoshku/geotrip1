@@ -47,6 +47,8 @@ import PaymentDetails from '../component/ticket/PaymentDetails';
 import ContactPage from '../pages/ContactPage';
 import Usersupport from '../admin/Usersupport';
 import ResetPassword from '../pages/ResetPassword';
+import NotFound from '../pages/NotFound';
+import CarSearchResults from '../component/car/CarSearchResults';
 
 
 
@@ -82,7 +84,7 @@ const AppRoutes = () => {
        <Route path='/carbook' element = {<Cardetails/>}></Route>
        <Route path='/cancelled-bookings' element = {<Cancelled/>}></Route>
        <Route path='/classic-blog' element = {<Blog/>}></Route>
-       <Route path="/hotel/:city/hotel-list" element={<HotelCity />} />
+       <Route path="/:city/hotel-list/" element={<HotelCity />} />
        <Route path="/car/:formattedLocation" element={<SearchedCityCar />} />
        <Route path='/property-list' element = {<Rental/>}></Route>
        <Route path="/rental/:city/rental-list" element = {<RentalResults/>} />
@@ -92,6 +94,8 @@ const AppRoutes = () => {
        <Route path='/payment-detail' element = {<PaymentDetails/>}></Route>
        <Route path='/contact-us' element = {<ContactPage/>}></Route>
        <Route path="/reset-password/:token" element={<ResetPassword />} />
+       <Route path='*' element={<NotFound/>}></Route>
+       <Route path="/cars/:location" element={<CarSearchResults />} />
 
        {/* admin  */}
 

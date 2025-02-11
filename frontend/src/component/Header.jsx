@@ -11,6 +11,8 @@ import { useContext } from 'react';
 import AccountDropdown from './userprofile/AccountDropdown';
 import { FaTaxi } from "react-icons/fa";
 import { MdHotel } from "react-icons/md";
+// import {homelogo} form "./logo1.webp"
+
 
 // SkqQGUBOM7pWq44o-pass 
 const Header = () => {
@@ -61,9 +63,9 @@ const Header = () => {
 
 <a className="nav-brand static-show" href="/">
               {isScrolled && isHomePage ? (
-                <img src="/assets/img/logo-light.png" className="logo" alt="Scrolled Logo" />
+                <img src="/logo3.png" className="w-38 size-9 mt-2 h-8 object-contain md:w-40 md:h-20" alt="Scrolled Logo" />
               ) : (
-                <img src="/assets/img/logo.png" className="logo" alt="Default Logo" />
+                <img src="/logo3.png" className="w-38  h-8 mt-2 object-contain md:w-40 md:h-20" alt="Default Logo" />
               )}
             </a>
             <a className="nav-brand mob-show" href="/">

@@ -146,7 +146,7 @@ const TicketBooking = () => {
   }
 
   return (
-    <div className="px-[30px] md:px-[30px] mt-[5vw]">
+    <div className="px-[30px] md:px-[30px]">
       <div>
         {loading ? (
           <div className="w-full min-h-[60vh] flex justify-center items-center">

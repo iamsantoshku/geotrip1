@@ -7,7 +7,7 @@ const Herobanner = () => {
       title: 'Starts Your Trip with GeoTrip',
       description: 'Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.',
       buttonText: 'Explore More',
-      background: '/assets/img/banner-2.jpg',
+      background: '/assets/img/banner.jpg',
     },
     {
       id: 2,
