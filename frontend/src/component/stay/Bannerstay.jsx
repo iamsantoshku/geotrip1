@@ -295,6 +295,7 @@ const Bannerstay = () => {
     const navigate = useNavigate(); // Initialize useNavigate hook
 
 
+
     // Function to handle guest count changes
     const handleGuestChange = (type, operation) => {
         setGuests(prevGuests => {
@@ -311,7 +312,7 @@ const Bannerstay = () => {
         // Check if city is entered
         if (city) {
             // Navigate to the rental page with the city name
-            navigate(`/rental/${city}/rental-list`);
+            navigate(`/rental/${city}/rental-list/`);
         }
     };
 
@@ -328,7 +329,7 @@ const Bannerstay = () => {
                             </div>
                         </div>
 
-                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 px-lg-5">
                             <div className="search-wrap with-label bg-white rounded-3 p-3 pt-4">
                                 <div className="row gy-3 gx-md-3 gx-sm-2">
                                     <div className="col-xl-8 col-lg-7 col-md-12">
@@ -346,9 +347,9 @@ const Bannerstay = () => {
                                                 </div>
                                             </div>
                                             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                                <div className="form-group mb-0">
+                                                <div className=" form-group hdd-arrow border rounded-1 mb-0">
                                                     <label>Choose Date</label>
-                                                    <DatePicker
+                                                    {/* <DatePicker
                                                         selected={startDate}
                                                         onChange={(dates) => {
                                                             const [start, end] = dates;
@@ -359,9 +360,23 @@ const Bannerstay = () => {
                                                         endDate={endDate}
                                                         selectsRange
                                                         inline={false}
-                                                        className="form-control fw-bold"
+                                                        className="h-14"
                                                         placeholderText="Check-In & Check-Out"
-                                                    />
+                                                    /> */}
+                                                    <input type='date' className="form-control fw-bold"
+                                                    selected={startDate}
+                                                    onChange={(dates) => {
+                                                        const [start, end] = dates;
+                                                        setStartDate(start);
+                                                        setEndDate(end);
+                                                    }}
+                                                    startDate={startDate}
+                                                    endDate={endDate}
+                                                    selectsRange
+                                                    placeholderText="Check-In & Check-Out"
+                                                    >
+                        
+                        </input>
                                                 </div>
                                             </div>
                                         </div>
