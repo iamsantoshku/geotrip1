@@ -52,7 +52,7 @@ const RoomDetails = () => {
                         <div className="roomavls-thumb mb-2">
                           <img
                             src={`${BACKENDURL}/${room.images[0]}`} // First image from array
-                            className="img-fluid rounded-2 col-xl-12"
+                            className="img-fluid rounded-2 col-xl-12 w-full "
                             alt={room.type}
                           />
                         </div>

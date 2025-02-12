@@ -475,7 +475,7 @@ const Bookingform = () => {
                 <div className="cardImage__caps rounded-2 overflow-hidden h-100">
                   <img
                     src={`${BACKENDURL}/${room.images[0]}`} // First image from the array
-                    className="img-fluid rounded-2 col-xl-12 h-100 object-fit"
+                    className="img-fluid rounded-2 col-xl-12 h-100 object-fit w-full"
                     alt={room.type}
                   />
                 </div>

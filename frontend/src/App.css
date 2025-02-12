@@ -47,6 +47,9 @@
 .modal-backdrop {
   z-index: 1050 !important; /* Ensure the backdrop is properly layered */
 }
+/* .logo {
+  filter: invert(15%) sepia(100%) saturate(7493%) hue-rotate(360deg) brightness(97%) contrast(102%);
+} */
 
 
 /* *{

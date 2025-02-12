@@ -23,7 +23,7 @@ const Header = () => {
   const location = useLocation();
 
   const isHomePage = location.pathname === '/';
-  
+
   const [showModal, setShowModal] = useState(false);
   const [showCurrencyModal, setShowCurrencyModal] = useState(false);
   const [showCountryModal, setShowCountryModal] = useState(false);
@@ -59,16 +59,56 @@ const Header = () => {
       <div className="container">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
-            
 
-<a className="nav-brand static-show" href="/">
+
+            {/* <a className="nav-brand static-show mt-2" href="/">
               {isScrolled && isHomePage ? (
-                <img src="/logo3.png" className="w-38 size-9 mt-2 h-8 object-contain md:w-40 md:h-20" alt="Scrolled Logo" />
+                <img src="/logo3.png" className="logo " alt="Scrolled Logo" />
               ) : (
-                <img src="/logo3.png" className="w-38  h-8 mt-2 object-contain md:w-40 md:h-20" alt="Default Logo" />
+                <img src="/logo3.png" className="logo" alt="Default Logo" />
               )}
-            </a>
+            </a> */}
+            {/* <a className="nav-brand static-show mt-1" href="/">
+  {isScrolled && isHomePage ? (
+    <img src="/logo3.png" className="logo mt-1" alt="Scrolled Logo" style={{ width: "160px", height: "auto" }} />
+  ) : (
+    <img src="/logo1.webp" className="logo mt-1" alt="Default Logo" style={{ width: "160px", height: "auto" }} />
+  )}
+</a> */}
+
+<a className="nav-brand static-show mt-1" href="/">
+  {isHomePage ? (
+    <img 
+      src="/logo3.png" 
+      className="logo mt-1" 
+      alt="Home Page Logo" 
+      style={{ width: "160px", height: "auto" }} 
+    />
+  ) : isScrolled && isHomePage ? (
+    <img 
+      src="/logo3.png" 
+      className="logo mt-1 rounded-md" 
+      alt="Scrolled Logo" 
+      style={{ width: "160px", height: "auto" }} 
+    />
+  ) : (
+    <img 
+  src="/logo1.webp" 
+  className="logo mt-1" 
+  alt="Default Logo" 
+  style={{ 
+    width: "160px", 
+    height: "auto", 
+    borderRadius: "30px" /* Adjust as needed */
+  }} 
+/>
+
+  )}
+</a>
+
+
             <a className="nav-brand mob-show" href="/">
+            {/* /assets/img/logo.png */}
               <img src="/assets/img/logo.png" className="logo" alt="Logo" />
             </a>
             <div className="nav-toggle"></div>
@@ -93,15 +133,15 @@ const Header = () => {
                 <li>
                   {isUserLoggedIn ? (
                     <div>
-                      <AccountDropdown/>
+                      <AccountDropdown />
                     </div>
-                  ):
-                  <a href="#" onClick={() => setShowModal(true)} className="bg-light-primary text-primary rounded" data-bs-toggle="modal" data-bs-target="#login">
-                    <i className="fa-regular fa-circle-user fs-6"></i>
-                  </a>
+                  ) :
+                    <a href="#" onClick={() => setShowModal(true)} className="bg-light-primary text-primary rounded" data-bs-toggle="modal" data-bs-target="#login">
+                      <i className="fa-regular fa-circle-user fs-6"></i>
+                    </a>
 
                   }
-                  
+
                 </li>
               </ul>
             </div>
@@ -113,14 +153,12 @@ const Header = () => {
                   Home<span className="submenu-indicator"></span>
                 </a>
 
-                
-                
               </li>
               <li>
                 <a href="JavaScript:Void(0);">
                   Listing<span className="submenu-indicator"></span>
                 </a>
-                
+
                 <ul className="nav-dropdown nav-submenu">
                   <li>
                     <a href="JavaScript:Void(0);">
@@ -128,9 +166,9 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="hotel-list">Hotel list 01</a></li>
-                      
+
                       {/* <li><a href="hotel-details">Hotel Detail 01</a></li> */}
-                     
+
                     </ul>
                   </li>
                   <li>
@@ -149,7 +187,7 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="property-list">Rental List 01</a></li>
-                     
+
                       {/* <li><a href="rental-detail.html">Rental Detail</a></li> */}
                     </ul>
                   </li>
@@ -159,19 +197,19 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="car-list">Car List 01</a></li>
-                      
+
                       {/* <li><a href="car-detail.html">Car Detail</a></li> */}
                     </ul>
                   </li>
-                  
-                  
+
+
                 </ul>
               </li>
               <li>
                 <a href="JavaScript:Void(0);">
                   Pages<span className="submenu-indicator"></span>
                 </a>
-                
+
                 <ul className="nav-dropdown nav-submenu">
                   <li>
                     <a href="JavaScript:Void(0);">
@@ -179,26 +217,26 @@ const Header = () => {
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="classic-blog">Classic Blog</a></li>
-                      
+
                     </ul>
                   </li>
-                  
+
                   <li><a href="about-us">About Us</a></li>
-                  
+
                   <li>
                     <a href="contact-us">
                       Contact Us<span className="submenu-indicator"></span>
                     </a>
-                    
+
                   </li>
                 </ul>
               </li>
-              
+
               <li>
                 <a href="JavaScript:Void(0);">
                   Menu<span className="submenu-indicator"></span>
                 </a>
-                
+
                 <ul className="nav-dropdown nav-submenu xxl-menu">
                   <li>
                     <a href="stay">
@@ -228,34 +266,34 @@ const Header = () => {
                   </li>
 
                   <li>
-										<a href="hotel">
-											<div className="mega-advance-menu">
-												<div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
-														className="fa-solid  text-green-700"></i>
-                            <MdHotel className='text-green-700' />
-                            </div>
-												<div className="mega-last ps-2">
-													<h6 className="lh-base fs-6 font--bold m-0">Hotel</h6>
-													<p className="text-sm-muted m-0">Beautiful Place for stays</p>
-												</div>
-											</div>
-										</a>
-									</li>
+                    <a href="hotel">
+                      <div className="mega-advance-menu">
+                        <div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
+                          className="fa-solid  text-green-700"></i>
+                          <MdHotel className='text-green-700' />
+                        </div>
+                        <div className="mega-last ps-2">
+                          <h6 className="lh-base fs-6 font--bold m-0">Hotel</h6>
+                          <p className="text-sm-muted m-0">Beautiful Place for stays</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
                   <li>
-										<a href="car">
-											<div className="mega-advance-menu">
-												<div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
-														className="fa-brands "></i>
-                            <FaTaxi />
-                            </div>
-                            
-												<div className="mega-last ps-2">
-													<h6 className="lh-base fs-6 font--bold m-0">Cabs</h6>
-													<p className="text-sm-muted m-0">Book your Cabs</p>
-												</div>
-											</div>
-										</a>
-									</li>
+                    <a href="car">
+                      <div className="mega-advance-menu">
+                        <div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
+                          className="fa-brands "></i>
+                          <FaTaxi />
+                        </div>
+
+                        <div className="mega-last ps-2">
+                          <h6 className="lh-base fs-6 font--bold m-0">Cabs</h6>
+                          <p className="text-sm-muted m-0">Book your Cabs</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
                 </ul>
               </li>
               {/* <li><a href="about-us">About Us</a></li> */}
@@ -307,24 +345,24 @@ const Header = () => {
               />
 
               {/* Sign In / Register */}
-              
-           <li className="list-buttons light">
-            {isUserLoggedIn ?(
-              <div>
-                <AccountDropdown/>
-              </div>
-            ):
-           
-            <a href="/#" onClick={() => setShowModal(true)}>
-              <i className="fa-regular fa-circle-user fs-6 me-2"></i>
-              Sign In / Register
-            </a>                           
-            }
-             </li>
+
+              <li className="list-buttons light">
+                {isUserLoggedIn ? (
+                  <div>
+                    <AccountDropdown />
+                  </div>
+                ) :
+
+                  <a href="/#" onClick={() => setShowModal(true)}>
+                    <i className="fa-regular fa-circle-user fs-6 me-2"></i>
+                    Sign In / Register
+                  </a>
+                }
+              </li>
             </ul>
             {/* <Login/> */}
             <Login showModal={showModal} setShowModal={setShowModal} />
-           
+
           </div>
         </nav>
       </div>
