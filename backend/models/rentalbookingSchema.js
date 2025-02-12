@@ -8,12 +8,14 @@ const bookingSchema = new mongoose.Schema({
         required: true,
       },
     rentalId: { type: mongoose.Schema.Types.ObjectId, ref: "Rental", required: true },
+
     guests: [
         {
             name: { type: String, required: true },
             age: { type: Number, required: true },
         },
     ],
+    title: {type: String},
     totalPrice: { type: Number, required: true },
     bookingDate: { type: Date, default: Date.now },
 });

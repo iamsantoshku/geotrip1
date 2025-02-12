@@ -321,7 +321,7 @@ export const createrentalBooking = async (req, res) => {
       if (!user) {
         return res.status(404).json({ message: "User not found." });
       }
-        const { rentalId, guests, totalPrice } = req.body;
+        const { rentalId, guests, totalPrice,title } = req.body;
 
         // Validate required fields
         if (!user || !rentalId || !guests || guests.length === 0 || !totalPrice) {
@@ -333,11 +333,15 @@ export const createrentalBooking = async (req, res) => {
             user:user._id,
             rentalId,
             guests,
+            title,
             totalPrice,
             bookingDate: new Date(), // Auto-generate booking date
         });
 
         await newBooking.save();
+
+        user.rentalBookings.push(newBooking._id);
+        await user.save();
 
         res.status(201).json({
             message: "Booking created successfully!",

@@ -320,46 +320,34 @@ export const getAllUsers = async (req, res) => {
 
 
 
+// import User from "../models/User.js"; // Adjust the import path as needed
 
-// export const getUser = async (req, res) => {
-//   try {
-//     // Ensure userId exists
-//     if (!req.userId) {
-//       return res.status(400).json({ message: "User ID is required" });
-//     }
+export const updateUserRole = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const { role } = req.body;
 
-//     console.log(req.userId, "req.userId");
+    // Validate role
+    if (!["user", "admin"].includes(role)) {
+      return res.status(400).json({ message: "Invalid role specified." });
+    }
 
-//     // Find user by ID
-//     const user = await User.findById(req.userId);
+    // Find user by ID
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found." });
+    }
 
-//     if (!user) {
-//       return res.status(404).json({ message: "User not found" });
-//     }
+    // Update role
+    user.role = role;
+    await user.save();
 
-//     // Retrieve tickets in one query
-//     const tickets = await Ticket.find({ _id: { $in: user.bookings } });
+    res.status(200).json({ message: "User role updated successfully.", user });
+  } catch (error) {
+    console.error("Error updating user role:", error);
+    res.status(500).json({ message: "Server error. Try again later." });
+  }
+};
 
-//     // Respond with user and their tickets
-//     return res.status(200).json({
-//       user: {
-//         id: user._id,
-//         firstName: user.firstName,
-//         lastName: user.lastName,
-//         email: user.email,
-//         mobile: user.mobile,
-//         dob: user.dob,
-//         gender: user.gender,
-//         avatar: user.avatar,
-//         about: user.about,
-//       },
-//       tickets,
-//     });
-//   } catch (error) {
-//     console.error("Error in getUser:", error.message);
-//     return res.status(500).json({ message: "Something went wrong", error: error.message });
-//   }
-// };
-
-
+// module.exports = { updateUserRole };
 

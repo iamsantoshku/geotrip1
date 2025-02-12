@@ -49,6 +49,7 @@ import Usersupport from '../admin/Usersupport';
 import ResetPassword from '../pages/ResetPassword';
 import NotFound from '../pages/NotFound';
 import CarSearchResults from '../component/car/CarSearchResults';
+import AdminUserManagement from '../pages/AdminUserManagement';
 
 
 
@@ -114,6 +115,7 @@ const AppRoutes = () => {
           <Route path='ticketlist' element = {<AllUserBookings/>}></Route>
           <Route path='add-rental' element = {<AddRental/>}></Route>
           <Route path='usersupport' element = {<Usersupport/>}></Route>
+          <Route path='rolechange' element = {<AdminUserManagement/>}></Route>
 
           </Route>
        </Routes>

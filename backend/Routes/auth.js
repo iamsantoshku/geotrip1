@@ -16,6 +16,7 @@ import {
   getAllBookings,
   forgotPassword,
   resetPassword,
+  updateUserRole,
   
   
 } from "../controller/authController.js";
@@ -30,6 +31,7 @@ router.get("/allusers", getAllUsers);
 router.get('/all-bookings', getAllBookings);
 router.post('/forgot-password', forgotPassword);
 router.post('/reset-password', resetPassword);
+router.put("/update-role/:id", authenticate, updateUserRole);
 
 router.get("/all-user-bookings", getAllUserBookings);
 

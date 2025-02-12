@@ -731,6 +731,7 @@ const RentalDetails = () => {
     const [guests, setGuests] = useState([]);
     const [newGuest, setNewGuest] = useState({ name: "", age: "" });
     const [bookingSuccess, setBookingSuccess] = useState(false);
+    const [title, settitle] = useState("")
 
     const { user } = useContext(authContext);
 
@@ -773,6 +774,7 @@ const RentalDetails = () => {
                 userId: user._id, // Ensure user ID is available
                 rentalId: rental._id,
                 guests,
+                title,
                 totalPrice: rental.discountedPrice,
             };
 

@@ -421,6 +421,7 @@ const MyBookings = () => {
     hotelBookings: [],
     flightBookings: [],
     carBookings: [],
+    rentalBookings:[],
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -509,7 +510,8 @@ const MyBookings = () => {
     const hasBookings =
     bookings.hotelBookings.length > 0 ||
     bookings.flightBookings.length > 0 ||
-    bookings.carBookings.length > 0;
+    bookings.carBookings.length > 0 ||
+    bookings.rentalBookings.length >0 ;
 
   return (
 
@@ -702,6 +704,103 @@ const MyBookings = () => {
             ))
           ) : (
             <p>No car bookings available.</p>
+          )}
+        </div>
+      </section>;
+
+      <section className="mt-3">
+        <h2 className="text-xl font-semibold mb-4">rental Bookings</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+          {bookings.rentalBookings.length > 0 ? (
+            bookings.rentalBookings.map((rental) => (
+              <div key={rental._id} className="card border br-dashed mb-4">
+                {/* Card header */}
+                <div className="card-header border-b flex flex-col md:flex-row justify-between items-start md:items-center p-4">
+                  {/* Icon and Title */}
+                  <div className="flex items-center">
+                    <div className="square--50 circle bg-light-success text-success flex-shrink-0 text-center flex items-center justify-center">
+                      <i className="fa-solid fa-hotel text-lg"></i>
+                    </div>
+                    {/* Title */}
+                    <div className="ml-3">
+                      <h6 className="card-title text-dark text-lg font-bold mb-1">
+                        {rental.
+
+title}
+                      </h6>
+                      <ul className="nav nav-divider text-sm text-muted">
+                        <li className="nav-item">Booking ID: {rental._id}</li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 lg:mt-0 flex">
+                    {rental.bookingStatus !== "cancelled" ? (
+                      <button
+                        onClick={() => handleCarCancelBooking(rental._id)}
+                        className="btn btn-md btn-light-danger font-medium px-6 py-2 mr-2"
+                      >
+                        Cancel Booking
+                      </button>
+                    ) : (
+                      <span className="text-red-500 font-medium px-6 py-2 mr-2">
+                        Cancelled
+                      </span>
+                    )}
+                    <a
+                      href="#"
+                      className={`btn btn-md ${rental.bookingStatus === "cancelled"
+                          ? "btn-light-gray"
+                          : "btn-light-seegreen"
+                        } font-medium px-6 py-2`}
+                      disabled={rental.bookingStatus === "cancelled"}
+                    >
+                      Manage Booking
+                    </a>
+                  </div>
+                </div>
+
+                {/* Card body */}
+                <div className="card-body p-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div>
+                      <span className="block text-sm font-medium text-muted">
+                        Booking Date
+                      </span>
+                      <h6 className="text-base font-bold">{rental.
+bookingDate}</h6>
+                    </div>
+
+                    <div>
+                      <span className="block text-sm font-medium text-muted">
+                        Number of guests
+                      </span>
+                      <h6 className="text-base font-bold">{rental.guests.length}</h6>
+                    </div>
+
+                    <div>
+                      <span className="block text-sm font-medium text-muted">
+                        Booking price
+                      </span>
+                      <h6 className="text-base font-bold">{rental.
+                        totalPrice}</h6>
+
+
+                    </div>
+                    <div>
+                      <span className="block text-sm font-medium text-muted">
+                        Booked by
+                      </span>
+                      <h6 className="text-base font-bold">{rental.
+                        guests[0].name}</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No rental bookings available.</p>
           )}
         </div>
       </section>;
