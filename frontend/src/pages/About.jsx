@@ -12,17 +12,16 @@ const About = () => {
     <>
       <div className="relative bg-gradient-to-r from-blue-100 via-purple-50 to-indigo-100 py-12 px-4 sm:px-8 lg:px-16">
         <div className="animate-fade-in-up transform transition-all duration-700 ease-out">
-          {/* <Traveller /> */}
-          {/* <Exprience/> */}
+          
           <Exprince1/>
-          {/* <Calltoaction/> */}
+          
         </div>
       </div>
 
-      <div className="relative bg-gradient-to-r from-blue-100 to-pink-100 py-12 px-4 sm:px-8 lg:px-16">
-        <div className="animate-fade-in-left transform transition-all duration-700 ease-out">
+      <div className="relative bg-gradient-to-r  py-12 px-4 sm:px-8 lg:px-16">
+        {/* <div className="animate-fade-in-left transform transition-all duration-700 ease-out"> */}
           <AdventureSection />
-        </div>
+        {/* </div> */}
       </div>
 
       {/* <div className="relative bg-gradient-to-r from-green-100 to-blue-50 py-12 px-4 sm:px-8 lg:px-16">

@@ -81,13 +81,11 @@ const Header = () => {
 </a>
 
 
-
-
             <a className="nav-brand mob-show" href="/">
               {/* /assets/img/logo.png */}
               <img src="/makeuslogored.png" className="logo" alt="Logo" style={{
-                width: "60px",
-                height: "40px",
+                width: "100px",
+                height: "45px",
                 borderRadius: "30px" ,
                 backgroundColor:"red"
               }} />
