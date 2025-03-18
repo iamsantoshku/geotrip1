@@ -412,7 +412,7 @@ const Bannerhomeht = () => {
           <div className="row justify-content-center align-items-center">
             <div className="col-xl-9 text-center mb-4">
               <h1>
-                Start Your Trip with <span className="position-relative">GeoTrip</span>
+                Start Your Trip with <span className="position-relative">Makeustrip</span>
               </h1>
               <p className="fs-5 fw-light">
                 Take a break from work stress. Discover, plan trips, and explore beautiful destinations.

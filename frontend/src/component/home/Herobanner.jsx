@@ -143,7 +143,7 @@ const Herobanner = () => {
   const banners = [
     {
       id: 1,
-      title: "Starts Your Trip with makeustrip",
+      title: "Starts Your Trip with Makeustrip",
       description:
         "Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.",
       buttonText: "Explore More",
@@ -181,8 +181,8 @@ const Herobanner = () => {
           >
             <div className="container">
               <div className="carousel-caption text-center">
-                <h1 className="banner-title">
-                  {banner.title.split("GeoTrip")[0]}
+                {/* <h1 className="banner-title">
+                  {banner.title.split("Makeustrip")[0]}
                   <span className="position-relative z-4">
                     <span className="position-absolute top-50 start-50 translate-middle d-none d-md-block mt-4">
                       <svg width="185px" height="23px" viewBox="0 0 445.5 23">
@@ -193,10 +193,11 @@ const Herobanner = () => {
                       </svg>
                     </span>
                   </span>
-                </h1>
+                </h1> */}
+                <h1 className="text-5xl">{banner.title}</h1>
                 <p className="fs-5 fw-light">{banner.description}</p>
                 <p className="mt-5">
-                  <a className="btn btn-primary px-5" href="#">
+                  <a className="btn btn-primary px-5" href="flight">
                     {banner.buttonText}{" "}
                     <i className="fa-solid fa-arrow-trend-up ms-2"></i>
                   </a>

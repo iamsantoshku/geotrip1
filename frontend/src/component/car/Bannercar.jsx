@@ -562,7 +562,7 @@ const Bannercar = () => {
             <div className="col-xl-9 col-lg-10 col-md-12 col-sm-12">
               <div className="position-relative text-center mb-5">
                 <h1>
-                  Start Your Trip with <span className="position-relative z-4">GeoTrip</span>
+                  Start Your Trip with <span className="position-relative z-4">Makeustrip</span>
                 </h1>
                 <p className="fs-5 fw-light">Discover and book the best cars for your next trip.</p>
               </div>

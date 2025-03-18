@@ -50,6 +50,9 @@ import ResetPassword from '../pages/ResetPassword';
 import NotFound from '../pages/NotFound';
 import CarSearchResults from '../component/car/CarSearchResults';
 import AdminUserManagement from '../pages/AdminUserManagement';
+import TermsOfService from '../component/TermsOfService';
+import PrivacyPolicy from '../component/PrivacyPolicy';
+import CookiesPolicy from '../component/CookiesPolicy';
 
 
 
@@ -96,6 +99,9 @@ const AppRoutes = () => {
        <Route path="/reset-password/:token" element={<ResetPassword />} />
        <Route path='*' element={<NotFound/>}></Route>
        <Route path="/cars/:location" element={<CarSearchResults />} />
+       <Route path='/term-of-service/' element={<TermsOfService/>}></Route>
+       <Route path='/privecy-policy/' element={<PrivacyPolicy/>}></Route>
+       <Route path='/cookies/' element={<CookiesPolicy/>}></Route>
 
        {/* admin  */}
 
@@ -115,6 +121,7 @@ const AppRoutes = () => {
           <Route path='add-rental' element = {<AddRental/>}></Route>
           <Route path='usersupport' element = {<Usersupport/>}></Route>
           <Route path='rolechange' element = {<AdminUserManagement/>}></Route>
+          
 
           </Route>
        </Routes>

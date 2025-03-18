@@ -372,6 +372,10 @@ const Hoteldet = () => {
       <section className="gray-simple">
         <div className="container">
           <div className="row justify-content-between">
+            <div className='text-center text-4xl font-semibold'>
+                      <h4>Book Hotel With Makeustrip </h4>
+            
+                    </div>
             <div className="col-xl-4 col-lg-4 col-md-4">
               <h5 className="fw-bold fs-6 mb-lg-0 mb-3">
                 Showing {hotels.length} Search Results

@@ -22,7 +22,7 @@ const Calltoaction = () => {
                     {/* Title Section */}
                     <div className="calltoAction-title mb-5">
                       <h4 className="text-light fs-2 fw-bold lh-base m-0">
-                        Subscribe & Get<br />Special Discount with GeoTrip.com
+                        Subscribe & Get<br />Special Discount with makeustrip
                       </h4>
                     </div>
 

@@ -4,38 +4,38 @@ const Review = () => {
   const reviews = [
     {
       name: "Aman Diwakar",
-      country: "United States",
+      country: "India",
       img: "/assets/img/team-1.jpg",
       stars: 4,
-      review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
+      review: "Make Us Trip made my vacation stress-free! The itinerary was well-planned, the hotels were excellent, and the customer service was outstanding. Highly recommend!.",
     },
     {
       name: "Kunal M. Thakur",
-      country: "United States",
+      country: "India",
       img: "/assets/img/team-2.jpg",
       stars: 4,
-      review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
+      review: "Had an amazing travel experience with Make Us Trip! From hassle-free booking to seamless execution, everything was perfect. Can’t wait for my next trip!",
     },
     {
       name: "Divya Talwar",
-      country: "United States",
+      country: "India",
       img: "/assets/img/team-3.jpg",
       stars: 4,
-      review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
+      review: "Best travel platform! Got great deals on flights and hotels. The customer support was super helpful, making my journey smooth and enjoyable. 10/10 experience",
     },
     {
       name: "Karan Maheshwari",
-      country: "United States",
+      country: "India",
       img: "/assets/img/team-4.jpg",
       stars: 4,
-      review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
+      review: "Loved the trip! The team ensured every detail was taken care of, from transport to sightseeing. A truly memorable experience with Make Us Trip!",
     },
     {
       name: "Ritika Mathur",
-      country: "United States",
+      country: "India",
       img: "/assets/img/team-5.jpg",
       stars: 4,
-      review: "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt.",
+      review: "Highly professional and reliable travel service! The trip was perfectly organized, and I explored some breathtaking destinations without any worries. Will book again!",
     },
   ];
 
@@ -64,10 +64,9 @@ const Review = () => {
           <div className="row align-items-center justify-content-center">
             <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
               <div className="secHeading-wrap text-center mb-5">
-                <h2>Loving Reviews By Our Customers</h2>
-                <p>
-                  Cicero famously orated against his political opponent Lucius
-                  Sergius Catilina.
+                <h2 className="text-4xl">Your Travel Stories with Make Us Trip</h2>
+                <p className="text-2xl">
+                Hear from Our Happy Travelers! At Make Us Trip, we believe every journey should be memorable, hassle-free, and filled with joy. 
                 </p>
               </div>
             </div>

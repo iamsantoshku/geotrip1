@@ -61,9 +61,6 @@ const Header = () => {
       
             
 
-            
-
-
 
 <a className="nav-brand static-show mt-1" href="/">
   {isHomePage && !isScrolled ? (
@@ -88,10 +85,11 @@ const Header = () => {
 
             <a className="nav-brand mob-show" href="/">
               {/* /assets/img/logo.png */}
-              <img src="/logoicon.png" className="logo" alt="Logo" style={{
-                width: "40px",
-                height: "30px",
-                // borderRadius: "30px" /* Adjust as needed */
+              <img src="/makeuslogored.png" className="logo" alt="Logo" style={{
+                width: "60px",
+                height: "40px",
+                borderRadius: "30px" ,
+                backgroundColor:"red"
               }} />
             </a>
             <div className="nav-toggle"></div>

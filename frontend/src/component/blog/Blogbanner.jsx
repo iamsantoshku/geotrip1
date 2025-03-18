@@ -16,8 +16,7 @@ const Blogbanner = () => {
 						<div className="fpc-capstion text-center my-4">
 							<div className="fpc-captions">
 								<h1 className="xl-heading text-light">Trending News</h1>
-								<p className="text-light">Cicero famously orated against his political opponent Lucius Sergius Catilina.
-									Occasionally the first Oration against Catiline is taken for type specimens</p>
+								<p className="text-light">Welcome to our travel blog, where every journey tells a story! From breathtaking landscapes to hidden gems, we bring you the best travel tips, destination guides, and unforgettable experiences. Whether you're seeking adventure, relaxation, or cultural exploration, we’ve got you covered. Let’s wander the world together—one destination at a time!</p>
 							</div>
 						</div>
 

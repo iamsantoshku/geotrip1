@@ -251,7 +251,7 @@ const Location = () => {
             <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
               <div className="secHeading-wrap text-center mb-5">
                 <h2>Popular Location To Stay</h2>
-                <p>Cicero famously orated against his political opponent Lucius Sergius Catilina.</p>
+                <p>Cicero famously orated against his political opponent in Mumbai.</p>
               </div>
             </div>
           </div>

@@ -230,12 +230,12 @@ const ContactPage = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      <section className="text-center">
+      {/* <section className="text-center">
         <h2 className="text-4xl font-bold text-gray-900">Contact Our <span className="text-black">Friendly Experts</span></h2>
         <p className="mt-3 text-gray-600">Any questions? We would be happy to help you.</p>
-      </section>
+      </section> */}
       
-      <div className="grid md:grid-cols-4 gap-6 mt-10">
+      {/* <div className="grid md:grid-cols-4 gap-6 mt-10">
         {[
           { icon: <FaUser size={32} />, title: "Help & Support", text: "For help with a current product or service.", contact: "support@alithemes.com" },
           { icon: <FaPhone size={32} />, title: "Call Us", text: "Speak to a member of our team.", contact: "(+91)7033825186" },
@@ -249,7 +249,7 @@ const ContactPage = () => {
             <p className="text-blue-500 mt-4 font-medium">{item.contact}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <section className="mt-16 bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">Get in Touch</h1>

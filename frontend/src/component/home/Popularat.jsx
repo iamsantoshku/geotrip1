@@ -130,14 +130,14 @@ const AttractionCard = ({ imageSrc, cityName, thingsToDo }) => {
 
 const Popularat = () => {
   const attractions = [
-    { imageSrc: '/assets/img/attr/attr-7.jpg', cityName: 'Kansas City', thingsToDo: 260 },
-    { imageSrc: '/assets/img/attr/attr-5.jpg', cityName: 'Los Angeles', thingsToDo: 240 },
-    { imageSrc: '/assets/img/attr/attr-6.jpg', cityName: 'San Antonio', thingsToDo: 312 },
-    { imageSrc: '/assets/img/attr/attr-8.jpg', cityName: 'San Francisco', thingsToDo: 220 },
-    { imageSrc: '/assets/img/attr/attr-9.jpg', cityName: 'Nashville', thingsToDo: 180 },
-    { imageSrc: '/assets/img/attr/attr-10.jpg', cityName: 'Philadelphia', thingsToDo: 612 },
-    { imageSrc: '/assets/img/tours/tour-11.jpg', cityName: 'San Jose', thingsToDo: 145 },
-    { imageSrc: '/assets/img/tours/tour-10.jpg', cityName: 'San Diego', thingsToDo: 310 },
+    { imageSrc: '/assets/img/attr/attr-7.jpg', cityName: 'New Delhi', thingsToDo: 260 },
+    { imageSrc: '/assets/img/attr/attr-5.jpg', cityName: 'Mumbai', thingsToDo: 240 },
+    { imageSrc: '/assets/img/attr/attr-6.jpg', cityName: 'Jaipur', thingsToDo: 312 },
+    { imageSrc: '/assets/img/attr/attr-8.jpg', cityName: 'Goa', thingsToDo: 220 },
+    { imageSrc: '/assets/img/attr/attr-9.jpg', cityName: 'Agra', thingsToDo: 180 },
+    { imageSrc: '/assets/img/attr/attr-10.jpg', cityName: 'Udaipur', thingsToDo: 612 },
+    { imageSrc: '/assets/img/tours/tour-11.jpg', cityName: 'Kolkata', thingsToDo: 145 },
+    { imageSrc: '/assets/img/tours/tour-10.jpg', cityName: 'Varanashi', thingsToDo: 310 },
   ];
 
   return (
@@ -148,8 +148,8 @@ const Popularat = () => {
           <div className="row align-items-center justify-content-center">
             <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
               <div className="secHeading-wrap text-center mb-5">
-                <h2>Best Attraction In USA</h2>
-                <p>Cicero famously orated against his political opponent Lucius Sergius Catilina.</p>
+                <h3 className='text-4xl text-red-600'>Best Tour and Travel Destination Near Me </h3>
+                <p>Looking for the perfect getaway near you? Explore breathtaking destinations just a short trip away! Whether it's scenic hill stations, serene beaches, or historical landmarks, find the best travel spots that suit your adventure. Discover hidden gems, enjoy local culture, and make unforgettable memories with Make Us Trip!</p>
               </div>
             </div>
           </div>

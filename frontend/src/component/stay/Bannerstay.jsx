@@ -324,7 +324,7 @@ const Bannerstay = () => {
                     <div className="row justify-content-center align-items-center">
                         <div className="col-xl-9 col-lg-10 col-md-12 col-sm-12">
                             <div className="position-relative text-center mb-5">
-                                <h1>Start Your Trip with <span className="position-relative z-4">GeoTrip</span></h1>
+                                <h1>Start Your Trip with <span className="position-relative z-4">Makeustrip</span></h1>
                                 <p className="fs-5 fw-light">Take a little break from the work stress of everyday. Discover, plan trips and explore beautiful destinations.</p>
                             </div>
                         </div>

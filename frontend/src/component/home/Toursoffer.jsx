@@ -49,23 +49,23 @@ const Toursoffer = () => {
     {
       discount: '20% Off',
       imageSrc: '/assets/img/city/ct-6.png',
-      location: 'Los Angeles',
+      location: 'Delhi',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
-      priceRange: '$849 - $999',
+      priceRange: '₹20000 - ₹30000',
     },
     {
       discount: '15% Off',
       imageSrc: '/assets/img/city/ct-5.png',
-      location: 'United Kingdom',
+      location: 'Mumbai',
       tripDetails: ['Round-trip', '3D/4N', '2 Person'],
-      priceRange: '$399 - $599',
+      priceRange: '₹40000 - ₹50000',
     },
     {
       discount: '30% Off',
       imageSrc: '/assets/img/city/ct-1.png',
-      location: 'France',
+      location: 'Goa',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
-      priceRange: '$569 - $799',
+      priceRange: '₹60000 - ₹70000',
     },
   ];
 
@@ -74,6 +74,8 @@ const Toursoffer = () => {
       <section className="pt-5 pb-0">
         <div className="container">
           <div className="row align-items-center justify-content-center g-xl-4 g-lg-4 g-md-3 g-4">
+            {/* <h2 className='text-red-500 text-4xl '>Best Destination in India</h2> */}
+            <h2 className="text-red-500 text-4xl text-center">Best Destination in India</h2>
             {tours.map((tour, index) => (
               <TourItem
                 key={index}

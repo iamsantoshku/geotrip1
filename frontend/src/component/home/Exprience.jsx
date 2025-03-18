@@ -82,13 +82,7 @@ const Exprience = () => {
                   Our Attractive Experience And Services For You!
                 </h2>
                 <p className="fw-light fs-6">
-                  Using dummy content or fake information in the Web design
-                  process can Fake data can ensure a nice looking layout but it
-                  doesn’t reflect what a living, breathing application must
-                  endure. Real data does. result in products with unrealistic
-                  assumptions and potentially serious design flaws. A seemingly
-                  elegant design can quickly begin to bloat with unexpected
-                  content or break under the weight of actual activity.
+                Traveling creates unforgettable memories—waking up to a sunrise over the mountains, the salty breeze of an untouched beach, or the laughter of new friends in a foreign land. It’s the joy of discovering hidden alleys, tasting exotic cuisines, and capturing breathtaking landscapes. Every journey tells a story—getting lost in vibrant city streets, dancing under the northern lights, or sharing moments with locals who turn into lifelong friends. Travel isn’t just about places; it’s about experiences that shape us, broaden our minds, and leave footprints on our hearts. The best memories aren’t planned; they’re found in the unexpected adventures
                 </p>
                 <div className="d-inline-flex mt-4">
                   <div className="d-inline-flex flex-column justify-content-center align-items-center py-3 px-3 rounded gray-simple me-3">
