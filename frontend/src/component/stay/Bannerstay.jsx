@@ -318,7 +318,7 @@ const Bannerstay = () => {
 
     return (
         <div>
-            <div className="image-cover hero-header bg-white" style={{ background: 'url(/assets/img/banner-8.jpg) no-repeat' }} data-overlay="3">
+            <div className="image-cover hero-header bg-white" style={{ background: 'url(tourbanner.png) no-repeat' }} data-overlay="3">
                 <div className="container">
                     {/* Search Form */}
                     <div className="row justify-content-center align-items-center">

@@ -9,8 +9,7 @@ import Country from './Country';
 import { authContext } from '../context/authContext';
 import { useContext } from 'react';
 import AccountDropdown from './userprofile/AccountDropdown';
-import { FaTaxi } from "react-icons/fa";
-import { MdHotel } from "react-icons/md";
+
 // import {homelogo} form "./logo1.webp"
 
 
@@ -59,57 +58,41 @@ const Header = () => {
       <div className="container">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
+      
+            
+
+            
 
 
-            {/* <a className="nav-brand static-show mt-2" href="/">
-              {isScrolled && isHomePage ? (
-                <img src="/logo3.png" className="logo " alt="Scrolled Logo" />
-              ) : (
-                <img src="/logo3.png" className="logo" alt="Default Logo" />
-              )}
-            </a> */}
-            {/* <a className="nav-brand static-show mt-1" href="/">
-  {isScrolled && isHomePage ? (
-    <img src="/logo3.png" className="logo mt-1" alt="Scrolled Logo" style={{ width: "160px", height: "auto" }} />
-  ) : (
-    <img src="/logo1.webp" className="logo mt-1" alt="Default Logo" style={{ width: "160px", height: "auto" }} />
-  )}
-</a> */}
 
 <a className="nav-brand static-show mt-1" href="/">
-  {isHomePage ? (
-    <img 
-      src="/logo3.png" 
-      className="logo mt-1" 
-      alt="Home Page Logo" 
-      style={{ width: "160px", height: "auto" }} 
-    />
-  ) : isScrolled && isHomePage ? (
-    <img 
-      src="/logo3.png" 
-      className="logo mt-1 rounded-md" 
-      alt="Scrolled Logo" 
-      style={{ width: "160px", height: "auto" }} 
-    />
+  {isHomePage && !isScrolled ? (
+    <img src="/translogo.png" className="mt-1" alt="Home Page Logo" />
   ) : (
-    <img 
-  src="/logo1.webp" 
-  className="logo mt-1" 
-  alt="Default Logo" 
-  style={{ 
-    width: "160px", 
-    height: "auto", 
-    borderRadius: "30px" /* Adjust as needed */
-  }} 
-/>
-
+    <img
+      src="/makeuslogored.png"
+      className="logo mt-1 rounded-md"
+      alt="Scrolled or Non-Home Logo"
+      style={{
+        width: "160px",
+        height: "auto",
+        borderRadius: "30px",
+        backgroundColor: !isHomePage || isScrolled ? "#cd2c22" : "transparent", // Red background if not home OR scrolled
+      }}
+    />
   )}
 </a>
 
 
+
+
             <a className="nav-brand mob-show" href="/">
-            {/* /assets/img/logo.png */}
-              <img src="/assets/img/logo.png" className="logo" alt="Logo" />
+              {/* /assets/img/logo.png */}
+              <img src="/logoicon.png" className="logo" alt="Logo" style={{
+                width: "40px",
+                height: "30px",
+                // borderRadius: "30px" /* Adjust as needed */
+              }} />
             </a>
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
@@ -242,7 +225,8 @@ const Header = () => {
                     <a href="stay">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
-                          <i className="fa-solid fa-hotel"></i>
+                          {/* <i className="fa-solid fa-hotel"></i> */}
+                          <img src="/stayicon.png" alt="" />
                         </div>
                         <div className="mega-last ps-2">
                           <h6 className="mb-0 ft-bold fs-13">Stay</h6>
@@ -255,7 +239,8 @@ const Header = () => {
                     <a href="flight">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
-                          <i className="fa-solid fa-plane-departure"></i>
+                          {/* <i className="fa-solid fa-plane-departure"></i> */}
+                          <img src="/flighticon.png" alt="" />
                         </div>
                         <div className="mega-last ps-2">
                           <h6 className="mb-0 ft-bold fs-13">Flight</h6>
@@ -270,7 +255,8 @@ const Header = () => {
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
                           className="fa-solid  text-green-700"></i>
-                          <MdHotel className='text-green-700' />
+                          {/* <MdHotel className='text-green-700' /> */}
+                          <img src="/hotelicon.png" alt="" />
                         </div>
                         <div className="mega-last ps-2">
                           <h6 className="lh-base fs-6 font--bold m-0">Hotel</h6>
@@ -284,7 +270,8 @@ const Header = () => {
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
                           className="fa-brands "></i>
-                          <FaTaxi />
+                          {/* <FaTaxi /> */}
+                          <img src="/cabicon.png" alt="" />
                         </div>
 
                         <div className="mega-last ps-2">

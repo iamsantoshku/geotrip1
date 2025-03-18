@@ -395,7 +395,17 @@ const Bannerhomeht = () => {
     <div>
       <div
         className="image-cover hero-header bg-white"
-        style={{ background: "url(/assets/img/banner-5.jpg) no-repeat" }}
+        // style={{ background: "url(/assets/img/banner-5.jpg) no-repeat" }}
+        // style={{ background: "url(/hotelbanner.png) no-repeat" }}
+        style={{
+          backgroundImage: "url(/hotelbanner.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          minHeight: "530px", // Default height
+          height: "auto", // Auto height for responsiveness
+        }}
         data-overlay="5"
       >
         <div className="container">

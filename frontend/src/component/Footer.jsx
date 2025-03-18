@@ -13,7 +13,8 @@ const Footer = () => {
                 <div className="footer-widget">
                   <div className="d-flex align-items-start flex-column mb-3">
                     <div className="d-inline-block">
-                      <img src="/assets/img/logo-light.png" className="img-fluid" width="160" alt="Footer Logo" />
+                      {/* <img src="/assets/img/logo-light.png" className="img-fluid" width="160" alt="Footer Logo" /> */}
+                      <img src="/footerlogo.png" className="img-fluid" width="180" alt="Footer Logo" />
                     </div>
                   </div>
                   <div className="footer-add pe-xl-3">

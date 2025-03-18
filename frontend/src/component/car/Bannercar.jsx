@@ -545,7 +545,18 @@ const Bannercar = () => {
 
   return (
     <div>
-      <div className="image-cover hero-header bg-white" style={{ background: "url(/assets/img/car-bg.jpg) no-repeat" }}>
+      {/* <div className="image-cover hero-header bg-white" style={{ background: "url(/assets/img/car-bg.jpg) no-repeat" }}> */}
+      <div className="image-cover hero-header bg-white" 
+      // style={{ background: "url(/cabbanner.png) no-repeat" }}>
+      style={{
+        backgroundImage: "url(/cabbanner.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        minHeight: "500px", // Default height
+        height: "auto", // Auto height for responsiveness
+      }}>
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-xl-9 col-lg-10 col-md-12 col-sm-12">
