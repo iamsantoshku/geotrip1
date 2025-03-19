@@ -64,7 +64,7 @@ const Header = () => {
 
 <a className="nav-brand static-show mt-1" href="/">
   {isHomePage && !isScrolled ? (
-    <img src="/translogo.png" className="mt-1" alt="Home Page Logo" />
+    <img src="/translogo.png" className="mt-1" alt="Home Page Logo" style={{height:"auto",width: "160px"}} />
   ) : (
     <img
       src="/makeuslogored.png"

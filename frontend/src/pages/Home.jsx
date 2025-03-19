@@ -10,6 +10,7 @@ import Review from '../component/home/Review'
 import Exprience from '../component/home/Exprience'
 import Calltoaction from '../component/home/Calltoaction'
 import Hoteldet from '../component/hotel/Hoteldet'
+import Hoteldethome from '../component/home/Hoteldethome'
 
 const Home = () => {
   return (
@@ -19,7 +20,8 @@ const Home = () => {
         <Toursoffer/>
         <Popularat/>
         
-        <Hoteldet/>
+        {/* <Hoteldet/> */}
+        <Hoteldethome/>
         {/* <Location/> */}
         {/* <PopularVenues/> */}
         {/* <VideoHelp/> */}

@@ -100,7 +100,7 @@ const AppRoutes = () => {
        <Route path='*' element={<NotFound/>}></Route>
        <Route path="/cars/:location" element={<CarSearchResults />} />
        <Route path='/term-of-service/' element={<TermsOfService/>}></Route>
-       <Route path='/privecy-policy/' element={<PrivacyPolicy/>}></Route>
+       <Route path='/privacy-policy/' element={<PrivacyPolicy/>}></Route>
        <Route path='/cookies/' element={<CookiesPolicy/>}></Route>
 
        {/* admin  */}

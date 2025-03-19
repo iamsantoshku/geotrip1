@@ -1,9 +1,7 @@
-
-
 import React, { useState, useEffect } from "react";
-import FilterBar from "./FilterBar";
-import Pagination from "./Pagination";
+import FilterBar from "../hotel/FilterBar";
 import axios from 'axios';  // Import axios to fetch data
+
 import { BACKENDURL } from "../../Config/Config";
 import { useNavigate } from "react-router-dom";
 import Roombook from "../room/Roombook";
@@ -96,48 +94,92 @@ const HotelCard = ({ hotel }) => {
 
 
 
-const Hoteldet = () => {
-  const [hotels, setHotels] = useState([]);
+// const Hoteldethome = () => {
+//   const [hotels, setHotels] = useState([]);
 
-  useEffect(() => {
-    // Fetch hotel data from your API
-    axios
-      .get(BACKENDURL + "/api/v1/hotels/hotelss") // Adjust URL to your actual API endpoint
-      .then((response) => {
-        setHotels(response.data);  // Assuming the data is in the response's data property
-      })
-      .catch((error) => {
-        console.error("Error fetching hotel data:", error);
-      });
-  }, []);
+//   useEffect(() => {
+//     // Fetch hotel data from your API
+//     axios
+//       .get(BACKENDURL + "/api/v1/hotels/hotelss") // Adjust URL to your actual API endpoint
+//       .then((response) => {
+//         setHotels(response.data);  // Assuming the data is in the response's data property
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching hotel data:", error);
+//       });
+//   }, []);
 
-  return (
-    <div>
-      <section className="gray-simple">
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className='text-center text-4xl font-semibold'>
-                      <h4>Book Hotel With Makeustrip </h4>
+//   return (
+//     <div>
+//       <section className="gray-simple">
+//         <div className="container">
+//           <div className="row justify-content-between">
+//             <div className='text-center text-4xl font-semibold'>
+//                       <h4>Book Hotel With Makeustrip </h4>
             
-                    </div>
-            <div className="col-xl-4 col-lg-4 col-md-4">
-              <h5 className="fw-bold fs-6 mb-lg-0 mb-3">
-                Showing {hotels.length} Search Results
-              </h5>
-            </div>
-            <FilterBar />
-          </div>
-          <div className="row g-4">
-            {hotels.map((hotel) => (
-              <HotelCard key={hotel._id} hotel={hotel} />
+//                     </div>
+//             <div className="col-xl-4 col-lg-4 col-md-4">
+//               <h5 className="fw-bold fs-6 mb-lg-0 mb-3">
+//                 Showing {hotels.length} Search Results
+//               </h5>
+//             </div>
+//             {/* <FilterBar /> */}
+//           </div>
+//           <div className="row g-4">
+//             {hotels.map((hotel) => (
+//               <HotelCard key={hotel._id} hotel={hotel} />
               
-            ))}
-          </div>
-          <Pagination />
-        </div>
-      </section>
-    </div>
-  );
-};
+//             ))}
+//           </div>
+         
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
 
-export default Hoteldet;
+// export default Hoteldethome;
+
+
+
+const Hoteldethome = () => {
+    const [hotels, setHotels] = useState([]);
+  
+    useEffect(() => {
+      axios
+        .get(BACKENDURL + "/api/v1/hotels/hotelss")
+        .then((response) => {
+          setHotels(response.data.slice(0, 6)); // Limiting results to 6
+        })
+        .catch((error) => {
+          console.error("Error fetching hotel data:", error);
+        });
+    }, []);
+  
+    return (
+      <div>
+        <section className="gray-simple">
+          <div className="container">
+            <div className="row justify-content-between">
+              <div className='text-center text-4xl font-semibold'>
+                <h4>Book Hotel With Makeustrip</h4>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-4">
+                <h5 className="fw-bold fs-6 mb-lg-0 mb-3">
+                  Showing {hotels.length} Search Results
+                </h5>
+              </div>
+            </div>
+            <div className="row g-4">
+              {hotels.map((hotel) => (
+                <HotelCard key={hotel._id} hotel={hotel} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  };
+  
+  export default Hoteldethome;
+  

@@ -9,7 +9,7 @@ const TourItem = ({ discount, imageSrc, location, tripDetails, priceRange }) => 
   return (
     <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 ">
       <div className="pop-touritems">
-        <a href="#" className="card rounded-3 br-dashed border-2 m-0">
+        <a href="property-list" className="card rounded-3 br-dashed border-2 m-0">
           <div className="offers-container d-flex align-items-center justify-content-start p-2">
             <div className="offers-flex position-relative">
               <div className="offer-tags position-absolute start-0 top-0 mt-2 ms-2">

@@ -163,11 +163,11 @@ const Footer = () => {
             <div className="footer-widget">
               <h4 className="widget-title">Navigation</h4>
               <ul className="footer-menu">
-                <li><a href="#">Terms of Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/term-of-service/">Terms of Services</a></li>
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
                 <li><a href="#">Refund & Cancellation</a></li>
                 <li><a href="#">Trust, Safety & Security</a></li>
-                <li><a href="#">Cookies</a></li>
+                <li><a href="/cookies">Cookies</a></li>
               </ul>
             </div>
           </div>
@@ -177,10 +177,10 @@ const Footer = () => {
             <div className="footer-widget">
               <h4 className="widget-title">Company</h4>
               <ul className="footer-menu">
-                <li><a href="/about-us">About Us</a></li>
-                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/about-us/">About Us</a></li>
+                <li><a href="/contact-us/">Contact Us</a></li>
                 <li><a href="https://affiliateformarketing.com/">Affiliate Program</a></li>
-                <li><a href="/classic-blog">Blog</a></li>
+                <li><a href="/classic-blog/">Blog</a></li>
               </ul>
             </div>
           </div>
@@ -190,12 +190,18 @@ const Footer = () => {
             <div className="footer-widget">
               <h4 className="widget-title">Payment Methods</h4>
               <img src="/assets/img/payment.png" className="img-fluid mb-3" alt="Payment Methods" />
-              <h5 className="widget-title mt-3">Our Partners</h5>
+              <h5 className="widget-title mt-3 text-gray-500">Our Partners</h5>
               {/* <div className="d-flex gap-3">
                 <img src="/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" />
                 <img src="/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" />
                 <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" />
               </div> */}
+              <div className="d-flex gap-3">
+  <img src="/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" style={{ width: "100px", height: "auto" }} />
+  <img src="/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" style={{ width: "100px", height: "auto" }} />
+  <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" style={{ width: "100px", height: "auto" }} />
+</div>
+
             </div>
           </div>
 
@@ -215,9 +221,9 @@ const Footer = () => {
 
             <div className="col-md-6 text-center text-md-end">
               <ul className="d-flex justify-content-center justify-content-md-end list-unstyled m-0">
-                <li><a href="/term-of-service">Terms of Service</a></li>
-                <li className="ms-3"><a href="/privacy-policy">Privacy Policy</a></li>
-                <li className="ms-3"><a href="/cookies">Cookies</a></li>
+                <li><a href="/term-of-service/">Terms of Service</a></li>
+                <li className="ms-3"><a href="/privacy-policy/">Privacy Policy</a></li>
+                <li className="ms-3"><a href="/cookies/">Cookies</a></li>
               </ul>
             </div>
 
