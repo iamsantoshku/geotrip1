@@ -149,13 +149,7 @@ const Adminhome = () => {
             User support
           </NavLink>
 
-          {/* <NavLink
-            to="/admin-panel/rolechange"
-            className="flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 gap-2 text-sm md:text-base text-gray-700 dark:text-gray-300"
-          >
-            <FiSettings className="text-gray-500" />
-            Role change
-          </NavLink> */}
+          
 
           {/* rolechange */}
           <div className="p-3">

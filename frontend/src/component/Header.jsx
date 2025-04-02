@@ -58,27 +58,24 @@ const Header = () => {
       <div className="container">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
-      
-            
 
-
-<a className="nav-brand static-show mt-1" href="/">
-  {isHomePage && !isScrolled ? (
-    <img src="/translogo.png" className="mt-1" alt="Home Page Logo" style={{height:"auto",width: "160px"}} />
-  ) : (
-    <img
-      src="/makeuslogored.png"
-      className="logo mt-1 rounded-md"
-      alt="Scrolled or Non-Home Logo"
-      style={{
-        width: "160px",
-        height: "auto",
-        borderRadius: "30px",
-        backgroundColor: !isHomePage || isScrolled ? "#cd2c22" : "transparent", // Red background if not home OR scrolled
-      }}
-    />
-  )}
-</a>
+            <a className="nav-brand static-show mt-1" href="/">
+              {isHomePage && !isScrolled ? (
+                <img src="/translogo.png" className="mt-1" alt="Home Page Logo" style={{ height: "auto", width: "160px" }} />
+              ) : (
+                <img
+                  src="/makeuslogored.png"
+                  className="logo mt-1 rounded-md"
+                  alt="Scrolled or Non-Home Logo"
+                  style={{
+                    width: "160px",
+                    height: "auto",
+                    borderRadius: "30px",
+                    backgroundColor: !isHomePage || isScrolled ? "#cd2c22" : "transparent", // Red background if not home OR scrolled
+                  }}
+                />
+              )}
+            </a>
 
 
             <a className="nav-brand mob-show" href="/">
@@ -86,13 +83,13 @@ const Header = () => {
               <img src="/whiteback.png" className="logo" alt="Logo" style={{
                 width: "170px",
                 height: "32px",
-                
+
               }} />
             </a>
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
               <ul>
-                <li className="currencyDropdown me-2">
+                {/* <li className="currencyDropdown me-2">
                   <a href="#" onClick={(e) => {
                     e.preventDefault();
                     setShowCurrencyModal(true);
@@ -107,7 +104,7 @@ const Header = () => {
                   }} className="nav-link" data-bs-toggle="modal" data-bs-target="#countryModal">
                     <img src="/assets/img/flag/flag.png" className="img-fluid" width="17" alt="Country" />
                   </a>
-                </li>
+                </li> */}
                 <li>
                   {isUserLoggedIn ? (
                     <div>
@@ -281,7 +278,7 @@ const Header = () => {
               {/* <li><a href="about-us">About Us</a></li> */}
             </ul>
             <ul className="nav-menu nav-menu-social align-to-right">
-              <li className="currencyDropdown me-2">
+              {/* <li className="currencyDropdown me-2">
                 <a
                   href="#"
                   className="nav-link"
@@ -292,18 +289,18 @@ const Header = () => {
                 >
                   <span className="fw-medium">INR</span>
                 </a>
-              </li>
+              </li> */}
 
 
               {/* <Currency/> */}
-              <Currency
+              {/* <Currency
                 show={showCurrencyModal}
                 onClose={() => setShowCurrencyModal(false)}
-              />
+              /> */}
 
               {/* Language Dropdown */}
 
-              <li className="languageDropdown me-2">
+              {/* <li className="languageDropdown me-2">
                 <a
                   href="#"
                   className="nav-link"
@@ -319,12 +316,12 @@ const Header = () => {
                     alt="Country"
                   />
                 </a>
-              </li>
+              </li> */}
 
-              <Country
+              {/* <Country
                 show={showCountryModal}
                 onClose={() => setShowCountryModal(false)}
-              />
+              /> */}
 
               {/* Sign In / Register */}
 
