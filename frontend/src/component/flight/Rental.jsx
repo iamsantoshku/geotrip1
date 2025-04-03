@@ -4,7 +4,7 @@ const Rental = () => {
   const rentalProperties = [
     {
       id: 1,
-      imgSrc: "/assets/img/property/img-8.jpg",
+      imgSrc: "/assets/img/property/img-8.webp",
       type: "House",
       name: "Pagoda Partners Realty",
       details: ["3 Beds", "2 Baths", "2100 sqft"],
@@ -15,7 +15,7 @@ const Rental = () => {
     },
     {
       id: 2,
-      imgSrc: "/assets/img/property/img-1.jpg",
+      imgSrc: "/assets/img/property/img-1.webp",
       type: "House",
       name: "Strive Partners Realty",
       details: ["3 Beds", "2 Baths", "2100 sqft"],
@@ -26,7 +26,7 @@ const Rental = () => {
     },
     {
       id: 3,
-      imgSrc: "/assets/img/property/img-2.jpg",
+      imgSrc: "/assets/img/property/img-2.webp",
       type: "Villa",
       name: "Larkspur Partners Realty",
       details: ["3 Beds", "2 Baths", "2100 sqft"],
@@ -37,7 +37,7 @@ const Rental = () => {
     },
     {
       id: 4,
-      imgSrc: "/assets/img/property/img-3.jpg",
+      imgSrc: "/assets/img/property/img-3.webp",
       type: "Apartment",
       name: "Agile Real Estate Group",
       details: ["3 Beds", "2 Baths", "2100 sqft"],

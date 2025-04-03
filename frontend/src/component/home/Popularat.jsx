@@ -130,14 +130,14 @@ const AttractionCard = ({ imageSrc, cityName, thingsToDo }) => {
 
 const Popularat = () => {
   const attractions = [
-    { imageSrc: '/assets/img/attr/attr-7.jpg', cityName: 'New Delhi', thingsToDo: 260 },
-    { imageSrc: '/assets/img/attr/attr-5.jpg', cityName: 'Mumbai', thingsToDo: 240 },
-    { imageSrc: '/assets/img/attr/attr-6.jpg', cityName: 'Jaipur', thingsToDo: 312 },
-    { imageSrc: '/assets/img/attr/attr-8.jpg', cityName: 'Goa', thingsToDo: 220 },
-    { imageSrc: '/assets/img/attr/attr-9.jpg', cityName: 'Agra', thingsToDo: 180 },
-    { imageSrc: '/assets/img/attr/attr-10.jpg', cityName: 'Udaipur', thingsToDo: 612 },
-    { imageSrc: '/assets/img/tours/tour-11.jpg', cityName: 'Kolkata', thingsToDo: 145 },
-    { imageSrc: '/assets/img/tours/tour-10.jpg', cityName: 'Varanashi', thingsToDo: 310 },
+    { imageSrc: '/assets/img/attr/attr-7.webp', cityName: 'New Delhi', thingsToDo: 260 },
+    { imageSrc: '/assets/img/attr/attr-5.webp', cityName: 'Mumbai', thingsToDo: 240 },
+    { imageSrc: '/assets/img/attr/attr-6.webp', cityName: 'Jaipur', thingsToDo: 312 },
+    { imageSrc: '/assets/img/attr/attr-8.webp', cityName: 'Goa', thingsToDo: 220 },
+    { imageSrc: '/assets/img/attr/attr-9.webp', cityName: 'Agra', thingsToDo: 180 },
+    { imageSrc: '/assets/img/attr/attr-10.webp', cityName: 'Udaipur', thingsToDo: 612 },
+    { imageSrc: '/assets/img/attr/attr-1.webp', cityName: 'Kolkata', thingsToDo: 145 },
+    { imageSrc: '/assets/img/attr/attr-2.webp', cityName: 'Varanashi', thingsToDo: 310 },
   ];
 
   return (

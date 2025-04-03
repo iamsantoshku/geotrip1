@@ -364,23 +364,23 @@ const Herobanner = () => {
       description:
         "Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.",
       buttonText: "Explore More",
-      background: "/flightbanner.png",
+      background: "/flightbanner.webp",
     },
-    {
-      id: 2,
-      title: "Explore The World Around",
-      description:
-        "Find breathtaking adventures waiting for you around the globe. Your journey begins here!",
-      buttonText: "Discover Now",
-      background: "/assets/img/destination/tr-4.jpg",
-    },
+    // {
+    //   id: 2,
+    //   title: "Explore The World Around",
+    //   description:
+    //     "Find breathtaking adventures waiting for you around the globe. Your journey begins here!",
+    //   buttonText: "Discover Now",
+    //   background: "/assets/img/destination/tr-4.jpg",
+    // },
     {
       id: 3,
       title: "Wander. Explore. Experience.",
       description:
         "Escape the ordinary and explore breathtaking destinations around the world. Find the perfect getaway tailored just for you!",
       buttonText: "Book Now",
-      background: "/tourbanner.png",
+      background: "/tourbanner.webp",
     },
     {
       id: 4,
@@ -388,7 +388,7 @@ const Herobanner = () => {
       description:
         "Find exclusive travel deals, flight bookings, and vacation packages to your dream destinations. Let’s make memories together!",
       buttonText: "Discover More",
-      background: "/hotelbanner.png",
+      background: "/hotelbanner.webp",
     },
     {
       id: 5,
@@ -396,7 +396,7 @@ const Herobanner = () => {
       description:
         "From tropical beaches to snowy peaks, explore destinations that inspire your soul. Where will your next journey take you?",
       buttonText: "Find Your Escape",
-      background: "/cabbanner.png",
+      background: "/cabbanner.webp",
     },
   ];
 
@@ -448,9 +448,13 @@ const Herobanner = () => {
                 zIndex: 2,
               }}
             >
-              <h1 className="text-5xl" style={{ color: "#fff" }}>
+              {/* <h1 className="text-5xl" style={{ color: "#fff" }}>
                 {banner.title}
-              </h1>
+              </h1> */}
+              <h1 className="text-5xl" style={{ color: "#fff", zIndex: 3 }}>
+  {banner.title}
+</h1>
+
               <p className="fs-5 fw-light" style={{ color: "#fff" }}>
                 {banner.description}
               </p>

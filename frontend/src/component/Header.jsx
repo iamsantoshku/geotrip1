@@ -168,7 +168,7 @@ const Header = () => {
                   </li>
                   <li>
                     <a href="JavaScript:Void(0);">
-                      Car<span className="submenu-indicator"></span>
+                      Cars<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
                       <li><a href="car-list">Car List 01</a></li>

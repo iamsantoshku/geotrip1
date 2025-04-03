@@ -398,7 +398,7 @@ const Bannerhomeht = () => {
         // style={{ background: "url(/assets/img/banner-5.jpg) no-repeat" }}
         // style={{ background: "url(/hotelbanner.png) no-repeat" }}
         style={{
-          backgroundImage: "url(/hotelbanner.png)",
+          backgroundImage: "url(/hotelbanner.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

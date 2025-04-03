@@ -48,21 +48,21 @@ const Toursoffer = () => {
   const tours = [
     {
       discount: '20% Off',
-      imageSrc: '/assets/img/city/ct-6.png',
+      imageSrc: '/assets/img/city/ct-6.webp',
       location: 'Delhi',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
       priceRange: '₹20000 - ₹30000',
     },
     {
       discount: '15% Off',
-      imageSrc: '/assets/img/city/ct-5.png',
+      imageSrc: '/assets/img/city/ct-5.webp',
       location: 'Mumbai',
       tripDetails: ['Round-trip', '3D/4N', '2 Person'],
       priceRange: '₹40000 - ₹50000',
     },
     {
       discount: '30% Off',
-      imageSrc: '/assets/img/city/ct-1.png',
+      imageSrc: '/assets/img/city/ct-1.webp',
       location: 'Goa',
       tripDetails: ['Round-trip', '3D/4N', '3 Person'],
       priceRange: '₹60000 - ₹70000',

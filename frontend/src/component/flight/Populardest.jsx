@@ -7,7 +7,7 @@ import React from 'react';
 const destinations = [
   {
     name: 'Delhi',
-    img: '/assets/img/city/ct-12.png',
+    img: '/assets/img/city/ct-12.webp',
     stats: {
       hotels: 15,
       flights: 30,
@@ -18,7 +18,7 @@ const destinations = [
   },
   {
     name: 'Mumbai',
-    img: '/assets/img/city/ct-6.png',
+    img: '/assets/img/city/ct-6.webp',
     stats: {
       hotels: 18,
       flights: 35,
@@ -29,7 +29,7 @@ const destinations = [
   },
   {
     name: 'Jaipur',
-    img: '/assets/img/city/ct-8.png',
+    img: '/assets/img/city/ct-8.webp',
     stats: {
       hotels: 12,
       flights: 20,
@@ -40,7 +40,7 @@ const destinations = [
   },
   {
     name: 'Goa',
-    img: '/assets/img/city/ct-9.png',
+    img: '/assets/img/city/ct-9.webp',
     stats: {
       hotels: 20,
       flights: 40,
