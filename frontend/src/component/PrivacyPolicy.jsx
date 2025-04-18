@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
           1. Introduction
         </h2>
         <p className="text-gray-600 mb-4">
-          Welcome to <strong>MakeUsTrip</strong>. We respect your privacy and
+          Welcome to <strong>Zumpon</strong>. We respect your privacy and
           are committed to protecting your personal information. This Privacy
           Policy explains how we collect, use, and share your data.
         </p>
@@ -78,7 +78,7 @@ const PrivacyPolicy = () => {
           If you have any questions about our Privacy Policy, please contact us
           at:{" "}
           <a href="mailto:support@makeustrip.in" className="text-blue-600">
-            support@makeustrip.in
+            support@makeustrip.com
           </a>
         </p>
       </div>

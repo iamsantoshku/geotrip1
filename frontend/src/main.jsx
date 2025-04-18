@@ -81,6 +81,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContextProvider } from "./context/authContext.jsx";
 import { BrowserRouter } from "react-router-dom"; // Import BrowserRouter
+import { HelmetProvider } from 'react-helmet-async';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -88,7 +89,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AuthContextProvider>
       {/* Wrap App with BrowserRouter */}
       <BrowserRouter>
-        <App />
+      <HelmetProvider>
+      <App />
+
+      </HelmetProvider>
+        
       </BrowserRouter>
     </AuthContextProvider>
   </React.StrictMode>

@@ -202,6 +202,7 @@ import React, { useState } from "react";
 import { FaUser, FaPhone, FaHandshake, FaGlobe } from "react-icons/fa";
 import axios from "axios";
 import { BACKENDURL } from "../Config/Config";
+import Head from "../component/Head";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -229,27 +230,16 @@ const ContactPage = () => {
   };
 
   return (
+    <>
+    <Head
+        title="Contact Us - Make Us Trip"
+        description="Get in touch with Make Us Trip for bookings, queries, or support. We're here to help you plan your perfect trip."
+        keywords="contact make us trip, travel support, booking help, customer service, make us trip contact"
+        image="https://www.makeustrip.in/contact-banner.png"
+        url="https://www.makeustrip.in/contact"
+      />
     <div className="max-w-7xl mx-auto px-6 py-12">
-      {/* <section className="text-center">
-        <h2 className="text-4xl font-bold text-gray-900">Contact Our <span className="text-black">Friendly Experts</span></h2>
-        <p className="mt-3 text-gray-600">Any questions? We would be happy to help you.</p>
-      </section> */}
       
-      {/* <div className="grid md:grid-cols-4 gap-6 mt-10">
-        {[
-          { icon: <FaUser size={32} />, title: "Help & Support", text: "For help with a current product or service.", contact: "support@alithemes.com" },
-          { icon: <FaPhone size={32} />, title: "Call Us", text: "Speak to a member of our team.", contact: "(+91)7033825186" },
-          { icon: <FaHandshake size={32} />, title: "Business Department", text: "Contact for cooperation projects.", contact: "(+01) 789 453 23" },
-          { icon: <FaGlobe size={32} />, title: "Global Branch", text: "Reach out for global expansions.", contact: "(+01) 345 456 23" },
-        ].map((item, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center border border-gray-200">
-            <div className="text-blue-600 mx-auto mb-4">{item.icon}</div>
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-gray-500 mt-2">{item.text}</p>
-            <p className="text-blue-500 mt-4 font-medium">{item.contact}</p>
-          </div>
-        ))}
-      </div> */}
 
       <section className="mt-16 bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">Get in Touch</h1>
@@ -329,6 +319,8 @@ const ContactPage = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 

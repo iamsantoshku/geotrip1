@@ -97,6 +97,7 @@ export const loginUser = async (req, res) => {
   }
 };
 // require("dotenv").config();
+
 dotenv.config();
 export const transporter = nodemailer.createTransport({
   service: "gmail",
