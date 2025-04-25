@@ -1,14 +1,4 @@
-// import React from 'react'
 
-// const Clasicblog = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default Clasicblog
 
 
 import React from 'react'
