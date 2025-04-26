@@ -60,7 +60,7 @@ const AccountDropdown = () => {
           {/* <div className=''> */}
           <ul className='flex flex-col'>
             <li>
-              <a href="user-profile">
+              <a href="/user-profile">
                 <i className="fa-regular fa-id-card me-2 pl-1 lg:pl-0"></i>
                 My Profile
                 {/* <span className="notti_coun style-1"></span> */}
@@ -68,19 +68,19 @@ const AccountDropdown = () => {
               </a>
             </li>
             <li>
-              <a href="my-bookings">
+              <a href="/my-bookings">
                 <i className="fa-solid fa-ticket me-2 pl-4 lg:pl-0"></i>
                 My Booking
               </a>
             </li>
             <li>
-              <a href="travelers">
+              <a href="/travelers">
                 <i className="fa-solid fa-user-group me-2 pl-0 lg:pl-0"></i>
                 Travelers
               </a>
             </li>
             <li>
-              <a href="payment-detail">
+              <a href="/payment-detail">
                 <i className="fa-solid fa-wallet me-2 pl-10 lg:pl-0"></i>
                 Payment Details
               </a>
@@ -89,7 +89,7 @@ const AccountDropdown = () => {
             {/* Admin Panel Section */}
             {isAdmin && (
               <li>
-                <a href="admin-panel">
+                <a href="/admin-panel">
                   <i className="fa-solid fa-tools me-2 pl-5 lg:pl-0"></i>
                   Admin Panel
                 </a>

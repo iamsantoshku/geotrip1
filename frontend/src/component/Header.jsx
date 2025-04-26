@@ -140,7 +140,7 @@ const Header = () => {
                       Hotel<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="hotel-list">Hotel list 01</a></li>
+                      <li><a href="/hotel-list">Hotel list 01</a></li>
 
                       {/* <li><a href="hotel-details">Hotel Detail 01</a></li> */}
 
@@ -151,7 +151,7 @@ const Header = () => {
                       Flight<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="flight-list-01">Flight List 01</a></li>
+                      <li><a href="/flight-list-01">Flight List 01</a></li>
                       {/* <li><a href="flight-list-02.html">Flight List 02</a></li>
                       <li><a href="Flight-detail.html">Flight Detail</a></li> */}
                     </ul>
@@ -161,7 +161,7 @@ const Header = () => {
                       Rental<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="property-list">Rental List 01</a></li>
+                      <li><a href="/property-list">Rental List 01</a></li>
 
                       {/* <li><a href="rental-detail.html">Rental Detail</a></li> */}
                     </ul>
@@ -196,10 +196,10 @@ const Header = () => {
                     </ul>
                   </li>
 
-                  <li><a href="about-us">About Us</a></li>
+                  <li><a href="/about-us">About Us</a></li>
 
                   <li>
-                    <a href="contact-us">
+                    <a href="/contact-us">
                       Contact Us<span className="submenu-indicator"></span>
                     </a>
 
@@ -214,7 +214,7 @@ const Header = () => {
 
                 <ul className="nav-dropdown nav-submenu xxl-menu">
                   <li>
-                    <a href="stay">
+                    <a href="/stay">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
                           {/* <i className="fa-solid fa-hotel"></i> */}
@@ -228,7 +228,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="flight">
+                    <a href="/flight">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-success fs-4">
                           {/* <i className="fa-solid fa-plane-departure"></i> */}
@@ -243,7 +243,7 @@ const Header = () => {
                   </li>
 
                   <li>
-                    <a href="hotel">
+                    <a href="/hotel">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-warning fs-4"><i
                           className="fa-solid  text-green-700"></i>
@@ -258,7 +258,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="car">
+                    <a href="/car">
                       <div className="mega-advance-menu">
                         <div className="mega-first square--50 rounded-2 gray-simple text-seagreen fs-4"><i
                           className="fa-brands "></i>
