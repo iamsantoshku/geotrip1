@@ -8,7 +8,7 @@ const Hotel = () => {
   return (
     <>
     
-<div>
+  <div>
        <Herobannerhtl/>
        <Hoteldet/>
        <Calltoaction/>

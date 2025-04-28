@@ -171,3 +171,58 @@ export const getRoomsByHotelId = async (req, res) => {
     res.status(500).json({ message: "Error fetching rooms", error });
   }
 };
+
+// export const getRoomsByHotelName = async (req, res) => {
+//   try {
+//     const { hotelName } = req.params; // Extract hotel name from request params
+
+//     // Find the hotel by its name
+//     const hotel = await Hotel.findOne({ name: hotelName });
+
+//     if (!hotel) {
+//       return res.status(404).json({ message: "Hotel not found." });
+//     }
+
+//     // Find rooms linked to the hotel ID
+//     const rooms = await Room.find({ hotel: hotel._id }).populate("hotel", "name");
+
+//     if (!rooms || rooms.length === 0) {
+//       return res.status(404).json({ message: "No rooms found for this hotel." });
+//     }
+
+//     res.status(200).json({
+//       hotelName: hotel.name,
+//       rooms,
+//     });
+//   } catch (error) {
+//     console.error("Error fetching rooms by hotel name:", error);
+//     res.status(500).json({ message: "Error fetching rooms by hotel name", error });
+//   }
+// };
+
+
+export const getRoomsByHotelName = async (req, res) => {
+  try {
+    const { hotelName } = req.params;
+
+    if (!hotelName) {
+      return res.status(400).json({ message: "Hotel name is required" });
+    }
+
+    const hotel = await Hotel.findOne({ name: hotelName });
+
+    if (!hotel) {
+      return res.status(404).json({ message: "Hotel not found" });
+    }
+
+    const rooms = await Room.find({ hotel: hotel._id });
+
+    res.status(200).json({
+      rooms,             // send rooms array
+      hotelName: hotel.name,  // send hotel name
+    });
+  } catch (error) {
+    console.error("Error fetching rooms by hotel name:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};

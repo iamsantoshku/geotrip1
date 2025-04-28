@@ -40,6 +40,7 @@ const Gallerybanner = () => {
                   {/* <li className="breadcrumb-item"><a href="#" className="text-primary">Home</a></li> */}
                   <li className="breadcrumb-item"><a href="#" className="text-primary">Hotel in Delhi, IND</a></li>
                   <li className="breadcrumb-item active" aria-current="page">{hotelName}</li>
+
                 </ol>
               </nav>
             </div>
@@ -66,6 +67,8 @@ const Gallerybanner = () => {
                         <a href="#" className="text-primary fw-medium ms-2">Show on Map</a>
                       </p>
                     </div>
+
+                   
                   </div>
                   <div className="crd-heaader-last my-md-0 my-2">
                     <div className="drix-wrap d-flex align-items-center">
@@ -91,7 +94,7 @@ const Gallerybanner = () => {
                       </a>
                     </div>
                   ))}
-                  <div className="galleryGrid__item position-relative">
+                  {/* <div className="galleryGrid__item position-relative">
                     <a href="/assets/img/hotel/hotel-7.jpg" data-lightbox="roadtrip">
                       <img src="/assets/img/hotel/hotel-7.jpg" alt="More Photos" className="rounded-2 img-fluid" />
                     </a>
@@ -100,7 +103,7 @@ const Gallerybanner = () => {
                         <i className="fa-solid fa-caret-right me-1"></i>16 More Photos
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -137,8 +140,8 @@ const Gallerybanner = () => {
               <div className="d-flex align-items-center justify-content-start py-3 px-3 rounded-2 bg-success mb-4">
                 <p className="text-light fw-semibold m-0">
                   <i className="fa-solid fa-gift text-warning me-2"></i>
-                  <a href="#" className="text-white text-decoration-underline">Login</a> or 
-                  <a href="#" className="text-white text-decoration-underline">Register</a> to earn up to 100 coins (approx 1.72 US$) after check-out.
+                  <a href="/#" className="text-white text-decoration-underline">Login</a> or 
+                  <a href="/#" className="text-white text-decoration-underline">Register</a> to earn up to 100 coins (approx 1.72 US$) after check-out.
                 </p>
               </div>
             </div>

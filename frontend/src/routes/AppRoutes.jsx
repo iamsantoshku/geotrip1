@@ -76,7 +76,8 @@ const AppRoutes = () => {
        <Route path='/hotel' element = {<Hotelhome/>}></Route>
        <Route path='/car' element = {<Car/>}></Route>
        <Route path='/car-list' element = {<Carlisting/>}></Route>       
-       <Route path="/hotel-details/:hotelId" element={<Roomdetails />} />
+       {/* <Route path="/hotel-details/:hotelId" element={<Roomdetails />} /> */}
+       <Route path="/hotel-details/:name" element={<Roomdetails />} />
        <Route path="/book/:id" element={<TicketBooking />} />      
        <Route path="/roombook" element={<Roombook />} />
        <Route path='/bookingpage-02' element={<Bookingform/>}></Route>

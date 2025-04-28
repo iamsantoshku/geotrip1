@@ -9,9 +9,9 @@ import { BACKENDURL } from "../../Config/Config";
 const HotelCard = ({ hotel }) => {
   const navigate = useNavigate();
 
-  const handleCardClick = (e, hotelId) => {
+  const handleCardClick = (e, name) => {
     e.preventDefault();
-    navigate(`/hotel-details/${hotelId}`);
+    navigate(`/hotel-details/${name}`);
   };
 
   return (
@@ -33,13 +33,13 @@ const HotelCard = ({ hotel }) => {
           <div className="col-xl col-lg col-md">
             <div className="listLayout_midCaps mt-md-0 mt-3 mb-md-0 mb-3">
               {/* Rating */}
-              <div className="d-flex align-items-center">
+              {/* <div className="d-flex align-items-center">
                 <div className="d-inline-block">
                   {[...Array(Math.round(hotel.rating || 0))].map((_, index) => (
                     <i key={index} className="fa fa-star text-warning text-xs"></i>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Hotel Name */}
               <h4 className="fs-5 fw-bold mb-1">{hotel.name}</h4>
@@ -134,7 +134,7 @@ const HotelCard = ({ hotel }) => {
 
               <div className="d-flex align-items-start align-items-md-end text-start text-md-end flex-column">
                 <button
-                  onClick={(e) => handleCardClick(e, hotel._id)}
+                  onClick={(e) => handleCardClick(e, hotel.name)}
                   className="btn btn-md btn-primary full-width fw-medium px-lg-4"
                 >
                   See Availability <i className="fa-solid fa-arrow-trend-up ms-2"></i>

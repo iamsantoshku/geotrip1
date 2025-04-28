@@ -10,17 +10,26 @@ import Gallerybanner from '../component/room/Gallerybanner'
 
 const Roomdetails = () => {
   return (
-    <div>
-        {/* <Hoteldetailban/> */}
-        {/* <Roomdetails/> */}
+    
+      <section class="pt-3 gray-simple">
+			<div class="container">
+				<div class="row">
         <Gallerybanner/>
         <RoomDetails/>
         <Service/>
         <Nearestservice/>
         <GuestReview/>
         <Faq/>
+
+        </div>
+        </div>
+        {/* </div> */}
+        </section>
+
+       
+        
       
-    </div>
+  
   )
 }
 

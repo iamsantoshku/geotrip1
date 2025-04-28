@@ -1,6 +1,6 @@
 import express from 'express';
 // import { addHotel, getAllHotels, getHotelById, filterHotels} '';
-import { addHotel, getAllHotels, getHotelById, filterHotels, searchHotels } from '../controller/hotelController.js';
+import { addHotel, getAllHotels, getHotelById, filterHotels, searchHotels,getHotelByName } from '../controller/hotelController.js';
 
 const router = express.Router();
 
@@ -19,6 +19,7 @@ router.get('/hotelss', getAllHotels);
 
 // Get a single hotel by ID
 router.get('/hotels/:id', getHotelById);
+router.get('/hotel/:name', getHotelByName);
 
 // Filter hotels by location or price range
 router.get('/hotels/filter', filterHotels);

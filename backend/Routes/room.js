@@ -50,6 +50,7 @@ import {
   getRoom,
   searchRooms,
   getRoomsByHotelId,
+  getRoomsByHotelName
 } from "../controller/roomController.js";
 import multer from "multer";
 
@@ -80,6 +81,8 @@ router.get("/:id", getRoom);
 router.get("/search", searchRooms);
 
 // Get rooms by hotel ID
-router.get("/hotels/:hotelId/rooms", getRoomsByHotelId);
+// router.get("/hotels/:hotelId/rooms", getRoomsByHotelId);
+// router.get('/hotels/:hotelName/rooms', getRoomsByHotelName);
+router.get("/hotel/:hotelName", getRoomsByHotelName);
 
 export default router;
