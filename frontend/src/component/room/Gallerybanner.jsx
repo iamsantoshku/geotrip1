@@ -103,8 +103,8 @@ const Gallerybanner = () => {
                 <div className="galleryGrid typeGrid_3 mt-2">
                   {['hotel-1', 'hotel-2', 'hotel-3', 'hotel-4', 'hotel-5', 'hotel-6', 'hotel-7'].map((image, index) => (
                     <div className="galleryGrid__item" key={index}>
-                      <a href={`/assets/img/hotel/${image}.jpg`} data-lightbox="roadtrip">
-                        <img src={`/assets/img/hotel/${image}.jpg`} alt={`Hotel ${index + 1}`} className="rounded-2 img-fluid" />
+                      <a href={`/assets/img/hotel/${image}.webp`} data-lightbox="roadtrip">
+                        <img src={`/assets/img/hotel/${image}.webp`} alt={`Hotel ${index + 1}`} className="rounded-2 img-fluid" />
                       </a>
                     </div>
                   ))}
