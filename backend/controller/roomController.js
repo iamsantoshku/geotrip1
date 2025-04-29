@@ -1,16 +1,7 @@
 import Room from "../models/roomSchema.js"; // Import Room model
 import Hotel from "../models/HotelSchema.js"
 
-// Add a new room
-// export const addRoom = async (req, res) => {
-//   try {
-//     const newRoom = new Room(req.body);
-//     const savedRoom = await newRoom.save();
-//     res.status(201).json({ message: "Room added successfully", data: savedRoom });
-//   } catch (error) {
-//     res.status(500).json({ message: "Failed to add room", error: error.message });
-//   }
-// };
+
 
 
 export const addRoom = async (req, res) => {
@@ -100,105 +91,8 @@ export const searchRooms = async (req, res) => {
 
 
 
-// Get rooms for a specific hotel
-// export const getRoomsByHotelId = async (req, res) => {
-//   const { hotelId } = req.params;
-
-//   try {
-//     const rooms = await Room.find({ hotelId }); // Assuming `Room` model has a `hotelId` field
-//     const hotel = await Hotel.findById(hotelId); // Fetch hotel name if needed
-
-//     if (!rooms || rooms.length === 0) {
-//       return res.status(404).json({ message: "No rooms found for this hotel." });
-//     }
-
-//     res.status(200).json({
-//       rooms,
-//       hotelName: hotel ? hotel.name : "Hotel Not Found", // Assuming `hotel` has a `name` field
-//     });
-//   } catch (error) {
-//     res.status(500).json({ message: "Error fetching rooms.", error });
-//   }
-// };
 
 
-
-
-// import Room from "../models/Room.js";
-
-// export const getRoomsByHotelId = async (req, res) => {
-//   try {
-//     const { hotelId } = req.params; // Extract hotel ID from request params
-//     const rooms = await Room.find({ hotel: hotelId }); // Query rooms by hotel ID
-
-//     if (!rooms || rooms.length === 0) {
-//       return res.status(404).json({ message: "No rooms found for this hotel." });
-//     }
-
-//     res.status(200).json({ 
-//       hotelName: "Your Hotel Name Here", // You can dynamically fetch this from Hotel collection if needed
-//       rooms 
-//     });
-//   } catch (error) {
-//     res.status(500).json({ message: "Error fetching rooms", error });
-//   }
-// };
-
-
-
-
-
-export const getRoomsByHotelId = async (req, res) => {
-  try {
-    const { hotelId } = req.params; // Extract hotel ID from request params
-
-    // Query rooms by hotel ID and populate the hotel details
-    const rooms = await Room.find({ hotel: hotelId }).populate("hotel", "name");
-
-    if (!rooms || rooms.length === 0) {
-      return res.status(404).json({ message: "No rooms found for this hotel." });
-    }
-
-    // Extract hotel name from the populated hotel data
-    const hotelName = rooms[0]?.hotel?.name || "Hotel Name Not Available";
-
-    res.status(200).json({
-      hotelName,
-      rooms,
-    });
-  } catch (error) {
-    console.error("Error fetching rooms:", error);
-    res.status(500).json({ message: "Error fetching rooms", error });
-  }
-};
-
-// export const getRoomsByHotelName = async (req, res) => {
-//   try {
-//     const { hotelName } = req.params; // Extract hotel name from request params
-
-//     // Find the hotel by its name
-//     const hotel = await Hotel.findOne({ name: hotelName });
-
-//     if (!hotel) {
-//       return res.status(404).json({ message: "Hotel not found." });
-//     }
-
-//     // Find rooms linked to the hotel ID
-//     const rooms = await Room.find({ hotel: hotel._id }).populate("hotel", "name");
-
-//     if (!rooms || rooms.length === 0) {
-//       return res.status(404).json({ message: "No rooms found for this hotel." });
-//     }
-
-//     res.status(200).json({
-//       hotelName: hotel.name,
-//       rooms,
-//     });
-//   } catch (error) {
-//     console.error("Error fetching rooms by hotel name:", error);
-//     res.status(500).json({ message: "Error fetching rooms by hotel name", error });
-//   }
-// };
 
 
 export const getRoomsByHotelName = async (req, res) => {

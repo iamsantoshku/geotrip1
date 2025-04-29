@@ -1,16 +1,6 @@
- // Import Car model
-// import carSchema from "../models/carSchema";
+
 import Car from "../models/carSchema.js"
-// Add a Car
-// export const addCar = async (req, res) => {
-//   try {
-//     const car = new Car(req.body);
-//     const savedCar = await car.save();
-//     res.status(201).json({ message: 'Car added successfully', car: savedCar });
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
+
 
 
 export const addCar = async (req, res) => {
@@ -52,44 +42,7 @@ export const addCar = async (req, res) => {
     }
   };
 
-// Search Cars (dynamic filters)
-// export const searchCar = async (req, res) => {
-//   const { name, type, transmission, fuel } = req.query;
 
-//   const filters = {};
-//   if (name) filters.name = { $regex: name, $options: 'i' }; // Case-insensitive search
-//   if (type) filters.type = type;
-//   if (transmission) filters.transmission = transmission;
-//   if (fuel) filters.fuel = fuel;
-
-//   try {
-//     const cars = await Car.find(filters);
-//     res.status(200).json(cars);
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
-
-
-// export const searchCars = async (req, res) => {
-//   try {
-//     const { pickupLocation, dropLocation, dateRange } = req.body;
-
-//     // Filter cars based on search criteria
-//     const cars = await Car.find({
-//       pickupLocation: { $regex: new RegExp(pickupLocation, 'i') }, // Case insensitive
-//       dropLocation: { $regex: new RegExp(dropLocation, 'i') },
-//       availableDates: {
-//         $gte: new Date(dateRange.start), 
-//         $lte: new Date(dateRange.end),
-//       },
-//     });
-
-//     res.status(200).json({ success: true, cars });
-//   } catch (error) {
-//     res.status(500).json({ success: false, message: 'Server Error', error });
-//   }
-// };
 
 
 export const searchCar = async (req, res) => {
@@ -158,9 +111,3 @@ export const getAllCars = async (req, res) => {
   }
 };
 
-// module.exports = {
-//   addCar,
-//   searchCar,
-//   getCar,
-//   getAllCars,
-// };

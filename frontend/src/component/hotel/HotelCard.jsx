@@ -1,7 +1,6 @@
 
 
 
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BACKENDURL } from "../../Config/Config";
@@ -23,7 +22,7 @@ const HotelCard = ({ hotel }) => {
             <div className="cardImage__caps rounded-2 overflow-hidden h-100">
               <img
                 className="img-fluid h-100 object-fit-cover"
-                src={BACKENDURL + `/${hotel.thumbnail}`}
+                src={`${BACKENDURL}/${hotel.thumbnail}`}
                 alt={hotel.name}
               />
             </div>
@@ -32,32 +31,19 @@ const HotelCard = ({ hotel }) => {
           {/* Hotel Details */}
           <div className="col-xl col-lg col-md">
             <div className="listLayout_midCaps mt-md-0 mt-3 mb-md-0 mb-3">
-              {/* Rating */}
-              {/* <div className="d-flex align-items-center">
-                <div className="d-inline-block">
-                  {[...Array(Math.round(hotel.rating || 0))].map((_, index) => (
-                    <i key={index} className="fa fa-star text-warning text-xs"></i>
-                  ))}
-                </div>
-              </div> */}
-
-              {/* Hotel Name */}
               <h4 className="fs-5 fw-bold mb-1">{hotel.name}</h4>
 
-              {/* Location & Distance */}
               <ul className="row gx-2 p-0 excortio">
                 <li className="col-auto">
                   <p className="text-muted-2 text-md">{hotel.location || "Unknown Location"}</p>
                 </li>
+                <li className="col-auto"><p className="text-muted-2 text-md fw-bold">.</p></li>
                 <li className="col-auto">
-                  <p className="text-muted-2 text-md fw-bold">.</p>
+                  <p className="text-muted-2 text-md">
+                    {hotel.distance ? `${hotel.distance} km from Airport` : "Distance Unavailable"}
+                  </p>
                 </li>
-                <li className="col-auto">
-                  <p className="text-muted-2 text-md">{hotel.distance ? `${hotel.distance} km from Airport` : "Distance Unavailable"}</p>
-                </li>
-                <li className="col-auto">
-                  <p className="text-muted-2 text-md fw-bold">.</p>
-                </li>
+                <li className="col-auto"><p className="text-muted-2 text-md fw-bold">.</p></li>
                 <li className="col-auto">
                   <p className="text-muted-2 text-md">
                     <a href="#" className="text-primary">Show on Map</a>
@@ -65,20 +51,21 @@ const HotelCard = ({ hotel }) => {
                 </li>
               </ul>
 
-              {/* Amenities */}
               <div className="detail ellipsis-container mt-3">
-                {(hotel.amenities && Array.isArray(hotel.amenities)) 
-                  ? hotel.amenities.slice(0, 5).map((amenity, index) => (
-                      <span key={index} className="ellipsis">{amenity}</span>
-                    ))
-                  : <span className="ellipsis">No Amenities Listed</span>
-                }
+                {Array.isArray(hotel.amenities) && hotel.amenities.length > 0 ? (
+                  hotel.amenities.slice(0, 5).map((amenity, index) => (
+                    <span key={index} className="ellipsis">{amenity}</span>
+                  ))
+                ) : (
+                  <span className="ellipsis">No Amenities Listed</span>
+                )}
               </div>
 
-              {/* Room & Cancellation Policy */}
               <div className="position-relative mt-3">
                 <div className="fw-medium text-dark">{hotel.roomType || "Standard Room"}</div>
-                <div className="text-md text-muted">Last booked {hotel.lastBooked || "N/A"} minutes ago</div>
+                <div className="text-md text-muted">
+                  Last booked {hotel.lastBooked || "N/A"} minutes ago
+                </div>
               </div>
 
               <div className="position-relative mt-4">
@@ -97,7 +84,7 @@ const HotelCard = ({ hotel }) => {
             </div>
           </div>
 
-          {/* Pricing & Booking Section */}
+          {/* Pricing and Booking */}
           <div className="col-xl-auto col-lg-auto col-md-auto text-right d-flex align-items-start align-items-md-end flex-column">
             <div className="row align-items-center justify-content-start justify-content-md-end gx-2 mb-3">
               <div className="col-auto text-start text-md-end">
@@ -112,12 +99,12 @@ const HotelCard = ({ hotel }) => {
             </div>
 
             <div className="position-relative mt-auto full-width">
-              {hotel.discount ? (
+              {hotel.discount && (
                 <div className="d-flex align-items-center justify-content-start justify-content-md-end mb-1">
                   <span className="label bg-success text-light">{hotel.discount}% Off</span>
                 </div>
-              ) : null}
-              
+              )}
+
               <div className="d-flex align-items-center justify-content-start justify-content-md-end">
                 {hotel.originalPrice && (
                   <div className="text-muted-2 fw-medium text-decoration-line-through me-2">
@@ -132,7 +119,7 @@ const HotelCard = ({ hotel }) => {
                 <div className="text-muted-2 text-sm">For {hotel.nights || 1} Nights</div>
               </div>
 
-              <div className="d-flex align-items-start align-items-md-end text-start text-md-end flex-column">
+              <div className="d-flex align-items-start align-items-md-end flex-column text-start text-md-end">
                 <button
                   onClick={(e) => handleCardClick(e, hotel.name)}
                   className="btn btn-md btn-primary full-width fw-medium px-lg-4"
@@ -142,7 +129,7 @@ const HotelCard = ({ hotel }) => {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -150,3 +137,4 @@ const HotelCard = ({ hotel }) => {
 };
 
 export default HotelCard;
+

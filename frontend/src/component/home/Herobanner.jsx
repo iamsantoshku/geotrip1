@@ -2,14 +2,16 @@
 
 
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper React components
-import { Autoplay, Pagination } from "swiper/modules"; // Swiper modules
-import "swiper/css"; // Import Swiper styles
+
+import React, { useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
 import "swiper/css/pagination";
 
 const Herobanner = () => {
-  const banners = [
+  // Memoize static banner data
+  const banners = useMemo(() => [
     {
       id: 1,
       title: "Start Your Trip with Make Us Trip",
@@ -18,14 +20,6 @@ const Herobanner = () => {
       buttonText: "Explore More",
       background: "/flightbanner.webp",
     },
-    // {
-    //   id: 2,
-    //   title: "Explore The World Around",
-    //   description:
-    //     "Find breathtaking adventures waiting for you around the globe. Your journey begins here!",
-    //   buttonText: "Discover Now",
-    //   background: "/assets/img/destination/tr-4.jpg",
-    // },
     {
       id: 3,
       title: "Wander. Explore. Experience.",
@@ -50,21 +44,22 @@ const Herobanner = () => {
       buttonText: "Find Your Escape",
       background: "/cabbanner.webp",
     },
-  ];
+  ], []);
 
   return (
     <Swiper
-      spaceBetween={0} // No gap between slides
-      slidesPerView={1} // Show 1 slide at a time
-      autoplay={{ delay: 8000, disableOnInteraction: false }} // Auto-slide every 8 seconds
-      loop={true} // Infinite loop
-      pagination={{ clickable: true }} // Enable pagination
-      modules={[Autoplay, Pagination]} // Only using Autoplay and Pagination
+      spaceBetween={0}
+      slidesPerView={1}
+      autoplay={{ delay: 8000, disableOnInteraction: false }}
+      loop={true}
+      pagination={{ clickable: true }}
+      modules={[Autoplay, Pagination]}
       className="mySwiper"
     >
       {banners.map((banner) => (
         <SwiperSlide key={banner.id}>
           <div
+            className="d-flex align-items-center justify-content-center text-center"
             style={{
               position: "relative",
               width: "100%",
@@ -73,10 +68,6 @@ const Herobanner = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
               color: "#fff",
             }}
           >
@@ -88,7 +79,7 @@ const Herobanner = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                background: "rgba(0, 0, 0, 0.5)",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
               }}
             ></div>
 
@@ -100,19 +91,16 @@ const Herobanner = () => {
                 zIndex: 2,
               }}
             >
-              {/* <h1 className="text-5xl" style={{ color: "#fff" }}>
+              <h1 className="text-5xl" style={{ color: "#fff" }}>
                 {banner.title}
-              </h1> */}
-              <h1 className="text-5xl" style={{ color: "#fff", zIndex: 3 }}>
-  {banner.title}
-</h1>
-
+              </h1>
               <p className="fs-5 fw-light" style={{ color: "#fff" }}>
                 {banner.description}
               </p>
               <p className="mt-5">
                 <a className="btn btn-primary px-5" href="flight">
-                  {banner.buttonText} <i className="fa-solid fa-arrow-trend-up ms-2"></i>
+                  {banner.buttonText}
+                  <i className="fa-solid fa-arrow-trend-up ms-2"></i>
                 </a>
               </p>
             </div>

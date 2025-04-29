@@ -49,7 +49,6 @@ import {
   getAllRooms,
   getRoom,
   searchRooms,
-  getRoomsByHotelId,
   getRoomsByHotelName
 } from "../controller/roomController.js";
 import multer from "multer";
