@@ -8,25 +8,28 @@ import { BACKENDURL } from "../../Config/Config";
 
 const Gallerybanner = () => {
 
-  const { hotelId } = useParams(); // Get hotel ID from URL params
+  const { name } = useParams(); // Get hotel ID from URL params
+  // cont {name} = useParams(); // Get hotel name from URL params
   const navigate = useNavigate(); // Navigation function from React Router
   const [rooms, setRooms] = useState([]);
   const [hotelName, setHotelName] = useState("");
-
+  const [hotelCity, setHotelCity] = useState("");
 
   useEffect(() => {
     // Fetch rooms by hotel ID
     axios
-      .get(`${BACKENDURL}/api/v1/rooms/hotels/${hotelId}/rooms`) // Correct API endpoint
+      .get(`${BACKENDURL}/api/v1/rooms/hotel/${name}`) // Correct API endpoint
       .then((response) => {
         setRooms(response.data.rooms); // Rooms array from backend
         setHotelName(response.data.hotelName || "Hotel"); // Dynamic hotel name
         // console.log(response.data)
+        console.log(response.data)
+        setHotelCity(response.data.city || "Delhi");
       })
       .catch((error) => {
         console.error("Error fetching room details:", error);
       });
-  }, [hotelId]);
+  }, [name]);
 
   return (
     <div>
@@ -35,14 +38,25 @@ const Gallerybanner = () => {
           <div className="row">
             {/* Breadcrumb */}
             <div className="col-xl-12 col-lg-12 col-md-12">
-              <nav aria-label="breadcrumb">
+              {/* <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                  {/* <li className="breadcrumb-item"><a href="#" className="text-primary">Home</a></li> */}
-                  <li className="breadcrumb-item"><a href="#" className="text-primary">Hotel in Delhi, IND</a></li>
+                  
+                  <li className="breadcrumb-item"><a href="" className="text-primary">Hotel in Delhi, IND</a></li>
                   <li className="breadcrumb-item active" aria-current="page">{hotelName}</li>
 
                 </ol>
-              </nav>
+              </nav> */}
+              <nav aria-label="breadcrumb">
+  <ol className="breadcrumb">
+    <li className="breadcrumb-item">
+      <a href="" className="text-primary">
+        Hotels in {hotelCity}, IND
+      </a>
+    </li>
+    {/* <li className="breadcrumb-item active" aria-current="page">{hotelName}</li> */}
+    <li className="ml-3" aria-current="page">{hotelName}</li>
+  </ol>
+</nav>
             </div>
 
             {/* Gallery & Info */}

@@ -277,7 +277,7 @@ const Hoteldet = () => {
               <HotelCard key={hotel._id} hotel={hotel} />
             ))}
           </div>
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
       </section>
     </div>
