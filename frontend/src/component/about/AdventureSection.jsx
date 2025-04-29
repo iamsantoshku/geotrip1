@@ -3,7 +3,8 @@
 
 import React from "react";
 import { FaStar, FaShieldAlt, FaClock, FaGlobe } from "react-icons/fa";
-import banner from "/assets/banner.avif"; // Ensure the path is correct
+// import banner from "/assets/banner.avif"; // Ensure the path is correct
+import banner from "/flightbanner.webp"; // Ensure the path is correct 
 
 const AdventureSection = () => {
   return (
