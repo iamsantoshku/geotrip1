@@ -1,6 +1,5 @@
 
 
-
 import React from "react";
 
 const Exprience = () => {
@@ -15,49 +14,33 @@ const Exprience = () => {
               <div className="position-relative">
                 <img
                   src="/assets/img/img-2.webp"
-                  className="img-fluid rounded-3 position-relative z-1"
+                  className="img-fluid rounded-3 w-100"
+                  style={{ aspectRatio: "4/4", objectFit: "cover" }}
                   alt="Experience"
                 />
+
+                {/* Floating Client and Rating Box */}
                 <div className="position-absolute bottom-0 start-0 z-index-1 mb-4 ms-2">
-                  <div className="bg-body d-flex d-inline-block rounded-3 position-relative p-3 z-2 shadow-wrap">
+                  <div className="bg-body d-flex rounded-3 p-3 shadow-sm">
                     
                     {/* Avatar Group */}
                     <div className="me-4">
-                      <h6 className="fw-normal">Client</h6>
-                      <ul className="avatar-group mb-0">
+                      <h6 className="fw-normal mb-2">Client</h6>
+                      <ul className="d-flex avatar-group list-unstyled mb-0 gap-1">
+                        {["team-1", "team-2", "team-3", "team-4"].map((img, i) => (
+                          <li key={i} className="avatar avatar-md">
+                            <img
+                              className="avatar-img rounded-circle"
+                              src={`/assets/img/${img}.webp`}
+                              alt="avatar"
+                              width="40"
+                              height="40"
+                            />
+                          </li>
+                        ))}
                         <li className="avatar avatar-md">
-                          <img
-                            className="avatar-img circle"
-                            src="assets/img/team-1.webp"
-                            alt="avatar"
-                          />
-                        </li>
-                        <li className="avatar avatar-md">
-                          <img
-                            className="avatar-img circle"
-                            src="/assets/img/team-2.webp"
-                            alt="avatar"
-                          />
-                        </li>
-                        <li className="avatar avatar-md">
-                          <img
-                            className="avatar-img circle"
-                            src="/assets/img/team-3.webp"
-                            alt="avatar"
-                          />
-                        </li>
-                        <li className="avatar avatar-md">
-                          <img
-                            className="avatar-img circle"
-                            src="/assets/img/team-4.webp"
-                            alt="avatar"
-                          />
-                        </li>
-                        <li className="avatar avatar-md">
-                          <div className="avatar-img circle bg-primary">
-                            <span className="text-white position-absolute top-50 start-50 translate-middle small">
-                              1K+
-                            </span>
+                          <div className="avatar-img bg-primary rounded-circle d-flex align-items-center justify-content-center" style={{ width: "40px", height: "40px" }}>
+                            <span className="text-white small">1K+</span>
                           </div>
                         </li>
                       </ul>
@@ -65,9 +48,9 @@ const Exprience = () => {
 
                     {/* Rating Section */}
                     <div>
-                      <h6 className="fw-normal mb-3">Rating</h6>
+                      <h6 className="fw-normal mb-2">Rating</h6>
                       <h6 className="m-0">
-                        4.5<i className="fa-solid fa-star text-warning ms-1"></i>
+                        4.5<i className="fa-solid fa-star text-warning ms-2"></i>
                       </h6>
                     </div>
                   </div>
@@ -76,32 +59,25 @@ const Exprience = () => {
             </div>
 
             {/* Text Section */}
-            <div className="col-xl-5 col-lg-6 col-md-6">
-              <div className="bestExperience-block">
-                <p className="fw-medium text-primary text-md text-uppercase mb-0">
-                  Memories
+            <div className="col-xl-5 col-lg-6 col-md-6 mt-4 mt-md-0">
+              <div>
+                <p className="text-primary text-uppercase fw-semibold mb-2">Memories</p>
+                <h2 className="fw-bold lh-base mb-3">Our Attractive Experience And Services For You!</h2>
+                <p className="text-muted fs-6">
+                  Traveling creates unforgettable memories—waking up to a sunrise over the mountains, the salty breeze of an untouched beach, or the laughter of new friends in a foreign land. Travel isn’t just about places; it’s about experiences that shape us and leave footprints on our hearts.
                 </p>
-                <h2 className="fw-bold lh-base">
-                  Our Attractive Experience And Services For You!
-                </h2>
-                <p className="fw-light fs-6">
-                Traveling creates unforgettable memories—waking up to a sunrise over the mountains, the salty breeze of an untouched beach, or the laughter of new friends in a foreign land. It’s the joy of discovering hidden alleys, tasting exotic cuisines, and capturing breathtaking landscapes. Every journey tells a story—getting lost in vibrant city streets, dancing under the northern lights, or sharing moments with locals who turn into lifelong friends. Travel isn’t just about places; it’s about experiences that shape us, broaden our minds, and leave footprints on our hearts. The best memories aren’t planned; they’re found in the unexpected adventures
-                </p>
-                <div className="d-inline-flex mt-4">
-                  <div className="d-inline-flex flex-column justify-content-center align-items-center py-3 px-3 rounded gray-simple me-3">
-                    <h6 className="fw-bold fs-3 m-0">33</h6>
-                    <p className="m-0 text-sm text-muted-2">Year Experience</p>
-                  </div>
-                  <div className="d-inline-flex flex-column justify-content-center align-items-center py-3 px-3 rounded gray-simple me-3">
-                    <h6 className="fw-bold fs-3 m-0">78</h6>
-                    <p className="m-0 text-sm text-muted-2">
-                      Destination Collaboration
-                    </p>
-                  </div>
-                  <div className="d-inline-flex flex-column justify-content-center align-items-center py-3 px-3 rounded gray-simple">
-                    <h6 className="fw-bold fs-3 m-0">25K</h6>
-                    <p className="m-0 text-sm text-muted-2">Happy Customers</p>
-                  </div>
+
+                <div className="d-flex flex-wrap gap-3 mt-4">
+                  {[
+                    { value: "33", label: "Year Experience" },
+                    { value: "78", label: "Destination Collaboration" },
+                    { value: "25K", label: "Happy Customers" },
+                  ].map((item, i) => (
+                    <div key={i} className="text-center p-3 rounded gray-simple flex-fill" style={{ minWidth: "120px" }}>
+                      <h6 className="fw-bold fs-3 m-0">{item.value}</h6>
+                      <p className="m-0 text-sm text-muted">{item.label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
