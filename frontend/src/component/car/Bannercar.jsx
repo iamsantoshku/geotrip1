@@ -55,7 +55,7 @@ const Bannercar = () => {
       <div className="image-cover hero-header bg-white" 
       // style={{ background: "url(/cabbanner.png) no-repeat" }}>
       style={{
-        backgroundImage: "url(/cabbanner.png)",
+        backgroundImage: "url(/cabbanner.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
