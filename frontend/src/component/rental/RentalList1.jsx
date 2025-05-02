@@ -15,8 +15,8 @@ const RentalList1 = () => {
         fetch(BACKENDURL + "/api/v1/rental/getallrentals")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);  // Debug the API response
-                if (data && Array.isArray(data.data)) { // Correctly access rentals from data.data
+                console.log(data);  
+                if (data && Array.isArray(data.data)) { 
                     setRentals(data.data);
                 } else {
                     console.error("No rentals found");
@@ -29,7 +29,7 @@ const RentalList1 = () => {
             });
     }, []);
 
-    // Show loading state or error message if rentals are null
+    
     return (
         <div className="container mx-auto p-2">
             {rentals === null ? (

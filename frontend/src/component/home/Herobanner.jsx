@@ -1,9 +1,6 @@
 
 
 
-
-
-
 // import React, { useMemo } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, Pagination } from "swiper/modules";
@@ -11,41 +8,44 @@
 // import "swiper/css/pagination";
 
 // const Herobanner = () => {
-//   // Memoize static banner data
-//   const banners = useMemo(() => [
-//     {
-//       id: 1,
-//       title: "Start Your Trip with Make Us Trip",
-//       description:
-//         "Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.",
-//       buttonText: "Explore More",
-//       background: "/flightbanner.webp",
-//     },
-//     {
-//       id: 3,
-//       title: "Wander. Explore. Experience.",
-//       description:
-//         "Escape the ordinary and explore breathtaking destinations around the world. Find the perfect getaway tailored just for you!",
-//       buttonText: "Book Now",
-//       background: "/tourbanner.webp",
-//     },
-//     {
-//       id: 4,
-//       title: "Your Perfect Trip Starts Here!",
-//       description:
-//         "Find exclusive travel deals, flight bookings, and vacation packages to your dream destinations. Let’s make memories together!",
-//       buttonText: "Discover More",
-//       background: "/hotelbanner.webp",
-//     },
-//     {
-//       id: 5,
-//       title: "Adventure is Calling!",
-//       description:
-//         "From tropical beaches to snowy peaks, explore destinations that inspire your soul. Where will your next journey take you?",
-//       buttonText: "Find Your Escape",
-//       background: "/cabbanner.webp",
-//     },
-//   ], []);
+//   const banners = useMemo(
+//     () => [
+//       {
+//         id: 1,
+//         title: "Start Your Trip with Make Us Trip",
+//         description:
+//           "Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.",
+//         buttonText: "Explore More",
+//         // background: "/flightbanner.webp",
+//         background: "/Flight Ticket1.webp",
+//       },
+//       {
+//         id: 3,
+//         title: "Wander. Explore. Experience.",
+//         description:
+//           "Escape the ordinary and explore breathtaking destinations around the world. Find the perfect getaway tailored just for you!",
+//         buttonText: "Book Now",
+//         background: "/tourbanner.webp",
+//       },
+//       {
+//         id: 4,
+//         title: "Your Perfect Trip Starts Here!",
+//         description:
+//           "Find exclusive travel deals, flight bookings, and vacation packages to your dream destinations. Let’s make memories together!",
+//         buttonText: "Discover More",
+//         background: "/hotelbanner.webp",
+//       },
+//       {
+//         id: 5,
+//         title: "Adventure is Calling!",
+//         description:
+//           "From tropical beaches to snowy peaks, explore destinations that inspire your soul. Where will your next journey take you?",
+//         buttonText: "Find Your Escape",
+//         background: "/car image.webp",
+//       },
+//     ],
+//     []
+//   );
 
 //   return (
 //     <Swiper
@@ -57,7 +57,7 @@
 //       modules={[Autoplay, Pagination]}
 //       className="mySwiper"
 //     >
-//       {banners.map((banner) => (
+//       {banners.map((banner, index) => (
 //         <SwiperSlide key={banner.id}>
 //           <div
 //             className="d-flex align-items-center justify-content-center text-center"
@@ -68,15 +68,19 @@
 //               overflow: "hidden",
 //             }}
 //           >
-//             {/* Optimized LCP-friendly image */}
+//             {/* Optimized Image */}
 //             <img
 //               src={banner.background}
 //               alt={banner.title}
-//               loading="eager"
+//               // width="1920"
+//               // height="595"
+//               loading={index === 0 ? "eager" : "lazy"}
+//               fetchPriority={index === 0 ? "high" : "auto"}
 //               decoding="async"
 //               style={{
 //                 width: "100%",
 //                 height: "100%",
+                
 //                 objectFit: "cover",
 //                 position: "absolute",
 //                 top: 0,
@@ -98,7 +102,7 @@
 //               }}
 //             ></div>
 
-//             {/* Content */}
+//             {/* Banner Content */}
 //             <div
 //               style={{
 //                 position: "relative",
@@ -106,12 +110,8 @@
 //                 zIndex: 2,
 //               }}
 //             >
-//               <h1 className="text-5xl" style={{ color: "#fff" }}>
-//                 {banner.title}
-//               </h1>
-//               <p className="fs-5 fw-light" style={{ color: "#fff" }}>
-//                 {banner.description}
-//               </p>
+//               <h1 className="text-5xl text-white">{banner.title}</h1>
+//               <p className="fs-5 fw-light text-white">{banner.description}</p>
 //               <p className="mt-5">
 //                 <a className="btn btn-primary px-5" href="flight">
 //                   {banner.buttonText}
@@ -146,7 +146,8 @@ const Herobanner = () => {
         description:
           "Take a little break from the work stress of everyday. Discover, plan trips, and explore beautiful destinations.",
         buttonText: "Explore More",
-        background: "/flightbanner.webp",
+        background: "/Flight Ticket1.webp",
+        // background: "/flightbanner.webp",
       },
       {
         id: 3,
@@ -170,7 +171,8 @@ const Herobanner = () => {
         description:
           "From tropical beaches to snowy peaks, explore destinations that inspire your soul. Where will your next journey take you?",
         buttonText: "Find Your Escape",
-        background: "/cabbanner.webp",
+        background: "/car image.webp",
+       
       },
     ],
     []
@@ -197,25 +199,33 @@ const Herobanner = () => {
               overflow: "hidden",
             }}
           >
-            {/* Optimized Image */}
-            <img
-              src={banner.background}
-              alt={banner.title}
-              width="1920"
-              height="595"
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "auto"}
-              decoding="async"
+            {/* Container to control image width */}
+            <div
               style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
                 position: "absolute",
                 top: 0,
                 left: 0,
-                zIndex: 0,
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
               }}
-            />
+            >
+              <img
+                src={banner.background}
+                alt={banner.title}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                decoding="async"
+                style={{
+                  // width: "100%",
+                  // maxWidth: "1400px",
+                  // height: "100%",
+                  // objectFit: "cover",
+                  // objectPosition: "center",
+                }}
+              />
+            </div>
 
             {/* Dark Overlay */}
             <div
@@ -255,3 +265,6 @@ const Herobanner = () => {
 };
 
 export default Herobanner;
+
+
+

@@ -17,7 +17,7 @@ const Filtersidebar = ({
 
   return (
     <div className="col-xl-3 col-lg-4 col-md-12 hidden md:block">
-      {/* <div className="filter-searchBar bg-white  rounded-3"> */}
+      
       <div className="filter-searchBar bg-white rounded-xl shadow-lg p-6">
         <div className="filter-searchBar-head border-bottom">
           <div className="searchBar-headerBody d-flex align-items-start justify-content-between px-3 py-3">

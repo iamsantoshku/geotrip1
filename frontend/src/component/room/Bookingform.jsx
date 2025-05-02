@@ -114,7 +114,7 @@ const Bookingform = () => {
               <div className="col-xl col-lg col-md">
                 <div className="listLayout_midCaps mt-md-0 mt-3 mb-md-0 mb-3">
 
-                  {/* <h4 className="fs-5 fw-bold mb-1">{hotel.name}</h4> */}
+                  
                   <h4 className="fs-5 fw-bold mb-1">{hotelName || "Hotel Name Unavailable"}</h4>
 
                   <div className="d-flex align-items-center mb-3">
@@ -245,19 +245,7 @@ const Bookingform = () => {
                 Add Guest
               </button>
             </div>
-            {/* <div className="col-xl-4 col-lg-4 col-md-12">
-              <h5>Reservation Summary</h5>
-              <p>Hotel: {hotelName}</p>
-              <p>Total Price: ₹{transactionDetails.totalPrice}</p>
-
-       
-              <Elements stripe={stripePromise}>
-                <PaymentForm
-                  handleSubmit={handleSubmit}
-                  isSubmitting={isSubmitting}
-                />
-              </Elements>
-            </div> */}
+            
 
 <div className="col-xl-4 col-lg-4 col-md-12 bg-gray-50 p-6 rounded-lg shadow-lg">
       <h5 className="text-xl font-semibold mb-4 text-gray-800">Reservation Summary</h5>
@@ -279,49 +267,6 @@ const Bookingform = () => {
   );
 };
 
-// Payment Form Component
-// const PaymentForm = ({ handleSubmit, isSubmitting }) => {
-//   const stripe = useStripe();
-//   const elements = useElements();
-
-//   return (
-//     <form
-//       onSubmit={(e) => {
-//         e.preventDefault();
-//         handleSubmit(stripe, elements);
-//       }}
-//     >
-//       <div className="form-group">
-//         <label htmlFor="cardElement" className="form-label">
-//           Card Details
-//         </label>
-//         <CardElement
-//           id="cardElement"
-//           options={{
-//             style: {
-//               base: {
-//                 fontSize: "16px",
-//                 color: "#424770",
-//                 "::placeholder": { color: "#aab7c4" },
-//               },
-//               invalid: { color: "#9e2146" },
-//             },
-//           }}
-//         />
-//       </div>
-//       <button
-//         type="submit"
-//         className="btn btn-primary mt-3"
-//         disabled={isSubmitting}
-//       >
-//         {isSubmitting ? "Processing..." : "Pay Now"}
-//       </button>
-//     </form>
-//   );
-// };
-
-
-// import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 
 const PaymentForm = ({ handleSubmit, isSubmitting }) => {
   const stripe = useStripe();

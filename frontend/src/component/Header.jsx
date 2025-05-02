@@ -10,7 +10,7 @@ import { authContext } from '../context/authContext';
 import { useContext } from 'react';
 import AccountDropdown from './userprofile/AccountDropdown';
 
-// import {homelogo} form "./logo1.webp"
+
 
 
 // SkqQGUBOM7pWq44o-pass 
@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     // <div className="header header-transparent theme">
-    <div className={`header theme ${isHomePage ? 'header-transparent' : 'bg-gray-300'} lg:px-10`}>
+    <div className={`header theme ${isHomePage ? 'header-transparent' : 'bg-white-600'} lg:px-10`}>
       <div className="container">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
@@ -89,22 +89,7 @@ const Header = () => {
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
               <ul>
-                {/* <li className="currencyDropdown me-2">
-                  <a href="#" onClick={(e) => {
-                    e.preventDefault();
-                    setShowCurrencyModal(true);
-                  }} className="nav-link" data-bs-toggle="modal" data-bs-target="#currencyModal">
-                    <span className="fw-medium">INR</span>
-                  </a>
-                </li>
-                <li className="languageDropdown me-2">
-                  <a href="#" onClick={(e) => {
-                    e.preventDefault();
-                    setShowCountryModal(true);
-                  }} className="nav-link" data-bs-toggle="modal" data-bs-target="#countryModal">
-                    <img src="/assets/img/flag/flag.png" className="img-fluid" width="17" alt="Country" />
-                  </a>
-                </li> */}
+               
                 <li>
                   {isUserLoggedIn ? (
                     <div>
@@ -140,7 +125,7 @@ const Header = () => {
                       Hotel<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="/hotel-list">Hotel list 01</a></li>
+                      <li><a href="/hotel-list">Hotel list</a></li>
 
                       {/* <li><a href="hotel-details">Hotel Detail 01</a></li> */}
 
@@ -151,7 +136,7 @@ const Header = () => {
                       Flight<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="/flight-list-01">Flight List 01</a></li>
+                      <li><a href="/flight-list-01">Flight List</a></li>
                       {/* <li><a href="flight-list-02.html">Flight List 02</a></li>
                       <li><a href="Flight-detail.html">Flight Detail</a></li> */}
                     </ul>
@@ -161,7 +146,7 @@ const Header = () => {
                       Rental<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="/property-list">Rental List 01</a></li>
+                      <li><a href="/property-list">Rental List</a></li>
 
                       {/* <li><a href="rental-detail.html">Rental Detail</a></li> */}
                     </ul>
@@ -171,7 +156,7 @@ const Header = () => {
                       Cars<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="car-list">Car List 01</a></li>
+                      <li><a href="car-list">Car List</a></li>
 
                       {/* <li><a href="car-detail.html">Car Detail</a></li> */}
                     </ul>
@@ -277,52 +262,10 @@ const Header = () => {
               </li>
               {/* <li><a href="about-us">About Us</a></li> */}
             </ul>
-            <ul className="nav-menu nav-menu-social align-to-right">
-              {/* <li className="currencyDropdown me-2">
-                <a
-                  href="#"
-                  className="nav-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowCurrencyModal(true);
-                  }}
-                >
-                  <span className="fw-medium">INR</span>
-                </a>
-              </li> */}
-
-
-              {/* <Currency/> */}
-              {/* <Currency
-                show={showCurrencyModal}
-                onClose={() => setShowCurrencyModal(false)}
-              /> */}
-
-              {/* Language Dropdown */}
-
-              {/* <li className="languageDropdown me-2">
-                <a
-                  href="#"
-                  className="nav-link"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowCountryModal(true);
-                  }}
-                >
-                  <img
-                    src="/assets/img/flag/flag.png"
-                    className="img-fluid"
-                    width="17"
-                    alt="Country"
-                  />
-                </a>
-              </li> */}
-
-              {/* <Country
-                show={showCountryModal}
-                onClose={() => setShowCountryModal(false)}
-              /> */}
-
+             {/* <ul className="nav-menu nav-menu-social align-to-right " >  */}
+             <ul className="nav-menu nav-menu-social align-to-right">
+  
+              
               {/* Sign In / Register */}
 
               <li className="list-buttons light">

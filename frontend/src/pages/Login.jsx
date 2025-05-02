@@ -195,24 +195,16 @@ const Login = ({ showModal, setShowModal }) => {
                     </a>
                   </div>
                 </div>
-                {/* <div className="prixer px-3">
-                  <div className="devider-wraps position-relative">
-                    <div className="devider-text text-muted-2 text-md">Sign In with More Methods</div>
-                  </div>
-                </div> */}
+               
 
                 <div className="social-login py-2 px-1">
                   <ul className="row align-items-center justify-content-between g-1 p-0 m-0">
                     <li className="col">
                       
-                      {/* <button onClick={handleGoogleLogin} className="square--60 border br-dashed rounded-2 full-width">
-                        <i className="fa-brands fa-google color--facebook fs-2"></i>
-                      </button> */}
+                      
                       {user ? (
         <div>
-          {/* <p>Welcome, {user.displayName}</p>
-          <img src={user.photoURL} alt="User Profile" />
-          <button onClick={handleLogout}>Logout</button> */}
+          
           <AccountDropdown/>
         </div>
       ) : (

@@ -126,26 +126,7 @@ const Signup = ({ showSignupModal, setShowSignupModal }) => {
               </form>
             </div>
 
-            {/* <div className="social-login py-4 px-2">
-              <p className="text-center mb-3">Or Sign Up with</p>
-              <ul className="row align-items-center justify-content-between g-3 p-0 m-0">
-                <li className="col">
-                  <a href="#" className="square--60 border br-dashed rounded-2 full-width">
-                    <i className="fa-brands fa-facebook color--facebook fs-2"></i>
-                  </a>
-                </li>
-                <li className="col">
-                  <a href="#" className="square--60 border br-dashed rounded-2">
-                    <i className="fa-brands fa-google color--google fs-2"></i>
-                  </a>
-                </li>
-                <li className="col">
-                  <a href="#" className="square--60 border br-dashed rounded-2">
-                    <i className="fa-brands fa-linkedin color--linkedin fs-2"></i>
-                  </a>
-                </li>
-              </ul>
-            </div> */}
+            
           </div>
           <div className="modal-footer align-items-center justify-content-center">
             <p>

@@ -16,9 +16,7 @@ const Searchlist = () => {
                         <Navfilter/>
                         <div class="row align-items-center g-4 mt-2">
                             <RentalList1/>
-                            {/* <Rentallist/>
-                            <Rentallist/>
-                            <Rentallist/> */}
+                            
                         </div>
                     </div>
 

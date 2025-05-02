@@ -168,12 +168,7 @@ const Bookingform3 = () => {
                   </div>
                 </div>
 
-				{/* <div>
-            <h1>Booking Summary</h1>
-            <p>Hotel: {hotelName}</p>
-            <p>Room Type: {room.type}</p>
-            <p>Total Price: ₹{transactionDetails.totalPrice.toFixed(2)}</p>
-        </div> */}
+		
               </div>
             </div>
           </div>
@@ -194,63 +189,3 @@ export default Bookingform3;
 
 
 
-// import React, { useState } from "react";
-
-// const Bookingform3 = ({ room, hotelName, totalPrice }) => {
-//   const [formData, setFormData] = useState({
-//     billingName: "",
-//     email: "",
-//     phone: "",
-//     address1: "",
-//     address2: "",
-//     country: "",
-//     cityState: "",
-//     postalCode: "",
-//     specialNotes: "",
-//     paymentMethod: "visa",
-//     autoPay: false,
-//   });
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handleSubmit = () => {
-//     console.log("Form Submitted:", { formData, room, hotelName, totalPrice });
-//     alert("Form submitted successfully!");
-//   };
-
-//   return (
-//     <div>
-//       <section className="pt-4 gray-simple position-relative">
-//         <div className="container">
-//           <h4>Booking Form</h4>
-//           <p>Hotel: {hotelName}</p>
-//           <p>Room Type: {room.type}</p>
-//           <p>Total Price: ₹{totalPrice.toFixed(2)}</p>
-
-//           {/* Billing Details */}
-//           <div>
-//             {["billingName", "email", "phone", "address1", "address2", "country", "cityState", "postalCode"].map(
-//               (field, index) => (
-//                 <div key={index}>
-//                   <label>{field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}:</label>
-//                   <input
-//                     type="text"
-//                     name={field}
-//                     value={formData[field]}
-//                     onChange={handleInputChange}
-//                   />
-//                 </div>
-//               )
-//             )}
-//             <button onClick={handleSubmit}>Submit Payment</button>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Bookingform3;

@@ -31,17 +31,7 @@ const Hoteldetailban = () => {
                                                     </select>
                                                 </div>
                                             </div>
-                                            {/* <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                        <div className="form-group mb-0">
-                          <input
-                            type="date"
-                            className="form-control fw-bold"
-                            placeholder="Check-In & Check-Out"
-                            id="checkinout"
-                            readOnly
-                          />
-                        </div>
-                      </div> */}
+                                            
 
                                             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                                 <div className="form-group mb-0">

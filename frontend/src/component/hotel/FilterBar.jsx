@@ -4,7 +4,7 @@ const FilterBar = () => {
   return (
     <div className="col-xl-8 col-lg-8 col-md-12">
       <div className="d-flex align-items-center justify-content-start justify-content-lg-end flex-wrap">
-        {/* Map Toggle Switch */}
+       
         <div className="flsx-first me-2">
           <div className="bg-white rounded py-2 px-3">
             <div className="form-check form-switch">

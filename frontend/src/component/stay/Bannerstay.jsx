@@ -69,20 +69,7 @@ const Bannerstay = () => {
                                             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                                 <div className=" form-group hdd-arrow border rounded-1 mb-0">
                                                     <label>Choose Date</label>
-                                                    {/* <DatePicker
-                                                        selected={startDate}
-                                                        onChange={(dates) => {
-                                                            const [start, end] = dates;
-                                                            setStartDate(start);
-                                                            setEndDate(end);
-                                                        }}
-                                                        startDate={startDate}
-                                                        endDate={endDate}
-                                                        selectsRange
-                                                        inline={false}
-                                                        className="h-14"
-                                                        placeholderText="Check-In & Check-Out"
-                                                    /> */}
+                                                    
                                                     <input type='date' className="form-control fw-bold"
                                                     selected={startDate}
                                                     onChange={(dates) => {
