@@ -1,8 +1,10 @@
+
+
 import React from 'react';
 
 const CabsTab = () => {
   return (
-    <div className="tab-pane" id="cabs">
+    <div>
       <div className="row gy-3 gx-md-3 gx-sm-2">
         {/* Left Section */}
         <div className="col-xl-8 col-lg-7 col-md-12">
