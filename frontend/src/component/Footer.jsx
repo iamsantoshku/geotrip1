@@ -64,15 +64,11 @@ const Footer = () => {
               <h4 className="widget-title">Payment Methods</h4>
               <img src="/assets/img/payment.png" className="img-fluid mb-3" alt="Payment Methods" />
               <h5 className="widget-title mt-3 text-gray-500">Our Partners</h5>
-              {/* <div className="d-flex gap-3">
-                <img src="/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" />
-                <img src="/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" />
-                <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" />
-              </div> */}
+              
               <div className="d-flex gap-3">
   <img src="/assets/img/mytrip.png" className="img-fluid" alt="MyTrip" style={{ width: "100px", height: "auto" }} />
   <img src="/assets/img/tripadv.png" className="img-fluid" alt="TripAdvisor" style={{ width: "100px", height: "auto" }} />
-  <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" style={{ width: "100px", height: "auto" }} />
+  {/* <img src="/assets/img/goibibo.png" className="img-fluid" alt="Goibibo" style={{ width: "100px", height: "auto" }} /> */}
 </div>
 
             </div>

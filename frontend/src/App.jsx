@@ -50,12 +50,24 @@ import Header from "./component/Header";
 import AppRoutes from "./routes/AppRoutes";
 import Footer from "./component/Footer";
 // Removed the import of BrowserRouter here
+import { useLocation } from "react-router-dom";
+
+import HeaderSecondary from "./component/HeaderSecondry";
 
 function App() {
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   return (
+    // <div className="">
+    //   {/* Remove the Router here */}
+    //   <Header />
+    //   <AppRoutes />
+    //   <Footer />
+    // </div>
+
     <div className="">
-      {/* Remove the Router here */}
-      <Header />
+      {isHomePage ? <Header /> : <HeaderSecondary />}
       <AppRoutes />
       <Footer />
     </div>

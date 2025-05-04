@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink, useLocation, } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -14,7 +13,7 @@ import AccountDropdown from './userprofile/AccountDropdown';
 
 
 // SkqQGUBOM7pWq44o-pass 
-const Header = () => {
+const HeaderSecondry = () => {
   const isAdmin = localStorage.getItem("isAdmin") === "true";
   const isUserLoggedIn = localStorage.getItem("token") !== "null";
   const { user, token } = useContext(authContext);
@@ -53,31 +52,44 @@ const Header = () => {
   }, []);
 
   return (
-    // <div className="header header-transparent theme">
-    <div className={`header theme ${isHomePage ? 'header-transparent' : 'bg-red-600'} lg:px-10`}>
-    
-      <div className="container">
+    // <div className=" bg-red-600 fixed top-0 left-0 w-full h-[68px] flex items-center justify-center z-50">  
+    <div className="header header-light">
+      <div className="container px-10">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
 
-            <a className="nav-brand static-show mt-1" href="/">
-              {isHomePage &&  !isScrolled? (
-                <img src="/translogo.png" className="mt-1" alt="Home Page Logo" style={{ height: "auto", width: "160px" }} />
-              ) : (
-                <img
-                  src="/makeuslogored.png"
-                  // src='colouredlogo.png'
-                  className="logo mt-1 rounded-md"
-                  alt="Scrolled or Non-Home Logo"
-                  style={{
-                    width: "160px",
-                    height: "auto",
-                    borderRadius: "30px",
-                    backgroundColor: !isHomePage || isScrolled ? "#cd2c22" : "transparent", // Red background if not home OR scrolled
-                  }}
-                />
-              )}
-            </a>
+            {/* <a className="nav-brand static-show mt-1" href="/">
+
+              <img
+                src="/makeustripmoblogo.png"
+                // src='colouredlogo.png'
+                className="logo mt-1 rounded-md"
+                alt="Scrolled or Non-Home Logo"
+                style={{
+                  width: "40px",
+                  height: "auto",
+
+                }}
+              />
+              <span class="text-blue-700 font-bold">Make</span>
+              <span class="text-blue-500">Us</span>
+              <span class="text-blue-400">Trip</span>
+
+            </a> */}
+            <a href="/" className="hidden sm:flex items-center space-x-1 mt-1">
+  <img
+    src="/makeustripmoblogo.png"
+    className="w-8 h-auto rounded-md"
+    alt="MakeUsTrip Logo"
+  />
+  <div className="flex space-x-1 text-xl font-bold">
+    <span style={{ color: 'rgb(0, 49, 73)' }}>make</span>
+    <span style={{ color: 'rgb(0, 49, 73)' }}>us</span>
+    <span style={{ color: 'rgb(0, 49, 73)' }}>trip</span>
+    {/* rgb(205, 44, 34) */}
+  </div>
+</a>
+
 
 
             <a className="nav-brand mob-show" href="/">
@@ -91,7 +103,7 @@ const Header = () => {
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
               <ul>
-               
+
                 <li>
                   {isUserLoggedIn ? (
                     <div>
@@ -109,17 +121,20 @@ const Header = () => {
             </div>
           </div>
           <div className="nav-menus-wrapper" style={{ transitionProperty: 'none' }}>
-            <ul className="nav-menu">
+            <ul className="nav-menu  ">
               <li>
-                <a href="JavaScript:Void(0);">
-                  Home<span className="submenu-indicator"></span>
+                <a href="JavaScript:Void(0);" className="ml-12">
+                  Home<span className=" submenu-indicator "></span>
                 </a>
 
               </li>
+
+
               <li>
                 <a href="JavaScript:Void(0);">
                   Listing<span className="submenu-indicator"></span>
                 </a>
+
 
                 <ul className="nav-dropdown nav-submenu">
                   <li>
@@ -264,10 +279,10 @@ const Header = () => {
               </li>
               {/* <li><a href="about-us">About Us</a></li> */}
             </ul>
-             {/* <ul className="nav-menu nav-menu-social align-to-right " >  */}
-             <ul className="nav-menu nav-menu-social align-to-right">
-  
-              
+            {/* <ul className="nav-menu nav-menu-social align-to-right " >  */}
+            <ul className="nav-menu nav-menu-social align-to-right">
+
+
               {/* Sign In / Register */}
 
               <li className="list-buttons light">
@@ -294,7 +309,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderSecondry;
 
 
 

@@ -25,10 +25,19 @@ const Home = () => {
         <Herobannermob />
       </div>
         <Herosearch/>
-        <Toursoffer/>
+        {/* <div className='gray-simple '> */}
+          <Toursoffer/>
+
+        {/* </div> */}
+        {/* <Toursoffer/> */}
+        <div className='gray-simple mt-5'>
         <Popularat/>
+
+        </div>
+        
         
         {/* <Hoteldet/> */}
+        
         <Hoteldethome/>
         
         <Review/>

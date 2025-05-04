@@ -17,7 +17,7 @@ const HotelCard = ({ hotel }) => {
   };
   
   return (
-    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
       <div className="pop-touritem shadow-sm">
         {/* Hotel Card Link */}
         <a href="room-details" onClick={handleCardClick} className="card rounded-3 m-0 text-decoration-none">
@@ -111,7 +111,7 @@ const Hoteldethome = () => {
   
     return (
       <div>
-        <section className="gray-simple">
+        <section className="">
           <div className="container">
             <div className="row justify-content-between">
               <div className='text-center text-4xl font-semibold'>
