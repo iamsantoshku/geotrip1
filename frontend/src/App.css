@@ -57,3 +57,9 @@
   padding: 0%;
 
 } */
+
+/* @media (min-width: 1500px) and (max-width: 4000px) {
+  .hide-between-150-200 {
+    display: none !important;
+  }
+} */

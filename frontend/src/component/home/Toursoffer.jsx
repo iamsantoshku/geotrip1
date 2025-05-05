@@ -90,7 +90,7 @@ const Toursoffer = () => {
       <section className="pt-5 pb-0">
         <div className="container">
           <div className="row align-items-center justify-content-center g-xl-4 g-lg-4 g-md-3 g-4">
-            <h2 className="text-red-500 text-4xl text-center mb-4">
+            <h2 className=" text-4xl text-center mb-4" style={{ color: 'rgb(0, 49, 73)' }}>
               Best Destination in India
             </h2>
             {tours.map((tour, index) => (

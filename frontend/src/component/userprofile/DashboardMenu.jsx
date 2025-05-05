@@ -3,7 +3,7 @@ import React from 'react';
 
 const DashboardMenu = () => {
     return (
-        <div className="dashboard-menus  d-none d-lg-block -mt-10">
+        <div className="dashboard-menus  d-none d-lg-block -mt-10" style={{ backgroundColor: 'rgb(0, 49, 73)' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-12 col-lg-12 col-md-12">

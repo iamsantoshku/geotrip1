@@ -2,7 +2,11 @@ import React from 'react'
 
 const Dasborad = () => {
   return (
-    <div className="row align-items-center justify-content-center">
+    // <div className="row align-items-center justify-content-center" style={{ backgroundColor: rgb('0, 49, 73') }}>
+    <div
+  className="row align-items-center justify-content-center"
+  
+>
     <div className="col-xl-12 col-lg-12 col-md-12 mb-4">
         <button
             className="btn btn-dark fw-medium full-width d-block d-lg-none"

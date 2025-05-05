@@ -54,52 +54,47 @@ const HeaderSecondry = () => {
   return (
     // <div className=" bg-red-600 fixed top-0 left-0 w-full h-[68px] flex items-center justify-center z-50">  
     <div className="header header-light">
-      <div className="container px-10">
+      <div className="container px-5">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
 
-            {/* <a className="nav-brand static-show mt-1" href="/">
 
-              <img
-                src="/makeustripmoblogo.png"
-                // src='colouredlogo.png'
-                className="logo mt-1 rounded-md"
-                alt="Scrolled or Non-Home Logo"
-                style={{
-                  width: "40px",
-                  height: "auto",
 
-                }}
-              />
-              <span class="text-blue-700 font-bold">Make</span>
-              <span class="text-blue-500">Us</span>
-              <span class="text-blue-400">Trip</span>
 
-            </a> */}
             <a href="/" className="hidden sm:flex items-center space-x-1 mt-1">
-  <img
-    src="/makeustripmoblogo.png"
-    className="w-8 h-auto rounded-md"
-    alt="MakeUsTrip Logo"
-  />
-  <div className="flex space-x-1 text-xl font-bold">
-    <span style={{ color: 'rgb(0, 49, 73)' }}>make</span>
-    <span style={{ color: 'rgb(0, 49, 73)' }}>us</span>
-    <span style={{ color: 'rgb(0, 49, 73)' }}>trip</span>
-    {/* rgb(205, 44, 34) */}
-  </div>
-</a>
+              <img
+                src="/whiteback.png"
+                className="h-auto rounded-md hide-between-150-200"
+                alt="MakeUsTrip Logo"
+              />
+            </a>
+
+
+            {/* rgb(205, 44, 34) */}
 
 
 
-            <a className="nav-brand mob-show" href="/">
-              {/* /assets/img/logo.png */}
+            {/* <a className="nav-brand mob-show" href="/">
+              
               <img src="/whiteback.png" className="logo" alt="Logo" style={{
                 width: "170px",
                 height: "32px",
 
               }} />
-            </a>
+            </a> */}
+
+<a className="nav-brand block sm:hidden" href="/">
+  <img
+    src="/whiteback.png"
+    className="logo"
+    alt="Logo"
+    style={{
+      width: "170px",
+      height: "32px",
+    }}
+  />
+</a>
+
             <div className="nav-toggle"></div>
             <div className="mobile_nav">
               <ul>
@@ -116,7 +111,7 @@ const HeaderSecondry = () => {
 
                   }
 
-                </li>
+                </li>+
               </ul>
             </div>
           </div>
@@ -315,5 +310,10 @@ export default HeaderSecondry;
 
 
 
-
+{/* <div className="flex space-x-1 text-xl font-bold">
+    <span style={{ color: 'rgb(0, 49, 73)' }}>make</span>
+    <span style={{ color: 'rgb(0, 49, 73)' }}>us</span>
+    <span style={{ color: 'rgb(0, 49, 73)' }}>trip</span>
+   
+  </div> */}
 
