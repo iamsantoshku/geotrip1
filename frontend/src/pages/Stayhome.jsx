@@ -17,7 +17,11 @@ const Stayhome = () => {
       />
       <div>
         <Bannerstay/>
+        <div className='py-8'>
         <Offer/>
+
+        </div>
+        
         <Populardest/>
         <Populardom/>
       

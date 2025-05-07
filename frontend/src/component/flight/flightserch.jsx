@@ -30,7 +30,7 @@ const FlightSearch = () => {
         <div className="row justify-content-center align-items-center">
           <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
             <div className="search-wrap position-relative">
-              <div className="row align-items-end gy-3 gx-md-3 gx-sm-2">
+              <div className="row align-items-end gy-3 gx-md-3 gx-sm-2 ">
                 <div className="col-xl-8 col-lg-7 col-md-12">
                   <div className="row gy-3 gx-md-3 gx-sm-2">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 position-relative">
@@ -84,7 +84,7 @@ const FlightSearch = () => {
                       <div className="form-group mb-0">
                         <button
                           type="button"
-                          className="btn btn-whites text-primary full-width fw-medium"
+                          className="btn btn-whites text-primary full-width fw-medium "
                         >
                           <i className="fa-solid fa-magnifying-glass me-2"></i>Search
                         </button>

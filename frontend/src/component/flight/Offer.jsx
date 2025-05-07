@@ -30,12 +30,12 @@ const Offer = () => {
 
   return (
     <div>
-      <section className="pt-4 pb-0">
-        <div className="container">
-          <div className="row justify-content-between gy-4 gx-xl-4 gx-lg-3 gx-md-3 gx-4">
+      <section className="pt-4 pb-0 ">
+        <div className="container bg-gray-100">
+          <div className="row justify-content-between gy-4 gx-xl-4 gx-lg-3 gx-md-3 gx-4 ">
             {offers.map((offer, index) => (
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12" key={index}>
-                <div className="pop-touritems">
+                <div className="pop-touritems mb-4">
                   <a href="#" className="card rounded-3 br-dashed border-2 m-0">
                     <div className="offers-container d-flex align-items-center justify-content-start p-2">
                       <div className="offers-flex position-relative">

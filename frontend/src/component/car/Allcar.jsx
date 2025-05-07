@@ -123,10 +123,10 @@ const Allcar = () => {
   return (
     <div>
       <section>
-        <div className="container">
+        <div className="container bg-gray-50">
           <div className="row align-items-center justify-content-center">
             <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
-              <div className="secHeading-wrap text-center mb-5">
+              <div className="secHeading-wrap text-center mb-5 mt-4">
                 <h2>Our Awesome Vehicles</h2>
                 <p>Choose the best car for your trip.</p>
               </div>

@@ -62,7 +62,7 @@ const HotelCity = () => {
 
   return (
     <>
-      <div className="container mx-auto -mt-6 flex flex-col md:flex-row">
+      <div className="container mx-auto -mt-6 flex flex-col md:flex-row bg-gray-50">
         {/* Dynamic Filter Sidebar */}
         {/* <div className="hidden"> */}
           <Filtersidebar

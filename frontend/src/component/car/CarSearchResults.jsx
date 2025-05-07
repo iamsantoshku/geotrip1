@@ -28,10 +28,10 @@ const CarSearchResults = () => {
   }, [location, state]);
 
   return (
-    <div className="container mt-5">
+    <div className="container  bg-gray-100">
       {/* <h2 className="text-center mb-4">Cars Available in {location}</h2> */}
       <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-6 border-b-1 border-gray-300 pb-2">
-  Cars Available in <span className="text-blue-600">{location}</span>
+  Cars Available in <span className="text-blue-600  mt-5">{location}</span>
 </h2>
 
       {loading && <p>Loading...</p>}

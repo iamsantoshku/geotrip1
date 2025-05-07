@@ -17,7 +17,7 @@ const Caroffer = () => {
                         <span className="label text-light bg-danger fw-medium">20% Off</span>
                       </div>
                       <div className="offers-pic">
-                        <img src="/assets/img/city/ct-6.png" className="img-fluid rounded" width="110" alt="Los Angeles" />
+                        <img src="/assets/img/city/ct-6.webp" className="img-fluid rounded" width="110" alt="Los Angeles" />
                       </div>
                     </div>
                     <div className="offers-captions ps-3">
@@ -52,7 +52,7 @@ const Caroffer = () => {
                         <span className="label text-light bg-danger fw-medium">15% Off</span>
                       </div>
                       <div className="offers-pic">
-                        <img src="/assets/img/city/ct-5.png" className="img-fluid rounded" width="110" alt="United Kingdom" />
+                        <img src="/assets/img/city/ct-5.webp" className="img-fluid rounded" width="110" alt="United Kingdom" />
                       </div>
                     </div>
                     <div className="offers-captions ps-3">
@@ -87,7 +87,7 @@ const Caroffer = () => {
                         <span className="label text-light bg-danger fw-medium">30% Off</span>
                       </div>
                       <div className="offers-pic">
-                        <img src="/assets/img/city/ct-1.png" className="img-fluid rounded" width="110" alt="France" />
+                        <img src="/assets/img/city/ct-1.webp" className="img-fluid rounded" width="110" alt="France" />
                       </div>
                     </div>
                     <div className="offers-captions ps-3">
