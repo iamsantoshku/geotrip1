@@ -38,53 +38,55 @@ const Gallerybanner = () => {
           <div className="row">
             {/* Breadcrumb */}
             <div className="col-xl-12 col-lg-12 col-md-12">
-              
+
               <nav aria-label="breadcrumb">
-  <ol className="breadcrumb">
-    <li className="breadcrumb-item">
-      <a href="" className="text-primary">
-        Hotels in {hotelCity}, IND
-      </a>
-    </li>
-    
-    <li className="ml-3" aria-current="page">{hotelName}</li>
-  </ol>
-</nav>
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
+                    {/* <a href="" className="text-primary">
+                      Hotels in {hotelCity}, IND
+                    </a> */}
+                  </li>
+
+                  
+                </ol>
+              </nav>
             </div>
 
             {/* Gallery & Info */}
             <div className="col-xl-12 col-lg-12 col-md-12">
               <div className="card border-0 p-3 mb-4">
                 <div className="crd-heaader d-md-flex align-items-center justify-content-between">
-                  <div className="crd-heaader-first">
-                    <div className="d-inline-flex align-items-center mb-1">
-                      <span className="label bg-light-success text-success">Health Protected</span>
-                      <div className="d-inline-block ms-2">
-                        <i className="fa fa-star text-warning text-xs"></i>
-                        <i className="fa fa-star text-warning text-xs"></i>
-                        <i className="fa fa-star text-warning text-xs"></i>
-                        <i className="fa fa-star text-warning text-xs"></i>
-                        <i className="fa fa-star text-warning text-xs"></i>
-                      </div>
-                    </div>
-                    <div className="d-block">
-                      <h4 className="mb-0">{hotelName}</h4>
-                      <p className="text-md m-0">
-                        <i className="fa-solid fa-location-dot me-2"></i>delhi , 245652. 
-                        <a href="#" className="text-primary fw-medium ms-2">Show on Map</a>
-                      </p>
-                    </div>
+                <div className="crd-heaader-first">
+  <div className="d-inline-flex align-items-center mb-1 gap-3">
+    <span className="label bg-light-success text-success">{hotelName}</span>
+    <span className="text-muted">
+      <i className="fa-solid fa-location-dot me-1"></i>{hotelCity}
+      <a href="#" className="text-primary fw-medium ms-2">Show on Map</a>
+    </span>
+  </div>
+  <div className="d-block flex">
+    {/* <p className="text-md m-0">
+      <i className="fa-solid fa-location-dot me-2"></i>{hotelCity}, 245652.
+      <a href="#" className="text-primary fw-medium ms-2">Show on Map</a>
+    </p> */}
+    <div className="d-inline-block ms-2">
+      <i className="fa fa-star text-warning text-xs"></i>
+      <i className="fa fa-star text-warning text-xs"></i>
+      <i className="fa fa-star text-warning text-xs"></i>
+      <i className="fa fa-star text-warning text-xs"></i>
+      <i className="fa fa-star text-warning text-xs"></i>
+    </div>
+  </div>
+</div>
 
-                   
-                  </div>
                   <div className="crd-heaader-last my-md-0 my-2">
                     <div className="drix-wrap d-flex align-items-center">
-                      <div className="drix-first pe-2">
+                      {/* <div className="drix-first pe-2">
                         <div className="text-dark fw-semibold fs-4">US$107</div>
                         <div className="d-flex align-items-center justify-content-start justify-content-md-end">
                           <span className="label bg-success text-light">15% Off</span>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="drix-last">
                         <button type="button" className="btn btn-primary fw-semibold">Select Rooms</button>
                       </div>
@@ -101,13 +103,13 @@ const Gallerybanner = () => {
                       </a>
                     </div>
                   ))}
-                  
+
                 </div>
               </div>
             </div>
 
             {/* Top Attractions */}
-            <div className="col-xl-12 col-lg-12 col-md-12">
+            {/* <div className="col-xl-12 col-lg-12 col-md-12">
               <div className="row align-items-center justify-content-between gx-4">
                 {['Top Attractions', 'Nearest Airport & Metro', 'Cafe & Bars'].map((category, index) => (
                   <div className="col-xl-4 col-lg-4 col-md-4" key={index}>
@@ -133,16 +135,16 @@ const Gallerybanner = () => {
               </div>
             </div>
 
-            {/* Login Alert */}
+           
             <div className="col-xl-12 col-lg-12 col-md-12">
               <div className="d-flex align-items-center justify-content-start py-3 px-3 rounded-2 bg-success mb-4">
                 <p className="text-light fw-semibold m-0">
                   <i className="fa-solid fa-gift text-warning me-2"></i>
-                  <a href="/#" className="text-white text-decoration-underline">Login</a> or 
+                  <a href="/#" className="text-white text-decoration-underline">Login</a> or
                   <a href="/#" className="text-white text-decoration-underline">Register</a> to earn up to 100 coins (approx 1.72 US$) after check-out.
                 </p>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>

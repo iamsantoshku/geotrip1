@@ -66,8 +66,8 @@ const Review = () => {
           <div className="row align-items-center justify-content-center">
             <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
               <div className="secHeading-wrap text-center mb-5">
-                <h2 className="text-4xl">Your Travel Stories with Make Us Trip</h2>
-                <p className="text-2xl">
+                <h5 className="text-4xl text-red-700">Your Travel Stories with Make Us Trip</h5>
+                <p className="text-2xl mt-2">
                   Hear from Our Happy Travelers! At Make Us Trip, we believe every journey should be memorable, hassle-free, and filled with joy.
                 </p>
               </div>

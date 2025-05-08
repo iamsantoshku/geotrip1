@@ -45,8 +45,8 @@ const RoomDetails = () => {
   if (error) return <p className="text-center text-danger py-5">{error}</p>;
 
   return (
-    <div className="container my-4">
-      <h2 className="fw-bold mb-4">{hotelName} - Room Details</h2>
+    <div className="container -mt-14">
+      <h2 className="fw-bold mb-8">{hotelName} - Room Details</h2>
       <div className="row g-4">
         {rooms.length > 0 ? (
           rooms.map((room) => {

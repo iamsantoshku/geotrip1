@@ -152,8 +152,8 @@ const Popularat = () => {
         {/* Section Heading */}
         <div className="row align-items-center justify-content-center">
           <div className="col-xl-8 col-lg-9 col-md-11 col-sm-12">
-            <div className="secHeading-wrap text-center mb-5">
-              <h3 className="text-4xl text-red-600">
+            <div className="secHeading-wrap text-center mb-8">
+              <h3 className="text-4xl text-red-700 -mt-5">
                 Best Tour and Travel Destination Near Me
               </h3>
               <p>

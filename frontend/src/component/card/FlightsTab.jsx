@@ -63,7 +63,7 @@ const FlightsTab = () => {
           <input
             type="date"
             name="departDate"
-            className="form-control fw-bold bg-gray-50 text-lg rounded-lg"
+            className="form-control fw-small bg-gray-50 text-lg rounded-lg"
             value={formData.departDate}
             onChange={handleInputChange}
           />
@@ -77,7 +77,7 @@ const FlightsTab = () => {
           <input
             type="date"
             name="returnDate"
-            className="form-control fw-bold bg-gray-50 text-lg rounded-lg"
+            className="form-control fw-small bg-gray-50 text-lg rounded-lg"
             value={formData.returnDate}
             onChange={handleInputChange}
           />
