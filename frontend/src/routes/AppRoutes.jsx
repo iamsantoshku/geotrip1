@@ -66,18 +66,19 @@ const AppRoutes = () => {
        <Routes>
        <Route path='/' element={<Home/>}></Route>
        {/* <Route path='/login' element={<Login/>}></Route> */}
-       <Route path='/user-profile' element={<Profile/>}></Route>
-       <Route path='/my-booking' element={<MyBookingsDashboard/>}></Route>
-       <Route path='/hotel-list' element={<Hotel/>}></Route>
+       <Route path='/user-profile/' element={<Profile/>}></Route>
+       <Route path='/my-booking/' element={<MyBookingsDashboard/>}></Route>
+       <Route path='/hotel-list/' element={<Hotel/>}></Route>
        <Route path='/hotel-details' element={<Hoteldetails/>}></Route>
-       <Route path='/flight-list-01' element={<Flight/>}></Route>
-       <Route path='/flight' element={<Flighthome/>}></Route>
-       <Route path='/stay' element = {<Stayhome/>}></Route>
-       <Route path='/hotel' element = {<Hotelhome/>}></Route>
-       <Route path='/car' element = {<Car/>}></Route>
-       <Route path='/car-list' element = {<Carlisting/>}></Route>       
+       <Route path='/flight-list/' element={<Flight/>}></Route>
+       <Route path='/flight/' element={<Flighthome/>}></Route>
+       <Route path='/stay/' element = {<Stayhome/>}></Route>
+       <Route path='/hotel/' element = {<Hotelhome/>}></Route>
+       
+       <Route path='/car/' element = {<Car/>}></Route>
+       <Route path='/car-list/' element = {<Carlisting/>}></Route>       
        {/* <Route path="/hotel-details/:hotelId" element={<Roomdetails />} /> */}
-       <Route path="/hotel-details/:name" element={<Roomdetails />} />
+       <Route path="/hotel-details/:name/" element={<Roomdetails />} />
        <Route path="/book/:id" element={<TicketBooking />} />      
        <Route path="/roombook" element={<Roombook />} />
        <Route path='/bookingpage-02' element={<Bookingform/>}></Route>
@@ -87,16 +88,16 @@ const AppRoutes = () => {
        <Route path="/ticket/:ticketId" element={<Flightticket />} />      
        <Route path='/carbook' element = {<Cardetails/>}></Route>
        <Route path='/cancelled-bookings' element = {<Cancelled/>}></Route>
-       <Route path='/classic-blog' element = {<Blog/>}></Route>
+       <Route path='/classic-blog/' element = {<Blog/>}></Route>
        <Route path="/:city/hotel-list/" element={<HotelCity />} />
        <Route path="/car/:formattedLocation" element={<SearchedCityCar />} />
-       <Route path='/property-list' element = {<Rental/>}></Route>
+       <Route path='/property-list/' element = {<Rental/>}></Route>
        <Route path="/rental/:city/rental-list/" element = {<RentalResults/>} />
        <Route path="/rental" element={<RentalDetails />} />
-       <Route path='/about-us' element={<About/>}></Route>
+       <Route path='/about-us/' element={<About/>}></Route>
        <Route path='/travelers'element= {<TravelerDetails/>}></Route>
        <Route path='/payment-detail' element = {<PaymentDetails/>}></Route>
-       <Route path='/contact-us' element = {<ContactPage/>}></Route>
+       <Route path='/contact-us/' element = {<ContactPage/>}></Route>
        <Route path="/reset-password/:token" element={<ResetPassword />} />
        <Route path='*' element={<NotFound/>}></Route>
        <Route path="/cars/:location" element={<CarSearchResults />} />

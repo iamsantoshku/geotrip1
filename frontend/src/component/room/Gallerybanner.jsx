@@ -15,10 +15,23 @@ const Gallerybanner = () => {
   const [hotelName, setHotelName] = useState("");
   const [hotelCity, setHotelCity] = useState("");
 
+  const extractHotelName = (urlName) => {
+    const cleanedName = urlName.split("-").slice(0, -1).join(" ").replace(/-/g, " ");
+    return cleanedName;
+  };
+  // const extractHotelName = (urlName) => {
+  //   const parts = urlName.split("/");
+  //   const formattedName = parts.slice(-2, -1)[0]; // Extract the second last part (Hotel-Name)
+  //   const cleanedName = formattedName.replace(/-/g, " ");
+  //   return cleanedName;
+  // };
+  
+
   useEffect(() => {
     // Fetch rooms by hotel ID
+    const formattedName = extractHotelName(name);
     axios
-      .get(`${BACKENDURL}/api/v1/rooms/hotel/${name}`) // Correct API endpoint
+      .get(`${BACKENDURL}/api/v1/rooms/hotel/${formattedName}`) // Correct API endpoint
       .then((response) => {
         setRooms(response.data.rooms); // Rooms array from backend
         setHotelName(response.data.hotelName || "Hotel"); // Dynamic hotel name

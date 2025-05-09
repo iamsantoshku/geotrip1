@@ -58,11 +58,15 @@ export const getHotelById = async (req, res) => {
   }
 };
 
+
 export const getHotelByName = async (req, res) => {
   try {
     const { name } = req.params;
 
-    const hotel = await Hotel.findOne({ name: name });
+    // Extract the actual hotel name by removing the random string
+    const formattedName = name.split('-').slice(0, -1).join(' '); // Removes the last random string part and joins the rest
+
+    const hotel = await Hotel.findOne({ name: formattedName });
 
     if (!hotel) {
       return res.status(404).json({ message: 'Hotel not found' });
@@ -73,6 +77,22 @@ export const getHotelByName = async (req, res) => {
     res.status(500).json({ message: 'Error fetching hotel by name', error });
   }
 };
+
+// export const getHotelByName = async (req, res) => {
+//   try {
+//     const { name } = req.params;
+
+//     const hotel = await Hotel.findOne({ name: name });
+
+//     if (!hotel) {
+//       return res.status(404).json({ message: 'Hotel not found' });
+//     }
+
+//     res.status(200).json(hotel);
+//   } catch (error) {
+//     res.status(500).json({ message: 'Error fetching hotel by name', error });
+//   }
+// };
 
 
 // Filter hotels by location or price range
