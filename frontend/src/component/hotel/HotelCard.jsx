@@ -155,7 +155,6 @@ const HotelCard = ({ hotel }) => {
   };
 
  
-  
 
   const handleCardClick = (e) => {
     e.preventDefault();

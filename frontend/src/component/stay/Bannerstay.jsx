@@ -32,7 +32,7 @@ const Bannerstay = () => {
         // Check if city is entered
         if (city) {
             // Navigate to the rental page with the city name
-            navigate(`/rental/${city}/rental-list/`);
+            navigate(`/rental/${city}/`);
         }
     };
 

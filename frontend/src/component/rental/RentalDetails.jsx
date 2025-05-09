@@ -311,33 +311,9 @@ const RentalDetails = () => {
 
 
                     <div className="bg-white shadow rounded-lg p-6">
-                        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <img
-                        src={`${BACKENDURL}/${rental.images[0]}`}
-                        className="w-full h-64 object-cover rounded-lg"
-                        alt={rental.title}
-                    />
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-4">{rental.title}</h2>
-                        <p className="mb-2">
-                            <strong>Category:</strong> {rental.category}
-                        </p>
-                        <p className="mb-2">
-                            <strong>Location:</strong> {rental.location.city}, {rental.location.distanceFromTown} km from town
-                        </p>
-                        <p className="mb-2">
-                            <strong>Room Type:</strong> {rental.roomType}
-                        </p>
-                        <p className="mb-2">
-                            <strong>Price:</strong> ${rental.discountedPrice} <span className="text-red-500">({rental.discount}% Off)</span>
-                        </p>
-                        <p className="mb-2">
-                            <strong>Cancellation Policy:</strong> {rental.cancellationPolicy === "yes" ? "Free" : "No"}
-                        </p>
-                    </div>
-                </div> */}
+                        
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-xl rounded-2xl p-6 md:p-10 transition-transform duration-300 hover:scale-[1.01]">
+                        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-xl rounded-2xl p-6 md:p-10 transition-transform duration-300 hover:scale-[1.01] ">
                             <div className="w-full h-64 md:h-full">
                                 <img
                                     src={`${BACKENDURL}/${rental.images[0]}`}
@@ -365,84 +341,138 @@ const RentalDetails = () => {
                                     {rental.cancellationPolicy === "yes" ? "Free" : "No"}
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+  {/* Image Section */}
+  <div className="relative h-64 md:h-full">
+    <img
+      src={`${BACKENDURL}/${rental.images[0]}`}
+      className="w-full h-full object-cover"
+      alt={rental.title}
+    />
+    <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 text-sm rounded-full font-semibold shadow">
+      {rental.discount}% OFF
+    </div>
+  </div>
+
+  {/* Details Section */}
+  <div className="flex flex-col justify-center p-6 space-y-4 bg-gray-50">
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{rental.title}</h2>
+    
+    <p className="text-gray-700 flex items-center">
+      <span className="font-semibold text-black mr-2">Category:</span> 
+      {rental.category}
+    </p>
+    
+    <p className="text-gray-700 flex items-center">
+      <span className="font-semibold text-black mr-2">Location:</span> 
+      {rental.location.city}, {rental.location.distanceFromTown} km from town
+    </p>
+    
+    <p className="text-gray-700 flex items-center">
+      <span className="font-semibold text-black mr-2">Room Type:</span> 
+      {rental.roomType}
+    </p>
+    
+    <div className="flex items-center justify-between">
+      <p className="text-gray-800 text-lg font-semibold">
+        <span className="font-bold text-black">Price: </span> 
+        ₹{rental.discountedPrice}
+      </p>
+      {/* <p className="text-sm text-red-600 font-semibold line-through">
+        ₹{rental.originalPrice}
+      </p> */}
+    </div>
+
+    <p className="text-gray-700 flex items-center">
+      <span className="font-semibold text-black mr-2">Cancellation Policy:</span> 
+      {rental.cancellationPolicy === "yes" ? (
+        <span className="text-green-600 font-semibold">Free</span>
+      ) : (
+        <span className="text-red-600 font-semibold">No</span>
+      )}
+    </p>
+
+    
+  </div>
+</div>
+
 
                     </div>
 
                     {/* Guest Management */}
 
                     <div className="flex flex-col md:flex-row gap-6">
-    {/* Add Guests Section */}
-    <div className="mt-10 bg-white p-6 rounded-2xl shadow-lg w-full md:w-1/2">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Add Guests</h3>
-        <div className="space-y-5">
-            <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Guest Name</label>
-                <input
-                    type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition"
-                    placeholder="Enter guest name"
-                    value={newGuest.name}
-                    onChange={(e) => setNewGuest({ ...newGuest, name: e.target.value })}
-                />
-            </div>
-            <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Guest Age</label>
-                <input
-                    type="number"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition"
-                    placeholder="Enter guest age"
-                    value={newGuest.age}
-                    onChange={(e) => setNewGuest({ ...newGuest, age: e.target.value })}
-                />
-            </div>
-            <button
-                className="w-full md:w-auto text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 shadow-md"
-                style={{ backgroundColor: "rgb(205, 44, 34)" }}
-                onClick={addGuest}
-            >
-                Add Guest
-            </button>
-        </div>
-    </div>
+                        {/* Add Guests Section */}
+                        <div className="mt-10 bg-white p-6 rounded-2xl shadow-lg w-full md:w-1/2">
+                            <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Add Guests</h3>
+                            <div className="space-y-5">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">Guest Name</label>
+                                    <input
+                                        type="text"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition"
+                                        placeholder="Enter guest name"
+                                        value={newGuest.name}
+                                        onChange={(e) => setNewGuest({ ...newGuest, name: e.target.value })}
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">Guest Age</label>
+                                    <input
+                                        type="number"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition"
+                                        placeholder="Enter guest age"
+                                        value={newGuest.age}
+                                        onChange={(e) => setNewGuest({ ...newGuest, age: e.target.value })}
+                                    />
+                                </div>
+                                <button
+                                    className="w-full md:w-auto text-white font-semibold px-6 py-2 rounded-lg transition-all duration-200 shadow-md"
+                                    style={{ backgroundColor: "rgb(205, 44, 34)" }}
+                                    onClick={addGuest}
+                                >
+                                    Add Guest
+                                </button>
+                            </div>
+                        </div>
 
-    {/* Price Details and Confirm Booking Section */}
-    <div className="mt-10 bg-white p-6 rounded-2xl shadow-lg border border-gray-200 w-full md:w-1/2">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Price Details</h3>
-        <div className="space-y-3 text-gray-700">
-            <p className="flex justify-between">
-                <span className="font-medium">Base Price:</span>
-                <span>${rental.originalPrice}</span>
-            </p>
-            <p className="flex justify-between">
-                <span className="font-medium">Discount:</span>
-                <span>{rental.discount}%</span>
-            </p>
-            <p className="flex justify-between text-lg font-semibold text-gray-900 mt-4">
-                <span>Total Price:</span>
-                <span>${rental.discountedPrice}</span>
-            </p>
-        </div>
+                        {/* Price Details and Confirm Booking Section */}
+                        <div className="mt-10 bg-white p-6 rounded-2xl shadow-lg border border-gray-200 w-full md:w-1/2">
+                            <h3 className="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Price Details</h3>
+                            <div className="space-y-3 text-gray-700">
+                                <p className="flex justify-between">
+                                    <span className="font-medium">Base Price:</span>
+                                    <span>₹{rental.originalPrice}</span>
+                                </p>
+                                <p className="flex justify-between">
+                                    <span className="font-medium">Discount:</span>
+                                    <span>{rental.discount}%</span>
+                                </p>
+                                <p className="flex justify-between text-lg font-semibold text-gray-900 mt-4">
+                                    <span>Total Price:</span>
+                                    <span>₹{rental.discountedPrice}</span>
+                                </p>
+                            </div>
 
-        <div className="mt-8">
-            <button
-                className="w-full text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md"
-                style={{ backgroundColor: "rgb(205, 44, 34)" }}
-                onClick={confirmBooking}
-            >
-                Confirm Booking
-            </button>
+                            <div className="mt-8">
+                                <button
+                                    className="w-full text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md"
+                                    style={{ backgroundColor: "rgb(205, 44, 34)" }}
+                                    onClick={confirmBooking}
+                                >
+                                    Confirm Booking
+                                </button>
 
-            {bookingSuccess && (
-                <p className="mt-4 text-green-600 text-center font-medium">
-                    Booking has been successfully completed!
-                </p>
-            )}
-        </div>
-    </div>
-</div>
-
-                    
+                                {bookingSuccess && (
+                                    <p className="mt-4 text-green-600 text-center font-medium">
+                                        Booking has been successfully completed!
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    </div>
 
 
 

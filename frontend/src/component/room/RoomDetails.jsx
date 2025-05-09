@@ -186,12 +186,7 @@ const RoomDetails = () => {
     return cleanedName;
   };
 
-  // const extractHotelName = (urlName) => {
-  //   const parts = urlName.split("/");
-  //   const formattedName = parts.slice(-2, -1)[0]; // Extract the second last part (Hotel-Name)
-  //   const cleanedName = formattedName.replace(/-/g, " ");
-  //   return cleanedName;
-  // };
+  
   
 
   useEffect(() => {
@@ -273,18 +268,24 @@ const RoomDetails = () => {
                         </div>
                       </div>
 
-                      <div className="col-xl-9 col-lg-8 col-md-8">
-                        <div className="d-block border br-dashed rounded-2 px-3 py-3 mb-3">
+                      <div className="col-xl-9 col-lg-8 col-md-8 ">
+                        <div className="d-block border br-dashed rounded-2 px-3 py-3 mb-3 bg-gray-50">
                           <div className="d-flex align-items-sm-end justify-content-between flex-sm-row flex-column">
                             <div className="typsofrooms-wrap mb-5">
                               <h6 className="fs-6 fw-semibold mb-2">Room Details</h6>
-                              <ul className="row align-items-center g-1 mb-0 p-0">
+                              <ul className="row align-items-center g-1 mb-0 p-0 ">
                                 <li className="col-12">
-                                  <span className="text-muted-2 text-md">{room.description}</span>
+                                  <span className="text-muted-2 text-md text-white">{room.description}</span>
                                 </li>
                                 <li className="col-12">
                                   <span className="text-muted-2 text-md">{room.isRefundable ? "Refundable" : "Non-Refundable"}</span>
                                 </li>
+                                {/* <li className="col-12">
+  <span className="text-blue-600 text-md">{room.description}</span>
+</li>
+<li className="col-12">
+  <span className="text-white text-md">{room.isRefundable ? "Refundable" : "Non-Refundable"}</span>
+</li> */}
                                 <li className="col-12">
                                   <span className="text-success text-md">{room.availability ? "Available" : "Unavailable"}</span>
                                 </li>
