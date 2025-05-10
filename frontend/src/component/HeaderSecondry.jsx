@@ -54,7 +54,7 @@ const HeaderSecondry = () => {
   return (
     // <div className=" bg-red-600 fixed top-0 left-0 w-full h-[68px] flex items-center justify-center z-50">  
     <div className="header header-light">
-      <div className="container px-5">
+      <div className="container px-2 lg:px-3">
         <nav id="navigation" className="navigation navigation-landscape">
           <div className="nav-header">
 
@@ -74,14 +74,7 @@ const HeaderSecondry = () => {
 
 
 
-            {/* <a className="nav-brand mob-show" href="/">
-              
-              <img src="/whiteback.png" className="logo" alt="Logo" style={{
-                width: "170px",
-                height: "32px",
-
-              }} />
-            </a> */}
+            
 
             <a className="nav-brand block sm:hidden" href="/">
               <img
@@ -111,7 +104,7 @@ const HeaderSecondry = () => {
 
                   }
 
-                </li>+
+                </li>
               </ul>
             </div>
           </div>
@@ -188,7 +181,7 @@ const HeaderSecondry = () => {
                       Blog<span className="submenu-indicator"></span>
                     </a>
                     <ul className="nav-dropdown nav-submenu">
-                      <li><a href="/classic-blog/">Classic Blog</a></li>
+                      <li><a href="/classic-blog">Classic Blog</a></li>
 
                     </ul>
                   </li>
@@ -272,9 +265,9 @@ const HeaderSecondry = () => {
                   </li>
                 </ul>
               </li>
-              {/* <li><a href="about-us">About Us</a></li> */}
+              
             </ul>
-            {/* <ul className="nav-menu nav-menu-social align-to-right " >  */}
+            
             <ul className="nav-menu nav-menu-social align-to-right">
 
 
