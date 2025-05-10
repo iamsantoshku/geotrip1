@@ -10,6 +10,11 @@ const RentalCard = ({ rental }) => {
         // Redirect to the Car Booking page with car details
         navigate("/rental", { state: { rental } });
       };
+
+    // const handleAvailabilityClick = () => {
+    //     const rentalTitle = rental.title.replace(/\s+/g, '-').toLowerCase(); // Format title as URL-friendly
+    //     navigate(`/rental/${rentalTitle}`, { state: { rental } });
+    // };
     return (
         <div className="col-xl-12 col-lg-12 col-12 ">
             <div className="card list-layout-block rounded-3 p-3">

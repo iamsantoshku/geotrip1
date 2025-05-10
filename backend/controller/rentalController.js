@@ -86,17 +86,39 @@ export const searchRentalsByCity = async (req, res) => {
 
 
 
+// export const getSingleRental = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const rental = await RentalList.findById(id);
+
+//     if (!rental) {
+//       return res.status(404).json({ message: 'rental not found' });
+//     }
+
+//     res.status(200).json(rental);
+//   } catch (error) {
+//     res.status(500).json({ message: 'Error fetching hotel', error });
+//   }
+// };
+
+
+
 export const getSingleRental = async (req, res) => {
   try {
-    const { id } = req.params;
-    const rental = await RentalList.findById(id);
+    const { title } = req.query; // Using title as query parameter
+
+    if (!title) {
+      return res.status(400).json({ message: "Title is required" });
+    }
+
+    const rental = await RentalList.findOne({ title: title });
 
     if (!rental) {
-      return res.status(404).json({ message: 'rental not found' });
+      return res.status(404).json({ message: "Rental not found" });
     }
 
     res.status(200).json(rental);
   } catch (error) {
-    res.status(500).json({ message: 'Error fetching hotel', error });
+    res.status(500).json({ message: "Error fetching rental", error });
   }
 };

@@ -94,6 +94,7 @@ const AppRoutes = () => {
        <Route path='/property-list/' element = {<Rental/>}></Route>
        <Route path="/rental/:city/" element = {<RentalResults/>} />
        <Route path="/rental" element={<RentalDetails />} />
+       {/* <Route path="/rental/title" element={<RentalDetails />} /> */}
        <Route path='/about-us/' element={<About/>}></Route>
        <Route path='/travelers'element= {<TravelerDetails/>}></Route>
        <Route path='/payment-detail' element = {<PaymentDetails/>}></Route>

@@ -21,6 +21,8 @@ router.post("/addrental", upload.array("images", 5), addRental);
 router.get("/getallrentals", getAllRentals);
 router.get('/search', searchRentalsByCity);
 router.get("/rentals/:id", getSingleRental);
+router.get("/rentals", getSingleRental);
+
 
 
 export default router
