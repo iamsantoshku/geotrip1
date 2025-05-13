@@ -53,6 +53,7 @@ import AdminUserManagement from '../pages/AdminUserManagement';
 import TermsOfService from '../component/TermsOfService';
 import PrivacyPolicy from '../component/PrivacyPolicy';
 import CookiesPolicy from '../component/CookiesPolicy';
+import Success from '../pages/Success';
 
 
 
@@ -105,6 +106,8 @@ const AppRoutes = () => {
        <Route path='/term-of-service/' element={<TermsOfService/>}></Route>
        <Route path='/privacy-policy/' element={<PrivacyPolicy/>}></Route>
        <Route path='/cookies/' element={<CookiesPolicy/>}></Route>
+
+       <Route path='/success' element={<Success/>}></Route>
 
        {/* admin  */}
 

@@ -81,7 +81,7 @@ const Roombook = React.memo(() => {
                                             <div className="listLayout_midCaps mt-3">
                                                 <h4 className="fs-5 fw-bold mb-1">{hotelName}</h4>
                                                 <div className="d-flex align-items-center mb-3">
-                                                    <div className="square--40 rounded-2 bg-primary text-light fw-semibold me-2">{type}</div>
+                                                    <div className="rectangle--80 rounded-2 bg-primary text-light fw-semibold me-2">{type}</div>
                                                     <div className="text-md text-dark fw-medium">{amenities.join(", ")}</div>
                                                 </div>
                                                 <div className="mt-3">

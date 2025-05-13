@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import { BACKENDURL } from "../../Config/Config";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
@@ -11,6 +11,7 @@ const stripePromise = loadStripe("pk_test_51PsRJh07rudxqA9k9QA5TJH2XdoB02HVd6LD3
 
 const Bookingform = () => {
   const location = useLocation();
+   const navigate = useNavigate(); 
   const { room, hotelName, transactionDetails } = location.state || {};
 
   const [guests, setGuests] = useState([
@@ -81,6 +82,8 @@ const Bookingform = () => {
 
       if (result.success) {
         alert("Booking successful!");
+
+        navigate("/success");
       } else {
         alert("Payment failed: " + result.message);
       }
@@ -119,7 +122,7 @@ const Bookingform = () => {
 
                   <div className="d-flex align-items-center mb-3">
                     <div className="col-auto">
-                      <div className="square--40 rounded-2 bg-primary text-light fw-semibold">{room.type}</div>
+                      <div className="rectangle--40 rounded-2 bg-primary text-light fw-semibold">{room.type}</div>
                     </div>
                     <div className="col-auto text-start ps-2">
                       <div className="text-md text-dark fw-medium">{room.amenities.join(", ")}</div>
